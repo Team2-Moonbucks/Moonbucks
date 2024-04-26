@@ -1,0 +1,200 @@
+/* 스타벅스 폰트 적용 */
+@font-face {
+	font-family: 'Moonbucks';
+	src: url(../public/Santana-Black.ttf);
+}
+
+/* 웹 폰트 적용 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 자주사용하는 변수 생성 */
+:root {
+	--back-color :  #1A264B;
+	--MoonFont : 'Moonbucks';
+	--Gmartket : 'GmarketSansMedium';
+
+}
+
+h1, h2, h3, h4 {
+	font-family: var(--Gmartket);
+	font-weight: 100;
+	margin-top: 20px !important;
+}
+
+#root {
+	text-align: center;
+	background-color: var(--back-color);
+	color: white;
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Noto Sans KR';
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	margin: 0 !important;
+	max-width: 100% !important;
+	padding: 0 !important;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	width: 280px;
+	margin: auto;
+}
+
+li {
+	padding: 10px;
+}
+
+a {
+	text-decoration: none !important;
+	color: inherit !important;
+}
+
+.menuBox div {
+	display: inline-block;
+	margin: 5px;
+}
+
+.menuItem {
+	width: 300px;
+	background-color: lightgrey;
+	cursor: pointer;
+	color: white;
+	padding: 5px;
+}
+
+.menuItem:hover {
+	background-color: gray;
+}
+
+
+/* Header.js */
+.header{
+	background-color: white;
+	color: var(--back-color);
+	padding: 20px;
+	position: relative;
+}
+
+.header .me-auto > ul{
+	width: 100% !important;
+}
+
+.header .me-auto{
+	margin-right: 20px !important;
+	text-align: right;
+}
+
+.me-auto.navbar-nav{
+	flex-direction: row;
+}
+
+.me-auto a{
+	padding: 0.8em;
+	float: left;
+}
+
+
+.bg-body-tertiary{
+	background-color: rebeccapurple !important;
+}
+
+.logo:hover{
+	cursor: pointer;
+}
+
+.logo{
+	overflow: hidden;
+	width: 500px;
+}
+.logo h1{
+	font-family: var(--MoonFont);
+	width: 300px;
+	float: left;
+	font-size: 50px;
+	color: var(--back-color) !important;
+	text-decoration: none !important;
+	margin-top: 10px !important;
+}
+
+.logo span {
+	display: block;
+	height: 80px;
+	float: left;
+	width: 120px;
+}
+
+.logo span img{
+	height: 100%;
+}
+
+/* Navbar.js */
+.navbar {
+	color: var(--back-color);
+	text-align: center !important;
+	padding: 0;
+	align-items: center;
+	padding-bottom: 20px !important;
+	padding-top: 0 !important;
+
+}
+
+
+
+.navbar-me-auto  li{
+	width: 120px;
+	padding: 0;
+	margin: 0 3px;
+	height: 20px;
+}
+
+.navbar-me-auto li a {
+	display: block;
+	width: 100%;
+	padding: 0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+}
+
+.navbar-me-auto li a:hover {
+	background-color: var(--back-color);
+	border-radius: 20px;
+	color: white !important;
+}
+
+
+
+
+
+
+
+/* Footer.js */
+.footer {
+	background-color: #3C3D3E;
+	padding: 10px;
+	line-height: 10px;
+	margin-top: 100px;
+}
+
+.footer h2{
+	font-family: 'Moonbucks';
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.footer p{
+	color: rgba(255, 255, 255, 0.5);
+}
