@@ -177,9 +177,36 @@ a {
 
 
 
+/* Main.js */
+.mainCSS{
+	margin: 0 !important;
+	position: relative;
+}
+	
+.mainCSS span{
+	display: block;
+	width: 100%;
+}
 
+.mainCSS span img{
+	width: 100%;
+}
 
+.mainCSS > button {
+	position: absolute;
+	bottom: 30px;
+	left: calc(50% - 100px);
+	width: 200px;
+	height: 50px;
+	border-radius: 25px;
+	font-family: var(--Gmartket);
+	border: none;
+}
 
+.mainCSS button:hover {
+	color: white;
+	background-color: var(--back-color);
+}
 
 /* Footer.js */
 .footer {
