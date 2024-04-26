@@ -175,6 +175,14 @@ a {
 	color: white !important;
 }
 
+.header-nav ul li p{
+	margin-top: 15px;
+}
+
+.header-nav span{
+	color: var(--back-color);
+	font-weight: 700;
+}
 
 
 /* Main.js */
