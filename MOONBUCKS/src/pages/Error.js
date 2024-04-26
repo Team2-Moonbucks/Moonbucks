@@ -1,14 +1,20 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
+
 
 function Error() {
 
+	const navigate = useNavigate()
+
 	return (
-		<>
-			<h1>404 Error</h1>
+		<div className='errorCSS'>
+			<img src="../errorlogo.jpg"></img>
+			<h1>죄송합니다. 현재 찾을 수 없는 페이지를 요청 하셨습니다.</h1>
+			<h3>페이지의 주소가 잘못 입력되었거나, <br/> 주소가 변경 혹은 삭제되어 요청하신 페이지를 찾을 수 없습니다.</h3>
 			<Link to={'/'}>
-				<span>메인으로</span>
+				<span className='toMain'>메인으로</span>
 			</Link>
-		</>
+				<span onClick={() => {navigate(-1);}} className='toBack'>이전으로</span>
+		</div>
 	);
 }
 
