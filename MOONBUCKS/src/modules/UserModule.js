@@ -18,28 +18,13 @@ const userReducer = handleActions(
 	{
 		[LOGIN]: (state, { payload: { res } }) => {
 
-			if (res.role == 'admin') {
+			if (res) {
 				/* localStorage에 로그인 상태 저장 */
-				localStorage.setItem("LoginNickname", res.nickname);
-				localStorage.setItem("isAdmin", true);
-				localStorage.setItem("isLogin", true);	// localStorage가 무엇인지는 검색해서 (가볍게)공부해보세요
-			} else if(res.role == 'user') {
 				console.log('로그인 된 id : ', res.id);
-				localStorage.setItem("LoginNickname", res.nickname);
-				localStorage.setItem("isUser", true);
-				localStorage.setItem("isLogin", true);
+				localStorage.setItem("isLogin", true);	// localStorage가 무엇인지는 검색해서 (가볍게)공부해보세요
 			} else {
 				res = { message: 'LOGIN_FAIL' };
 			}
-
-
-			// if (res) {
-			// 	/* localStorage에 로그인 상태 저장 */
-			// 	console.log('로그인 된 id : ', res.id);
-			// 	localStorage.setItem("isLogin", true);	// localStorage가 무엇인지는 검색해서 (가볍게)공부해보세요
-			// } else {
-			// 	res = { message: 'LOGIN_FAIL' };
-			// }
 
 			return res;
 

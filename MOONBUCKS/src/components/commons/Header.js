@@ -8,21 +8,11 @@ import Navbar from 'react-bootstrap/Navbar';
 function Header() {
 
 	const isAuthorized = !!localStorage.getItem('isLogin');
-	const isUser = !!localStorage.getItem('isUser');
-	const isAdmin = !!localStorage.getItem('isAdmin');
-	const nickname = localStorage.getItem('LoginNickname');
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
-
-	console.log('isAdmin : ', isAdmin);
-	console.log('isUser : ', isUser);
-
 	/* 로그아웃 호출 시: localStorage 저장 값 삭제, userReducer 값 리셋, 루트로 이동 */
 	const logoutHandler = () => {
-		localStorage.removeItem('LoginNickname');
-		localStorage.removeItem('isAdmin');
-		localStorage.removeItem('isUser');
 		localStorage.removeItem('isLogin');
 		dispatch(resetLoginUser());
 		navigate('/');
@@ -38,40 +28,17 @@ function Header() {
 							<h1>MOONBUCKS</h1>
 						</NavLink>
 					</div>
-					<Nav className="me-auto header-nav">
+					<Nav className="me-auto">
 						<ul>
-							{/* {!isAuthorized ? (
+							{!isAuthorized ? (
 							<li><NavLink to='/login'>Login</NavLink></li>
 							) : (
 								<li onClick={logoutHandler}><a href="">LogOut</a></li>
 							)
 							}
+							{/* <NavLink to="/login">Login</NavLink> */}
 							<li><NavLink to="/">Sign In</NavLink></li>
-							<li><NavLink to="/">My Moonbucks</NavLink></li> */}
-
-							{!isAdmin ? (
-								!isUser ? (
-									<>
-										<li><NavLink to='/login'>Login</NavLink></li>
-										<li><NavLink to="/">Sign In</NavLink></li>
-									</>
-								) : (
-									<>
-										<li><p><span>'{nickname}'</span>님 환영합니다</p></li>
-										<li onClick={logoutHandler}><a href="">LogOut</a></li>
-										<li><NavLink to="/">My Moonbucks</NavLink></li>
-									</>
-								)
-							) : (
-								(
-									<>
-										<li><p>'{nickname}'님 환영합니다</p></li>
-										<li onClick={logoutHandler}><a href="">LogOut</a></li>
-									</>
-								)
-							)
-							}
-							
+							<li><NavLink to="/">My Moonbucks</NavLink></li>
 						</ul>
 					</Nav>
 				</Container>
