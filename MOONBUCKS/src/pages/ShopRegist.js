@@ -1,8 +1,8 @@
 
 import { Navigate } from 'react-router-dom';
-import MenuRegistForm from '../components/form/MenuRegistForm';
+import ShopRegistForm from '../components/form/ShopRegistForm';
 
-function MenuRegist() {
+function ShopRegist() {
 
 	/* 로그인 상태가 아닌데 호출할 경우 메인으로 */
 	const isAuthorized = !!localStorage.getItem('isLogin');
@@ -15,11 +15,12 @@ function MenuRegist() {
 	}
 
 	return (
-		<>
-			<h1>메뉴 등록 페이지</h1>
-			<MenuRegistForm />
-		</>
+		<div className='pageTitle'>
+			<h1>매장 등록</h1>
+			<hr/>
+			<ShopRegistForm />
+		</div>
 	);
 }
 
-export default MenuRegist;
+export default ShopRegist;

@@ -17,8 +17,159 @@
 	--back-color :  #1A264B;
 	--MoonFont : 'Moonbucks';
 	--Gmartket : 'GmarketSansMedium';
+	--NotoSans : 'Noto Sans KR';
 
 }
+
+/* 전체적인 CSS */
+
+
+
+.pageTitle{
+	position: relative;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.pageTitle h1{
+	text-align: left;
+	font-size: 24px;
+	font-weight: 100;
+	padding-left: 30px;
+	margin-bottom: 30px;
+}
+
+.pageTitle button{
+	border: none;
+	border-radius: 20px;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	color: var(--back-color);
+	background-color: white;
+}
+
+.pageTitle .modifyBtn{
+	right: 170px;
+}
+
+.pageTitle button:hover{
+	background-color: #2f4485;
+	color: white;
+}
+
+.DetailBox {
+	padding: 20px;
+}
+
+.ListBox {
+	width: 100%;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: stretch;
+}
+
+.ListBox div{
+	margin-bottom: 5px;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+.ListBox a{
+	width: calc(100%/4 - 20px);
+	min-width: 300px;
+	height: 200px;
+	display: flex;
+	margin-bottom: 15px;
+
+}
+
+.TotalItem {
+
+	width: calc(100%/2 - 10px);
+	flex-basis: 300px;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+	color: var(--back-color);
+	padding: 30px 10px 0px 15px;
+	flex-grow: 1;
+	word-break: keep-all;
+	font-family: var(--Gmartket);
+	border-top-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
+.TotalItem:hover {
+	background-color: white;
+}
+
+.DetailBox{
+	text-align: center;
+	width: 100%;
+}
+
+.TotalItem > table,
+.DetailBox > table{
+	text-align: left;	
+	padding: 5px;
+	vertical-align: top;
+}
+
+.DetailBox > table{
+	margin: 0 auto;
+	color: rgba(255, 255, 255, 0.7) !important;
+	font-weight: 100;
+}
+
+.DetailBox > table > tbody > tr > td{
+	vertical-align: top;
+	
+}
+
+.TotalItem > table > tbody > tr > td{
+	vertical-align: top !important;
+	
+}
+
+.TotalItem > table > tbody > tr > td:nth-child(1){
+	width: 70px !important;
+	text-align: justify;
+}
+
+.DetailBox > table > tbody > tr > td:nth-child(2){
+	padding-left: 30px;
+	color: white;
+}
+
+
+.DetailBox span {
+	display: inline-block;
+	width: 80px;
+	color: white;
+	text-align: justify;
+	
+}
+
+.TotalItem span{
+	display: inline-block;
+	width: 55px;
+}
+
+.DetailBox > table > tbody > tr > td:nth-child(1){
+	width: 90px !important;
+	text-align: justify;
+}
+
+
+
+
 
 h1, h2, h3, h4 {
 	font-family: var(--Gmartket);
@@ -175,11 +326,46 @@ a {
 	color: white !important;
 }
 
+.header-nav ul li p{
+	margin-top: 15px;
+}
+
+.header-nav span{
+	color: var(--back-color);
+	font-weight: 700;
+}
 
 
+/* Main.js */
+.mainCSS{
+	margin: 0 !important;
+	position: relative;
+}
+	
+.mainCSS span{
+	display: block;
+	width: 100%;
+}
 
+.mainCSS span img{
+	width: 100%;
+}
 
+.mainCSS > button {
+	position: absolute;
+	bottom: 30px;
+	left: calc(50% - 100px);
+	width: 200px;
+	height: 50px;
+	border-radius: 25px;
+	font-family: var(--Gmartket);
+	border: none;
+}
 
+.mainCSS button:hover {
+	color: white;
+	background-color: var(--back-color);
+}
 
 /* Footer.js */
 .footer {
@@ -197,4 +383,122 @@ a {
 
 .footer p{
 	color: rgba(255, 255, 255, 0.5);
+}
+
+/* Error.js */
+.errorCSS {
+	background-color: white;
+	color: var(--back-color);
+	font-family: var(--Gmartket);
+}
+
+.errorCSS img{
+	width: 50%;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.errorCSS h3{
+	font-family: var(--NotoSans);
+	color: #3C3D3E;
+}
+
+.errorCSS span{
+	display: inline-block;
+	width: 200px;
+	height: 80px;
+	line-height: 80px;
+	border: none;
+	border-radius: 20px;
+	margin: 20px 10px 0px;
+	font-size: 20px;
+}
+
+.toMain{
+	border: 1px solid var(--back-color) !important;
+	color: var(--back-color);
+
+}
+
+.toMain:hover{
+	color: white;
+	background-color: var(--back-color);
+}
+
+.toBack{
+	color: white;
+	background-color: var(--back-color);
+}
+
+.toBack:hover{
+	border: 1px solid var(--back-color) !important;
+	color: var(--back-color);
+	background-color: white !important;
+}
+
+/*  Regist, modify form */
+.formTotal {
+	text-align: left;
+	margin: 0 auto;
+	width: calc(100%/2);
+}
+
+.formTotal h1{
+	text-align: center;
+}
+
+.formTotal label{
+	margin-top: 10px;
+	color: #eee;
+}
+
+.formTotal input{
+	width: 100%;
+	margin-top: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	background-color: rgba(255, 255, 255, 0.8);
+	caret-color: var(--back-color);
+	padding-left: 10px;
+}
+
+.formTotal input:focus{
+	outline: none;
+	background-color: var(--back-color);
+	color: white;
+	caret-color: white;
+	
+	
+}
+
+.nameCaution {
+	color: rgb(247, 51, 51);
+	padding-left: 10px;
+}
+
+.formTotal select{
+	width: 50%;
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	padding-left: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	margin-top: 5px;
+
+}
+
+.formTotal select:focus{
+	background-color: white;
+	outline: none;
+}
+
+
+.formTotal > select > option:hover{
+	background-color: var(--back-color) !important;
+}
+
+.formTotal button{
+	font-family: var(--Gmartket);
 }
