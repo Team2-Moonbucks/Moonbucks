@@ -17,6 +17,7 @@
 	--back-color :  #1A264B;
 	--MoonFont : 'Moonbucks';
 	--Gmartket : 'GmarketSansMedium';
+	--NotoSans : 'Noto Sans KR';
 
 }
 
@@ -175,11 +176,46 @@ a {
 	color: white !important;
 }
 
+.header-nav ul li p{
+	margin-top: 15px;
+}
+
+.header-nav span{
+	color: var(--back-color);
+	font-weight: 700;
+}
 
 
+/* Main.js */
+.mainCSS{
+	margin: 0 !important;
+	position: relative;
+}
+	
+.mainCSS span{
+	display: block;
+	width: 100%;
+}
 
+.mainCSS span img{
+	width: 100%;
+}
 
+.mainCSS > button {
+	position: absolute;
+	bottom: 30px;
+	left: calc(50% - 100px);
+	width: 200px;
+	height: 50px;
+	border-radius: 25px;
+	font-family: var(--Gmartket);
+	border: none;
+}
 
+.mainCSS button:hover {
+	color: white;
+	background-color: var(--back-color);
+}
 
 /* Footer.js */
 .footer {
@@ -197,4 +233,55 @@ a {
 
 .footer p{
 	color: rgba(255, 255, 255, 0.5);
+}
+
+/* Error.js */
+.errorCSS {
+	background-color: white;
+	color: var(--back-color);
+	font-family: var(--Gmartket);
+}
+
+.errorCSS img{
+	width: 50%;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.errorCSS h3{
+	font-family: var(--NotoSans);
+	color: #3C3D3E;
+}
+
+.errorCSS span{
+	display: inline-block;
+	width: 200px;
+	height: 80px;
+	line-height: 80px;
+	border: none;
+	border-radius: 20px;
+	margin: 20px 10px 0px;
+	font-size: 20px;
+}
+
+.toMain{
+	border: 1px solid var(--back-color) !important;
+	color: var(--back-color);
+
+}
+
+.toMain:hover{
+	color: white;
+	background-color: var(--back-color);
+}
+
+.toBack{
+	color: white;
+	background-color: var(--back-color);
+}
+
+.toBack:hover{
+	border: 1px solid var(--back-color) !important;
+	color: var(--back-color);
+	background-color: white !important;
 }

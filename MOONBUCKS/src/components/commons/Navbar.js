@@ -46,7 +46,7 @@ function Navbars() {
 									<li><NavLink to='/Desset' style={({isActive}) => isActive? activeStyle : undefined}>Dessert</NavLink></li>
 									<li><NavLink to='/menu' style={({isActive}) => isActive? activeStyle : undefined}>Menu</NavLink></li>
 									<li><NavLink to='/Shop' style={({isActive}) => isActive? activeStyle : undefined}>Shop</NavLink></li>
-									<li><NavLink to='/Board' style={({isActive}) => isActive? activeStyle : undefined}>Board</NavLink></li>						
+									<li><NavLink to='/board' style={({isActive}) => isActive? activeStyle : undefined}>Board</NavLink></li>						
 							</Nav>
 						</ul>
 				</Navbar.Collapse>
