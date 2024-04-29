@@ -8,6 +8,8 @@ function DessertDetail() {
 
 	/* 로그인 상태 확인 */
 	const isAuthorized = !!localStorage.getItem('isLogin');
+	/* 관리자 로그인 상태 확인 */
+	const isAdmin = !!localStorage.getItem('isAdmin');
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const { id } = useParams();
@@ -32,7 +34,7 @@ function DessertDetail() {
 			<h1>메뉴 상세</h1>
 			<h1>
 				{ /* 로그인 된 상황에만 button이 보이도록 조건부 랜더링 */}
-				{(isAuthorized) &&
+				{(isAdmin) &&
 					<>
 						<button onClick={updateHandler}>메뉴 수정</button>
 						<button onClick={deleteHandler}>메뉴 삭제</button>

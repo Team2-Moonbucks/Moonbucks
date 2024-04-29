@@ -10,7 +10,7 @@ export function callGetMenuListAPI() {
 
 		/* Api의 axios 처리 참조  */
 		const result = await request('GET', '/menu');
-		console.log('getMenuList result : ', result);
+		console.log('여기서는 result가 담겼는가 getMenuList result : ', result);
 
 		/* action 생성 함수에 결과 전달하며 dispatch 호출 */
 		dispatch(getMenulist(result));

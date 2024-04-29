@@ -5,7 +5,7 @@ function DessertItem({ dessert }) {
 	return (
 		
 				
-			<Link to={`/Dessert/${dessert.id}`}>
+			<Link to={`/dessert/${dessert.id}`}>
 				<div className='DessertItem'>
 					<img src={dessert.detail.image} alt={dessert.menuName}/>
 				</div>

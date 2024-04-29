@@ -10,6 +10,7 @@ function MenuList() {
 	const menuList = result.menulist;
 	const dispatch = useDispatch();
 
+	console.log('result 결과값은 다음과 같습니다.',result);
 	console.log(menuList);
 
 	useEffect(

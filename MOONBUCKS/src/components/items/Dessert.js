@@ -13,7 +13,7 @@ function Dessert({ id }) {
 			/* dessert 호출 API */
 			dispatch(callGetDessertAPI(id));
 		},
-		[]
+		[id] // 종속성 배열에 id 추가
 	);
 
 	return (

@@ -18,22 +18,36 @@ function DessertModifyForm() {
 			/* menu 호출 API */
 			dispatch(callGetDessertAPI(id));
 		},
-		[]
+		[dispatch, id]
 	);
 
-	/* 입력 값 state 저장 */
-	const [modifyDessert, setModifyDessert] = useState(
-		{
-			id: id,
-			menuName: dessert.menuName,
-			menuPrice: dessert.menuPrice,
-			categoryName: '브레드',
-			detail: {
-				description: dessert.detail.description,
-				image: dessert.detail.image
-			}
-		}
-	);
+	// 초기 상태 설정
+    const [modifyDessert, setModifyDessert] = useState({
+        id: id,
+        menuName: '',
+        menuPrice: 0,
+        categoryName: '브레드',
+        detail: {
+            description: '',
+            image: ''
+        }
+    });
+
+    // dessert 데이터가 로드되면 modifyDessert 상태 업데이트
+    useEffect(() => {
+        if (dessert) {
+            setModifyDessert({
+                id: id,
+                menuName: dessert.menuName,
+                menuPrice: dessert.menuPrice,
+                categoryName: dessert.categoryName,
+                detail: {
+                    description: dessert.detail.description,
+                    image: dessert.detail.image
+                }
+            });
+        }
+    }, [dessert, id]); // dessert 변경 감지
 
 	/* 입력 값 변경 시 이벤트 핸들러 */
 	const onChangeHandler = (e) => {
@@ -94,42 +108,32 @@ function DessertModifyForm() {
 		})
 	}
 
-	useEffect(
-		() => {
-			/* 메뉴 수정 완료 확인 후 /menu로 이동 */
-			if (result.modify) {
-				alert('메뉴 수정');
-				navigate(`/dessert`);
-			}
-		},
-		[result]
-	);
-
 	const onClickHandler = () => {
 		/* modifyDessert에 대한 유효성 검사 후 호출 */
 		dispatch(callModifyDessertAPI(modifyDessert));
+		navigate(`/dessert`);
 	}
 
 	return (
-		<>
+		<div className='formTotal'>
 			<h1>{id}번 메뉴 수정</h1>
-			<label>메뉴 이름 : </label>
+			<label>메뉴 이름</label><br/>
 			<input type="text" name="menuName" value={modifyDessert.menuName} onChange={onChangeHandler} />
 			<br />
-			<label>메뉴 가격 : </label>
+			<label>메뉴 가격</label><br/>
 			<input type="number" name="menuPrice" value={modifyDessert.menuPrice} onChange={onChangeHandler} />
 			<br />
-			<label>카테고리 : </label>
+			<label>카테고리</label><br/>
 			<select name="categoryName" value={modifyDessert.categoryName} onChange={onChangeHandler}>
 				<option>브레드</option>
 				<option>케이크</option>
 				<option>샌드위치</option>
-			</select>
+			</select><br/>
 			<br />
-			<label>설명 : </label>
+			<label>설명</label><br/>
 			<textarea name="description" value={modifyDessert.detail.description} onChange={onChangeHandler}></textarea>
-			<br />
-			<label>사진 : </label>
+			<br/>
+			<label>사진</label><br/>
 			<input
 				type="file"
 				name="image"
@@ -138,7 +142,7 @@ function DessertModifyForm() {
 			/>
 			<br />
 			<button onClick={onClickHandler}>메뉴 수정</button>
-		</>
+		</div>
 	)
 }
 
