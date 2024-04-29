@@ -143,40 +143,32 @@ function MenuRegistForm() {
 
 	return (
 		<>
-			<label>메뉴 이름 : </label>
-			<input type="text" name="menuName" value={registMenu.menuName} onChange={onChangeHandler} />
-			<br />
-			<label>메뉴 가격 : </label>
-			<input type="number" name="menuPrice" value={registMenu.menuPrice} onChange={onChangeHandler} />
-			<br />
-			<label>카테고리 : </label>
-			<select name="categoryName" value={registMenu.categoryName} onChange={onChangeHandler}>
-				<option>한식</option>
-				<option>일식</option>
-				<option>서양</option>
-				<option>동양</option>
-				<option>커피</option>
-				<option>쥬스</option>
-				<option>기타</option>
-			</select>
-			<br />
-			<label>판매 여부 : </label>
-			<select name="isOrderable" value={registMenu.isOrderable} onChange={onChangeHandler}>
-				<option value="true">판매 가능</option>
-				<option value="false">판매 불가</option>
-			</select>
-			<br />
-			<label>설명 : </label>
-			<textarea name="description" value={registMenu.detail.description} onChange={onChangeHandler}></textarea>
-			<br />
-			<label>사진 : </label>
-			<input
-				type="file"
-				name="image"
-				accept='image/*'
-				onChange={fileChangeHandler} />
-			<br />
-			<button onClick={onClickHandler}>메뉴 등록</button>
+			<div className='formTotal'>
+				<label>매장 이름 </label>
+				<input type="text" name="shopName" value={registShop.shopName} onChange={onChangeHandler} />
+				<br />
+				<label>매장 주소 </label>
+				<input type="text" name="shopAddr" value={registShop.shopAddr} onChange={onChangeHandler} />
+				<br />
+				<label>매장 연락처 </label>
+				<input type="text" name="shopPhone" value={registShop.shopPhone} onChange={onChangeHandler} />
+				<br />
+				<label>카테고리 </label><br/>
+				<select name="shopCategory" value={registShop.shopCategory} onChange={onChangeHandler}>
+					<option>일반</option>
+					<option>DT</option>
+					<option>리저브</option>
+				</select>
+				<br />
+				<label>매장 x좌표 </label>
+				<input type="text" name="shopXcoordinate" value={registShop.shopXcoordinate} onChange={onChangeHandler} />
+				<br />
+				<label>매장 y좌표 </label>
+				<input type="text" name="shopYcoordinate" value={registShop.shopYcoordinate} onChange={onChangeHandler} />
+				<br />
+				<button onClick={onClickHandler}>매장 등록</button>
+				
+			</div>
 		</>
 	);
 }

@@ -143,34 +143,29 @@ function CoffeeRegistForm() {
 	}
 
 	return (
-		<>
-			<label>메뉴 이름 : </label>
+		<div className='formTotal'>
+		
+			<label>메뉴 이름 </label> <br />
 			<input type="text" name="coffeeName" value={registCoffee.coffeeName} onChange={onChangeHandler} />
 			<br />
-			<label>메뉴 가격 : </label>
+			<label>메뉴 가격 </label> <br />
 			<input type="number" name="coffeePrice" value={registCoffee.coffeePrice} onChange={onChangeHandler} />
 			<br />
-			<label>카테고리 : </label>
+			<label>카테고리 </label> 
+			< br />
 			<select name="categoryName" value={registCoffee.categoryName} onChange={onChangeHandler}>
-				<option>한식</option>
-				<option>일식</option>
-				<option>서양</option>
-				<option>동양</option>
 				<option>커피</option>
-				<option>쥬스</option>
-				<option>기타</option>
+				<option>차</option>
+				<option>블렌디드</option>
 			</select>
 			<br />
-			<label>판매 여부 : </label>
-			<select name="isOrderable" value={registCoffee.isOrderable} onChange={onChangeHandler}>
-				<option value="true">판매 가능</option>
-				<option value="false">판매 불가</option>
-			</select>
-			<br />
+			
 			<label>설명 : </label>
+			<br />
 			<textarea name="description" value={registCoffee.detail.description} onChange={onChangeHandler}></textarea>
 			<br />
 			<label>사진 : </label>
+			<br />
 			<input
 				type="file"
 				name="image"
@@ -178,7 +173,7 @@ function CoffeeRegistForm() {
 				onChange={fileChangeHandler} />
 			<br />
 			<button onClick={onClickHandler}>메뉴 등록</button>
-		</>
+		</div>
 	);
 }
 

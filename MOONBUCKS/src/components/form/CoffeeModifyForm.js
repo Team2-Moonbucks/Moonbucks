@@ -98,20 +98,12 @@ function CoffeeModifyForm() {
 		})
 	}
 
-	useEffect(
-		() => {
-			/* 메뉴 수정 완료 확인 후 /coffee로 이동 */
-			if (result.modify) {
-				alert('메뉴 수정');
-				navigate(`/coffee`);
-			}
-		},
-		[result]
-	);
+
 
 	const onClickHandler = () => {
 		/* modifyCoffee에 대한 유효성 검사 후 호출 */
 		dispatch(callModifyCoffeeAPI(modifyCoffee));
+		navigate(`/coffee`);
 	}
 
 	return (
@@ -125,21 +117,12 @@ function CoffeeModifyForm() {
 			<br />
 			<label>카테고리 : </label>
 			<select name="categoryName" value={modifyCoffee.categoryName} onChange={onChangeHandler}>
-				<option>한식</option>
-				<option>일식</option>
-				<option>서양</option>
-				<option>동양</option>
 				<option>커피</option>
-				<option>쥬스</option>
-				<option>기타</option>
+				<option>티</option>
+				<option>블렌디드</option>
 			</select>
 			<br />
-			<label>판매 여부 : </label>
-			<select name="isOrderable" value={modifyCoffee.isOrderable} onChange={onChangeHandler}>
-				<option value="true">판매 가능</option>
-				<option value="false">판매 불가</option>
-			</select>
-			<br />
+			
 			<label>설명 : </label>
 			<textarea name="description" value={modifyCoffee.detail.description} onChange={onChangeHandler}></textarea>
 			<br />
