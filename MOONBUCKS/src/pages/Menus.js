@@ -11,7 +11,7 @@ function Menus() {
 	const navigate = useNavigate();
 
 	return (
-		<div>
+		<div className="pageTitle">
 			<h1>메뉴 목록 {(isAdmin) && <button onClick={() => navigate(`/menu/regist`)}>메뉴 추가</button>} </h1>
 			<MenuList />
 		</div>
