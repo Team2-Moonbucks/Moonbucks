@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { callGetShopAPI } from '../../apis/ShopAPICalls';
+import KaKaoMap from './KaKaoMap';
 
 function Shop({ id }) {
 
@@ -12,13 +13,18 @@ function Shop({ id }) {
 		() => {
 			/* shop 호출 API */
 			dispatch(callGetShopAPI(id));
+
+
 		},
 		[]
 	);
 
+
+
 	return (
 		shop && (
 			<div className='DetailBox'>
+				<KaKaoMap shop={shop}/>
 				<table>
 					<tbody>
 						<tr>
