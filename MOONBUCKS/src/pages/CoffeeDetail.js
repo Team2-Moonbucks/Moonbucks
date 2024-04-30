@@ -7,7 +7,7 @@ import { callDeleteCoffeeAPI } from '../apis/CoffeeAPICalls';
 function CoffeeDetail() {
 
 	/* 로그인 상태 확인 */
-	const isAuthorized = !!localStorage.getItem('isLogin');
+	const isAuthorized = !!localStorage.getItem('isAdmin');
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const { id } = useParams();

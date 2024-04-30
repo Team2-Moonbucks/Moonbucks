@@ -27,8 +27,7 @@ function CoffeeModifyForm() {
 			id: id,
 			coffeeName: coffee.coffeeName,
 			coffeePrice: coffee.coffeePrice,
-			categoryName: '한식',
-			isOrderable: coffee.isOrderable,
+			categoryName: '커피',
 			detail: {
 				description: coffee.detail.description,
 				image: coffee.detail.image
@@ -125,19 +124,9 @@ function CoffeeModifyForm() {
 			<br />
 			<label>카테고리 : </label>
 			<select name="categoryName" value={modifyCoffee.categoryName} onChange={onChangeHandler}>
-				<option>한식</option>
-				<option>일식</option>
-				<option>서양</option>
-				<option>동양</option>
 				<option>커피</option>
-				<option>쥬스</option>
-				<option>기타</option>
-			</select>
-			<br />
-			<label>판매 여부 : </label>
-			<select name="isOrderable" value={modifyCoffee.isOrderable} onChange={onChangeHandler}>
-				<option value="true">판매 가능</option>
-				<option value="false">판매 불가</option>
+				<option>차</option>
+				<option>블렌디드</option>
 			</select>
 			<br />
 			<label>설명 : </label>
