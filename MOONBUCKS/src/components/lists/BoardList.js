@@ -4,13 +4,19 @@ import BoardItem from '../items/BoardItem';
 import { callGetBoardListAPI } from "../../apis/BoardAPICalls";
 
 
-function BoardList() {
+function BoardList({ title, searchTerm }) {
 
 	const result = useSelector(state => state.boardReducer);
-	const boardList = result.boardlist;
+	const boardList = result.boardlist || [];
 	const dispatch = useDispatch();
 
 	console.log('boardList : ', boardList);
+
+	useEffect(() => {
+        if (boardList.length === 0) { // 데이터가 없을 경우 API 호출
+            dispatch(callGetBoardListAPI());
+        }
+    }, [dispatch]);
 
 	useEffect(
 		() => {
@@ -19,6 +25,11 @@ function BoardList() {
 		},
 		[]
 	);
+
+	const filteredBoardList = boardList.filter(board => 
+        (title === '전체' || board.title === title) &&
+        board.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
 
 	return (
@@ -30,10 +41,16 @@ function BoardList() {
 					<li>작성자</li>
 					<li>작성일자</li>
 				</ul>
-				{boardList.map(board => <BoardItem key={board.id} board={board} />)}
+				{filteredBoardList.length > 0 ? (
+					filteredBoardList.map(board => <BoardItem key={board.title} board={board} />)
+				) : (
+					<p>해당 제목의 게시글이 없습니다.</p>
+				)}
 			</div>
 		)
+	
 	);
 }
+	
 
 export default BoardList;
