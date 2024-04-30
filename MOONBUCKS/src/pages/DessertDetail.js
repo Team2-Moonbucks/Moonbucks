@@ -30,14 +30,15 @@ function DessertDetail() {
 	);
 
 	return (
-		<div>
+		<div className="pageTitle">
 			<h1>메뉴 상세</h1>
+			<hr/>
 			<h1>
 				{ /* 로그인 된 상황에만 button이 보이도록 조건부 랜더링 */}
 				{(isAdmin) &&
 					<>
-						<button onClick={updateHandler}>메뉴 수정</button>
-						<button onClick={deleteHandler}>메뉴 삭제</button>
+						<button className="modifyBtn" onClick={updateHandler}>메뉴 수정</button>
+						<button className="deleteBtn" onClick={deleteHandler}>메뉴 삭제</button>
 					</>
 				}
 			</h1>

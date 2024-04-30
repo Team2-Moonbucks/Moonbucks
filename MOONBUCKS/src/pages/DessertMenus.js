@@ -28,15 +28,15 @@ function DessertMenus() {
     }, [dispatch]);
 
     return (
-        <div>
-            <h1> 분류보기 {isAdmin && <button onClick={() => navigate(`/dessert/regist`)}>메뉴 추가</button>} </h1>
+        <div className="pageTitle dessertTitle">
+            <h1> 디저트 {isAdmin && <button className='dessertRegistBtn' onClick={() => navigate(`/dessert/regist`)}>메뉴 추가</button>} </h1>
             <div>
-                <button className={category === '전체보기' ? 'active' : ''} onClick={() => handleCategoryChange('전체보기')}>전체보기</button>
-                <button className={category === '브레드' ? 'active' : ''} onClick={() => handleCategoryChange('브레드')}>브레드</button>
-                <button className={category === '케이크' ? 'active' : ''} onClick={() => handleCategoryChange('케이크')}>케이크</button>
-                <button className={category === '샌드위치' ? 'active' : ''} onClick={() => handleCategoryChange('샌드위치')}>샌드위치</button>
+                <button className={`${(category === '전체보기' ? 'active' : '')} TotalBtn` } onClick={() => handleCategoryChange('전체보기')}>전체보기</button>
+                <button className={`${(category === '브레드' ? 'active' : '')} breadBtn` } onClick={() => handleCategoryChange('브레드')}>브레드</button>
+                <button className={`${(category === '케이크' ? 'active' : '')} cakeBtn`} onClick={() => handleCategoryChange('케이크')}>케이크</button>
+                <button className={`${(category === '샌드위치' ? 'active' : '')} sandwitchBtn`} onClick={() => handleCategoryChange('샌드위치')}>샌드위치</button>
             </div>
-           
+        
             <DessertList category={category}/>
         </div>
     );

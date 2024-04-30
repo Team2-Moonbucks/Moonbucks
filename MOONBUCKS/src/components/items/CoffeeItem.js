@@ -6,13 +6,9 @@ function CoffeeItem( {coffee} ) {
 
 	return (
 		<Link to={`/coffee/${coffee.id}`}>
-			<div className='CoffeeItem'>
-               <img src={coffee.detail.image} alt={coffee.coffeeName}/>
-            </div>
-			<div className="coffeeItem">
-				<h3> {coffee.coffeeName}</h3>
-				
-				
+			<div className='coffeeItem'>
+				<img src={coffee.detail.image} alt={coffee.coffeeName}/>
+				<h3> {coffee.coffeeName}</h3>			
 			</div>
 		</Link>
 	);

@@ -31,6 +31,23 @@
 	box-sizing: border-box;
 }
 
+.pageTitle textarea{
+	width: 100%;
+	height: 150px;
+	resize: none;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+
+
 .pageTitle h1{
 	text-align: left;
 	font-size: 24px;
@@ -51,6 +68,8 @@
 	top: 30px;
 	color: var(--back-color);
 	background-color: white;
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .pageTitle .modifyBtn{
@@ -60,6 +79,7 @@
 .pageTitle button:hover{
 	background-color: #2f4485;
 	color: white;
+
 }
 
 .DetailBox {
@@ -104,6 +124,7 @@
 	font-family: var(--Gmartket);
 	border-top-right-radius: 30px;
 	border-bottom-left-radius: 30px;
+	transition: background-color 0.4s ease;
 }
 
 .TotalItem:hover {
@@ -123,15 +144,38 @@
 }
 
 .DetailBox > table{
+	width: 50%;
+	min-width: 700px;
 	margin: 0 auto;
 	color: rgba(255, 255, 255, 0.7) !important;
 	font-weight: 100;
+	word-break: keep-all;
 }
+
 
 .DetailBox > table > tbody > tr > td{
 	vertical-align: top;
 	
 }
+
+.DetailBox > table > tbody > tr > .tdimg{
+	width: 100%;
+	height: 300px;
+	text-align: center !important;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+}
+
+tr.space {
+	border-bottom: 30px solid transparent;
+  }
+
+.DetailBox img {
+	height: 80%;
+	margin-top: 30px;
+}
+
+
 
 .TotalItem > table > tbody > tr > td{
 	vertical-align: top !important;
@@ -152,9 +196,10 @@
 .DetailBox span {
 	display: inline-block;
 	width: 80px;
-	color: white;
-	text-align: justify;
-	
+	font-weight: 500;
+	color: white !important;
+	text-align: justify !important;
+	text-align-last: justify;
 }
 
 .TotalItem span{
@@ -224,6 +269,7 @@ a {
 	cursor: pointer;
 	color: white;
 	padding: 5px;
+	transition: background-color 0.4s ease;
 }
 
 .menuItem:hover {
@@ -318,6 +364,8 @@ a {
 	height: 40px;
 	line-height: 40px;
 	font-size: 18px;
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .navbar-me-auto li a:hover {
@@ -360,6 +408,8 @@ a {
 	border-radius: 25px;
 	font-family: var(--Gmartket);
 	border: none;
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .mainCSS button:hover {
@@ -417,6 +467,8 @@ a {
 .toMain{
 	border: 1px solid var(--back-color) !important;
 	color: var(--back-color);
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 
 }
 
@@ -428,6 +480,8 @@ a {
 .toBack{
 	color: white;
 	background-color: var(--back-color);
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .toBack:hover{
@@ -452,7 +506,7 @@ a {
 	color: #eee;
 }
 
-.formTotal input{
+.formTotal input[type="text"]{
 	width: 100%;
 	margin-top: 5px;
 	border: 1px solid rgba(255, 255, 255, 0.8);
@@ -464,12 +518,63 @@ a {
 	padding-left: 10px;
 }
 
+.formTotal input[type="password"]{
+	width: 100%;
+	margin-top: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	background-color: rgba(255, 255, 255, 0.8);
+	caret-color: var(--back-color);
+	padding-left: 10px;
+}
+
+.formTotal input[type="number"]{
+	width: 100%;
+	margin-top: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	background-color: rgba(255, 255, 255, 0.8);
+	caret-color: var(--back-color);
+	padding-left: 10px;
+}
+
+.formTotal input[type="file"]{
+	margin-top: 5px;
+}
+
 .formTotal input:focus{
 	outline: none;
 	background-color: var(--back-color);
 	color: white;
 	caret-color: white;
 	
+}
+
+.formTotal textarea{
+	margin-top: 5px;
+	padding: 15px;
+	word-break: keep-all;
+
+}
+
+input[type=file]::file-selector-button {
+	background-color: white;
+	border-radius: 5px;
+	border: none;
+	height: 30px;
+	width: 90px;
+	margin-right: 15px;
+}
+
+.formTotal textarea:focus{
+	outline: none;
+	background-color: var(--back-color);
+	color: white;
+	caret-color: white;
 	
 }
 
@@ -516,4 +621,298 @@ a {
 	height: 400px;
 	position:relative;
 	overflow:hidden;
+}
+
+
+/* Dessert.js */
+
+.dessertBox,
+.coffeeBox,
+.shopBox {
+	width: 100%;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: stretch;
+	margin-top: 30px !important;
+}
+
+.dessertBox div,
+.coffeeBox div{
+	margin-bottom: 5px;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+.dessertBox a,
+.coffeeBox a{
+	width: calc(100%/4 - 20px);
+	min-width: 300px;
+	height: 250px;
+	display: flex;
+	margin-bottom: 15px;
+
+}
+
+.dessertItem,
+.coffeeItem{
+
+	width: calc(100%/2 - 10px);
+	flex-basis: 300px;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+	color: var(--back-color);
+	padding: 30px 10px 0px 15px;
+	flex-grow: 1;
+	word-break: keep-all;
+	font-family: var(--Gmartket);
+	border-top-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	transition: background-color 0.4s ease;
+}
+
+.dessertItem:hover,
+.coffeeItem:hover{
+	background-color: white;
+}
+
+.dessertItem img,
+.coffeeItem img{
+	height: 70%;
+}
+
+
+.dessertItem h3,
+.coffeeItem h3{
+	font-size: 1.2em;
+	font-weight: 200;
+}
+
+.pageTitle button{
+	font-family: var(--Gmartket);
+	top: 27px;
+}
+
+.dessertTitle button{
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.shopTitle button{
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.pageTitle .dessertRegistBtn{
+	left: 150px;
+	top: 27px;
+}
+
+.pageTitle .coffeeRegistBtn{
+	left: 150px;
+	top: 27px;
+}
+
+.pageTitle .TotalBtn{
+	right: calc(140px * 3 + 30px);
+}
+
+.pageTitle .breadBtn{
+	right: calc(140px * 2 + 30px);
+}
+.pageTitle .cakeBtn{
+	right: calc(140px * 1 + 30px);
+	
+}
+.pageTitle .sandwitchBtn{
+	right: calc(120px * 0 + 30px);
+	
+}
+
+.pageTitle .coffeeBtn{
+	right: calc(140px * 2 + 30px);
+}
+.pageTitle .teaBtn{
+	right: calc(140px * 1 + 30px);
+	
+}
+.pageTitle .blendedBtn{
+	right: calc(120px * 0 + 30px);
+	
+}
+
+.pageTitle p{
+	margin-top: 5px;
+	font-size: 20px;
+}
+
+.searchBox {
+	position: relative;
+}
+
+.searchBox input[type="search"]{
+	width: 38%;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	background-color: rgba(255, 255, 255, 0.8);
+	caret-color: var(--back-color);
+	padding-left: 10px;
+}
+
+.searchBox input:focus{
+	outline: none;
+	background-color: var(--back-color);
+	color: white;
+	caret-color: white;
+	
+}
+
+.searchBtn{
+	position: absolute;
+	top: -2px !important;
+	left: 70%;
+}
+
+.pageTitle .active{
+	background-color: white;
+}
+
+
+/* board CSS */
+.boardItem {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.boardItem ul{
+	overflow: hidden;
+	width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
+}
+
+.boardItem ul:hover{
+	background-color: white;
+	color: var(--back-color);
+}
+
+.boardItem ul li{
+	float: left;
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	height: 100%;
+}
+
+.boardBox > ul{
+	width: 80%;
+	padding: 0 !important;
+	
+}
+
+.boardBox a{
+	height: 45px !important;
+	width: 60% !important; 
+}
+
+.boardBox > ul > li{
+	height: 45px;
+	line-height: 45px;
+	font-size: 1em;
+	border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.boardItem ul li:nth-child(1),
+.boardBox ul li:nth-child(1)
+{
+	width: 30%;
+}
+.boardItem ul li:nth-child(2),
+.boardBox ul li:nth-child(2){
+	width: 30%;
+}
+.boardItem ul li:nth-child(3),
+.boardBox ul li:nth-child(3){
+	width: 10%;
+}
+.boardItem ul li:nth-child(4),
+.boardBox ul li:nth-child(4){
+	width: 30%;
+}
+
+.boardBox .a{
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
+}
+
+.boardBox .a:hover{
+	background-color: white !important;
+	color: var(--back-color) ;
+}
+
+.BoardBox{
+	margin: 0 auto;
+}
+
+/* Login.js */
+
+.loginCSS h1{
+	padding-top: 20px;
+}
+
+.loginForm{
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.loginForm table{
+	margin: 0 auto;
+}
+
+.loginForm table label{
+	font-family: var(--Gmartket);
+	margin-right: 10px;
+	font-size: 20px;
+	margin-top: 3px;
+}
+
+.loginForm table button {
+	width: 100px;
+	margin-top: 3px;
+	height: 67px;
+	font-family: var(--Gmartket);
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	transition: color 0.4s ease;
+	transition: background-color 0.4s ease;
+	margin-left: 3px;
+}
+
+.loginForm table button:hover{
+	background-color: #2f4485;
+	color: white;
+}
+
+.loginForm input{
+	width: 100%;
+	margin-top: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	background-color: rgba(255, 255, 255, 0.8);
+	caret-color: var(--back-color);
+	padding-left: 10px;
+	transition: background-color 0.4s ease;
+}
+
+.loginForm input:focus{
+	outline: none;
+	background-color: var(--back-color);
+	color: white;
+	caret-color: white;
 }

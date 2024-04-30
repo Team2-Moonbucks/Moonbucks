@@ -38,16 +38,19 @@ function CoffeeMenu() {
     });
 
     return (
-        <div>
-            <h1>분류 보기 {(isAuthorized) && <button onClick={() => navigate(`/coffee/regist`)}>메뉴 추가</button>}</h1>
-            <button style={buttonStyle('전체')} onClick={() => handleCategoryChange('전체')}>전체보기</button>
-            <button style={buttonStyle('커피')} onClick={() => handleCategoryChange('커피')}>커피</button>
-            <button style={buttonStyle('차')} onClick={() => handleCategoryChange('차')}>티</button>
-            <button style={buttonStyle('블렌디드')} onClick={() => handleCategoryChange('블렌디드')}>블렌디드</button>
-            <input type="search" placeholder='검색어를 입력하세요.' value={searchTerm} onChange={handleSearchChange}></input>
-            <button onClick={handleSearch}>검색</button>
+        <div className="pageTitle dessertTitle">
+            <h1>음료 {(isAuthorized) && <button className='coffeeRegistBtn' onClick={() => navigate(`/coffee/regist`)}>메뉴 추가</button>}</h1>
+            <button className={`${(category === '전체' ? 'active' : '')} TotalBtn` } onClick={() => handleCategoryChange('전체')}>전체보기</button>
+            <button className={`${(category === '커피' ? 'active' : '')} coffeeBtn` }  onClick={() => handleCategoryChange('커피')}>커피</button>
+            <button className={`${(category === '차' ? 'active' : '')} teaBtn` }  onClick={() => handleCategoryChange('차')}>티</button>
+            <button className={`${(category === '블렌디드' ? 'active' : '')} blendedBtn` }  onClick={() => handleCategoryChange('블렌디드')}>블렌디드</button>
+            <div className='searchBox'>
+                <input type="search" placeholder='검색어를 입력하세요.' value={searchTerm} onChange={handleSearchChange}></input>
+                <button className='searchBtn' onClick={handleSearch}>검색</button>
+            </div>
+                {searchPerformed && <p>"{activeSearchTerm}" 검색 결과입니다.</p>}
 
-            {searchPerformed && <p>"{activeSearchTerm}" 검색 결과입니다.</p>}
+                
 
             <CoffeeList category={category} searchTerm={activeSearchTerm} searchTriggered={searchPerformed}/>
         </div>

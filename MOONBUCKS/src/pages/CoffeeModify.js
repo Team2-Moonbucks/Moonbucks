@@ -11,10 +11,11 @@ function CoffeeModify() {
 	}
 
 	return (
-		<>
+		<div className='pageTitle'>
 			<h1>메뉴 수정 페이지</h1>
+			<hr/>
 			<CoffeeModifyForm />
-		</>
+		</div>
 	);
 }
 

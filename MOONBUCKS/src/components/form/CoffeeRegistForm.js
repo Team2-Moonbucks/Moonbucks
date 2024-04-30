@@ -142,24 +142,24 @@ function CoffeeRegistForm() {
 	}
 
 	return (
-		<>
-			<label>메뉴 이름 : </label>
+		<div className='formTotal'>
+			<label>메뉴 이름</label><br/>
 			<input type="text" name="coffeeName" value={registCoffee.coffeeName} onChange={onChangeHandler} />
 			<br />
-			<label>메뉴 가격 : </label>
+			<label>메뉴 가격</label><br/>
 			<input type="number" name="coffeePrice" value={registCoffee.coffeePrice} onChange={onChangeHandler} />
 			<br />
-			<label>카테고리 : </label>
+			<label>카테고리</label><br/>
 			<select name="categoryName" value={registCoffee.categoryName} onChange={onChangeHandler}>
 				<option>커피</option>
 				<option>차</option>
 				<option>블렌디드</option>
 			</select>
 			<br />
-			<label>설명 : </label>
+			<label>설명</label><br/>
 			<textarea name="description" value={registCoffee.detail.description} onChange={onChangeHandler}></textarea>
 			<br />
-			<label>사진 : </label>
+			<label>사진</label><br/>
 			<input
 				type="file"
 				name="image"
@@ -167,7 +167,7 @@ function CoffeeRegistForm() {
 				onChange={fileChangeHandler} />
 			<br />
 			<button onClick={onClickHandler}>메뉴 등록</button>
-		</>
+		</div>
 	);
 }
 
