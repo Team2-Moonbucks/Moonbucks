@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function BoardPage() {
 
-	const isAuthorized = !!localStorage.getItem('isLogin');
+	const isLogin = !!localStorage.getItem('isLogin');
 
 	/* 관리자 로그인 상태 확인 */
 	const isAdmin = !!localStorage.getItem('isAdmin');
