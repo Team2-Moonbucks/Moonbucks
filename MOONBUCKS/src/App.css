@@ -602,23 +602,26 @@ input[type=file]::file-selector-button {
 
 /* Dessert.js */
 
-.dessertBox {
+.dessertBox,
+.coffeeBox {
 	width: 100%;
 	display: inline-flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-content: stretch;
-	margin-top: 15px !important;
+	margin-top: 30px !important;
 }
 
-.dessertBox div{
+.dessertBox div,
+.coffeeBox div{
 	margin-bottom: 5px;
 	font-size: 16px;
 	box-sizing: border-box;
 }
 
-.dessertBox a{
+.dessertBox a,
+.coffeeBox a{
 	width: calc(100%/4 - 20px);
 	min-width: 300px;
 	height: 250px;
@@ -627,7 +630,8 @@ input[type=file]::file-selector-button {
 
 }
 
-.dessertItem {
+.dessertItem,
+.coffeeItem{
 
 	width: calc(100%/2 - 10px);
 	flex-basis: 300px;
@@ -643,15 +647,19 @@ input[type=file]::file-selector-button {
 	border-bottom-left-radius: 30px;
 }
 
-.dessertItem:hover {
+.dessertItem:hover,
+.coffeeItem:hover{
 	background-color: white;
 }
 
-.dessertItem img{
+.dessertItem img,
+.coffeeItem img{
 	height: 70%;
 }
 
-.dessertItem h3{
+
+.dessertItem h3,
+.coffeeItem h3{
 	font-size: 1.2em;
 	font-weight: 200;
 }
@@ -666,6 +674,11 @@ input[type=file]::file-selector-button {
 }
 
 .pageTitle .dessertRegistBtn{
+	left: 150px;
+	top: 27px;
+}
+
+.pageTitle .coffeeRegistBtn{
 	left: 150px;
 	top: 27px;
 }
@@ -685,8 +698,58 @@ input[type=file]::file-selector-button {
 	right: calc(120px * 0 + 30px);
 	
 }
+
+.pageTitle .coffeeBtn{
+	right: calc(140px * 2 + 30px);
+}
+.pageTitle .teaBtn{
+	right: calc(140px * 1 + 30px);
+	
+}
+.pageTitle .blendedBtn{
+	right: calc(120px * 0 + 30px);
+	
+}
+
+.pageTitle p{
+	margin-top: 5px;
+	font-size: 20px;
+}
+
+.searchBox {
+	position: relative;
+}
+
+.searchBox input[type="search"]{
+	width: 38%;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	background-color: rgba(255, 255, 255, 0.8);
+	caret-color: var(--back-color);
+	padding-left: 10px;
+}
+
+.searchBox input:focus{
+	outline: none;
+	background-color: var(--back-color);
+	color: white;
+	caret-color: white;
+	
+}
+
+.searchBtn{
+	position: absolute;
+	top: -2px !important;
+	left: 70%;
+}
+
 .pageTitle .active{
 	background-color: white;
 }
+
+
+
 
 

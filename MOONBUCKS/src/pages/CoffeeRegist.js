@@ -12,10 +12,11 @@ function CoffeeRegist() {
 	}
 
 	return (
-		<>
+		<div className='pageTitle'>
 			<h1>메뉴 등록 페이지</h1>
+			<hr/>
 			<CoffeeRegistForm />
-		</>
+		</div>
 	);
 }
 
