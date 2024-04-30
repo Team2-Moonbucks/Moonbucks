@@ -6,21 +6,21 @@ const initialState = {};
 /* Action Types (User) */									// 타입 별 생성되는 액션 함수 이름(LARGE_SNAKE_CASE -> camelCase)
 export const LOGIN = 'user/LOGIN';							// -> login()
 export const RESET_LOGIN_USER = 'user/RESET_LOGIN_USER';	// -> resetLoginUser()
-const GET_MENULIST = 'user/GET_MENULIST';		// -> getUserlist()
-const GET_MENU = 'user/GET_MENU';				// -> getUser()
-const REGIST_MENU = 'user/REGIST_MENU';			// -> registUser()
-const MODIFY_MENU = 'user/MODIFY_MENU';			// -> modifyUser()
-const DELETE_MENU = 'user/DELETE_MENU';			// -> deleteUser()
+const GET_USERLIST = 'user/GET_USERLIST';		// -> getUserlist()
+const GET_USER = 'user/GET_USER';				// -> getUser()
+const REGIST_USER = 'user/REGIST_USER';			// -> registUser()
+const MODIFY_USER = 'user/MODIFY_USER';			// -> modifyUser()
+const DELETE_USER = 'user/DELETE_USER';			// -> deleteUser()
 
 /* Action Functions (User) */
 export const { user: { login, resetLoginUser, getUserlist, getUser, registUser, modifyUser, deleteUser } } = createActions({
 	[LOGIN]: (res) => ({ res }),
 	[RESET_LOGIN_USER]: (res = initialState) => ({ res }),
-	[GET_MENULIST]: (res) => ({ userlist: res }),
-	[GET_MENU]: (res) => ({ user: res }),
-	[REGIST_MENU]: (res) => ({ regist: res }),
-	[MODIFY_MENU]: (res) => ({ modify: res }),
-	[DELETE_MENU]: (res) => ({ delete: res }),
+	[GET_USERLIST]: (res) => ({ userlist: res }),
+	[GET_USER]: (res) => ({ user: res }),
+	[REGIST_USER]: (res) => ({ regist: res }),
+	[MODIFY_USER]: (res) => ({ modify: res }),
+	[DELETE_USER]: (res) => ({ delete: res }),
 });
 
 /* Reducer (User) */
@@ -59,19 +59,19 @@ const userReducer = handleActions(
 			return res;
 
 		},
-		[GET_MENULIST]: (state, { payload }) => {
+		[GET_USERLIST]: (state, { payload }) => {
 			return payload;
 		},
-		[GET_MENU]: (state, { payload }) => {
+		[GET_USER]: (state, { payload }) => {
 			return payload;
 		},
-		[REGIST_MENU]: (state, { payload }) => {
+		[REGIST_USER]: (state, { payload }) => {
 			return payload;
 		},
-		[MODIFY_MENU]: (state, { payload }) => {
+		[MODIFY_USER]: (state, { payload }) => {
 			return payload;
 		},
-		[DELETE_MENU]: (state, { payload }) => {
+		[DELETE_USER]: (state, { payload }) => {
 			return payload;
 		}
 	},
