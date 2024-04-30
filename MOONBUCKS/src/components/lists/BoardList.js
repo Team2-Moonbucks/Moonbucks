@@ -24,6 +24,12 @@ function BoardList() {
 	return (
 		boardList && (
 			<div className="boardBox">
+				<ul>
+					<li>제목</li>
+					<li>내용</li>
+					<li>작성자</li>
+					<li>작성일자</li>
+				</ul>
 				{boardList.map(board => <BoardItem key={board.id} board={board} />)}
 			</div>
 		)

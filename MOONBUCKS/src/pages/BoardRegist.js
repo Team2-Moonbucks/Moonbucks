@@ -21,8 +21,9 @@ function BoardRegist() {
     };
 
     return (
-        <div>
+        <div className='pageTitle'>
             <h1>게시물 등록</h1>
+            <hr/>
             <BoardRegistForm />
         </div>
     );

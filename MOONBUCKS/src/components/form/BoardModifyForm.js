@@ -38,6 +38,7 @@ function BoardModifyForm() {
 			if(board){
 				setModifyBoard(
 					{
+						...board,
 						id: id,
 						title: board.title,
 						content: board.content,
@@ -67,27 +68,13 @@ function BoardModifyForm() {
 		let name = e.target.name;
 		let value = e.target.value;
 
-		/* json-server에 저장될 데이터 타입 맞추기 위한 코드 */
-		// switch (name) {
-		// 	case 'boardPrice':
-		// 		value = parseInt(value);
-		// 		break;
-		// 	case 'isOrderable':
-		// 		value = !!value;
-		// 		break;
-		// 	case 'description':
-		// 		name = 'detail';
-		// 		value = {
-		// 			description: value,
-		// 			image: modifyBoard.detail.image
-		// 		};
-		// 		break;
-		// }
+		const currentDateTime = new Date().toLocaleString();
 
 		setModifyBoard(
 			{
 				...modifyBoard,
 				id: id,
+				date: currentDateTime,
 				[name]: value
 			}
 		);
@@ -131,19 +118,20 @@ function BoardModifyForm() {
 	}
 
 	return (
-		<>
+		<div className='formTotal'>
 			<h1>{id}번 게시글 수정</h1>
-			<label>게시글 제목 : </label>
+			<label>게시글 제목</label><br/>
 			<input type="text" name="title" value={modifyBoard.title} onChange={onChangeHandler} />
 			<br />
-			<label>내용 : </label>
+			<label>작성자</label><br/>
+			<input type="text" name="author" value={modifyBoard.author} onChange={onChangeHandler} />
+			<label>작성일</label><br/>
+			<input type="text" name="author" readOnly={true} value={modifyBoard.date} onChange={onChangeHandler} />
+			<label>내용</label><br/>
 			<textarea name="content" value={modifyBoard.content} onChange={onChangeHandler}></textarea>
 			<br />
-			<label>작성자 : </label>
-			<input type="text" name="author" value={modifyBoard.author} onChange={onChangeHandler} />
-			<br />
 			<button onClick={onClickHandler}>게시글 수정</button>
-		</>
+		</div>
 	)
 }
 

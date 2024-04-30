@@ -18,11 +18,28 @@ function Board({ id }) {
 
 	return (
 		board && (
-			<>
-				<h3>제목 : {board.title}</h3>
-				<h3>내용 : {board.content}</h3>
-				<h4>작성자 : {board.author}</h4>
-			</>
+			<div className='DetailBox BoardBox'>
+				<table>
+					<tbody>
+						<tr>
+							<td><span>제목</span>|</td>
+							<td>{board.title}</td>
+						</tr>
+						<tr>
+							<td><span>작성자</span>|</td>
+							<td>{board.date}</td>
+						</tr>
+						<tr>
+							<td><span>작성일</span>|</td>
+							<td>{board.author}</td>
+						</tr>
+						<tr>
+							<td><span>내용</span>|</td>
+							<td>{board.content}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		)
 	);
 }

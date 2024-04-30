@@ -750,6 +750,72 @@ input[type=file]::file-selector-button {
 }
 
 
+/* board CSS */
+.boardItem {
+	margin: 0 auto;
+	width: 80%;
+}
 
+.boardItem ul{
+	overflow: hidden;
+	width: 100%;
+	height: 45px;
+	margin: 0 !important;
+	padding: 0 !important;
+}
 
+.boardItem ul:hover{
+	background-color: white;
+	color: var(--back-color);
+}
 
+.boardItem ul li{
+	float: left;
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	height: 100%;
+}
+
+.boardBox > ul{
+	width: 80%;
+	padding: 0 !important;
+	
+}
+
+.boardBox a{
+	height: 45px !important;
+	width: 60% !important; 
+}
+
+.boardBox > ul > li{
+	height: 45px;
+	line-height: 45px;
+	font-size: 1em;
+	border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.boardItem ul li:nth-child(1),
+.boardBox ul li:nth-child(1)
+{
+	width: 20%;
+}
+.boardItem ul li:nth-child(2),
+.boardBox ul li:nth-child(2){
+	width: 40%;
+}
+.boardItem ul li:nth-child(3),
+.boardBox ul li:nth-child(3){
+	width: 10%;
+}
+.boardItem ul li:nth-child(4),
+.boardBox ul li:nth-child(4){
+	width: 30%;
+}
+
+.boardBox .a:hover{
+	background-color: white !important;
+	color: var(--back-color) ;
+}
+
+.BoardBox{
+	margin: 0 auto;
+}

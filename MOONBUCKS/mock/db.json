@@ -2791,10 +2791,10 @@
   "board": [
     {
       "id": "2",
-      "title": "두 번째 게시물",
+      "title": "두 번째 게시물(수정)",
       "content": "내용입니다.",
       "author": "작성자",
-      "date": "202404301154"
+      "date": "2024. 4. 30. 오후 4:27:48"
     },
     {
       "id": "3",
@@ -2825,23 +2825,25 @@
       "date": "202404301154"
     },
     {
-      "id": "6",
-      "title": "2",
-      "content": "ㄹ",
-      "author": "",
-      "date": "202404301154"
-    },
-    {
       "id": "7",
-      "title": "테스트",
+      "title": "테스트1",
       "content": "테스트 수정2",
-      "author": "관리자"
+      "author": "관리자",
+      "date": "2024. 4. 30. 오후 4:29:39"
     },
     {
       "id": "9",
-      "title": "테테테",
-      "content": "테테테테",
-      "author": "관리자"
+      "title": "Test",
+      "content": "Test",
+      "author": "관리자",
+      "date": "2024. 4. 30. 오후 4:29:58"
+    },
+    {
+      "id": "8",
+      "title": "user01",
+      "content": "dkfklsdfjslkdfjklejgklsjglksdjfsdlfsd",
+      "author": "유저01",
+      "date": "2024. 4. 30. 오후 4:33:51"
     }
   ]
 }

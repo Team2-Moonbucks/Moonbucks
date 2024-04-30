@@ -140,18 +140,18 @@ function BoardRegistForm() {
 	}
 
 	return (
-		<>
-			<label>게시글 제목 : </label>
+		<div className='formTotal'>
+			<label>게시글 제목</label><br/>
 			<input type="text" name="title" value={registBoard.title} onChange={onChangeHandler} />
 			<br />
-			<label>내용 : </label>
+			<label>내용</label><br/>
 			<textarea name="content" value={registBoard.content} onChange={onChangeHandler}></textarea>
 			<br />
-			<label>작성자 : </label>
-			<input type="text" name="author" value={registBoard.author} onChange={onChangeHandler} />
+			<label>작성자</label><br/>
+			<input type="text" name="author" readOnly={true} value={registBoard.author} onChange={onChangeHandler} />
 			<br />
 			<button onClick={onClickHandler}>게시글 등록</button>
-		</>
+		</div>
 	);
 }
 

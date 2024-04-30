@@ -7,7 +7,7 @@ function CoffeeItem( {coffee} ) {
 	return (
 		<Link to={`/coffee/${coffee.id}`}>
 			<div className='coffeeItem'>
-            	<img src={coffee.detail.image} alt={coffee.coffeeName}/>
+				<img src={coffee.detail.image} alt={coffee.coffeeName}/>
 				<h3> {coffee.coffeeName}</h3>			
 			</div>
 		</Link>

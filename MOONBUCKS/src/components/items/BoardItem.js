@@ -5,10 +5,12 @@ function BoardItem({ board }) {
 	return (
 		<Link to={`/board/${board.id}`}>
 			<div className="boardItem">
-				<h3>제목 : {board.title}</h3>
-				<h3>내용 : {board.content}</h3>
-				<h4>작성자 : {board.author}</h4>
-				<h4>작성일 : {board.date}</h4>
+				<ul>
+					<li>{board.title}</li>
+					<li>{board.content}</li>
+					<li>{board.author}</li>
+					<li>{board.date}</li>
+				</ul>
 			</div>
 		</Link>
 	);

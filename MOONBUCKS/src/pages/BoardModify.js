@@ -14,10 +14,11 @@ function BoardModify() {
 	}
 
 	return (
-		<>
+		<div className='pageTitle'>
 			<h1>게시글 수정 페이지</h1>
+			<hr/>
 			<BoardModifyForm />
-		</>
+		</div>
 	);
 }
 
