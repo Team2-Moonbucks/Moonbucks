@@ -30,16 +30,13 @@ import DessertDetail from './pages/DessertDetail';
 import DessertRegist from './pages/DessertRegist';
 import DessertModify from './pages/DessertModify';
 
-<<<<<<< HEAD
 import MyMoonBucks from './pages/MyMoonBucks';
 
 // import Mymoonbu
-=======
 import BoardPage from './pages/BoardPage';
 import BoardRegist from './pages/BoardRegist';
 import BoardDetail from './pages/BoardDetail';
 import BoardModify from './pages/BoardModify';
->>>>>>> 5386687 (add: 게시판 기능 구현)
 
 
 /* 추가 설치해야 하는 패키지 목록
