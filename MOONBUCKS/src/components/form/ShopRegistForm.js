@@ -11,6 +11,7 @@ function ShopRegistForm() {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const shopList = result.shoplist;
+	const nameCaution = document.getElementById('nameCaution');
 
 	if(shopList){
 		const shopNameValue = document.getElementById('shopName').value;
@@ -130,7 +131,15 @@ function ShopRegistForm() {
 
 	useEffect(
 		() => {
-			dispatch(callGetShoplistAPI());
+			if(nameCaution.innerHTML == '  * 사용가능한 매장명입니다.'){
+				dispatch(callGetShoplistAPI());
+			}else if(nameCaution.innerHTML == '  * 중복된 매장명입니다.'){
+				alert("중복된 매장명입니다. 다시 입력해주세요");
+				document.getElementById('shopName').focus();
+			}else{
+				alert("매장명은 반드시 작성해야합니다.");
+				document.getElementById('shopName').focus();
+			}
 		},
 		[]
 	)

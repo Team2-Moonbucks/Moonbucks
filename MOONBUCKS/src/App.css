@@ -68,6 +68,8 @@ input[type="number"]::-webkit-inner-spin-button{
 	top: 30px;
 	color: var(--back-color);
 	background-color: white;
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .pageTitle .modifyBtn{
@@ -122,6 +124,7 @@ input[type="number"]::-webkit-inner-spin-button{
 	font-family: var(--Gmartket);
 	border-top-right-radius: 30px;
 	border-bottom-left-radius: 30px;
+	transition: background-color 0.4s ease;
 }
 
 .TotalItem:hover {
@@ -266,6 +269,7 @@ a {
 	cursor: pointer;
 	color: white;
 	padding: 5px;
+	transition: background-color 0.4s ease;
 }
 
 .menuItem:hover {
@@ -360,6 +364,8 @@ a {
 	height: 40px;
 	line-height: 40px;
 	font-size: 18px;
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .navbar-me-auto li a:hover {
@@ -402,6 +408,8 @@ a {
 	border-radius: 25px;
 	font-family: var(--Gmartket);
 	border: none;
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .mainCSS button:hover {
@@ -459,6 +467,8 @@ a {
 .toMain{
 	border: 1px solid var(--back-color) !important;
 	color: var(--back-color);
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 
 }
 
@@ -470,6 +480,8 @@ a {
 .toBack{
 	color: white;
 	background-color: var(--back-color);
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .toBack:hover{
@@ -657,6 +669,7 @@ input[type=file]::file-selector-button {
 	font-family: var(--Gmartket);
 	border-top-right-radius: 30px;
 	border-bottom-left-radius: 30px;
+	transition: background-color 0.4s ease;
 }
 
 .dessertItem:hover,
@@ -777,6 +790,8 @@ input[type=file]::file-selector-button {
 	width: 100%;
 	margin: 0 !important;
 	padding: 0 !important;
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 .boardItem ul:hover{
@@ -826,6 +841,11 @@ input[type=file]::file-selector-button {
 	width: 30%;
 }
 
+.boardBox .a{
+	transition: background-color 0.4s ease;
+	transition: color 0.4s ease;
+}
+
 .boardBox .a:hover{
 	background-color: white !important;
 	color: var(--back-color) ;
@@ -833,4 +853,65 @@ input[type=file]::file-selector-button {
 
 .BoardBox{
 	margin: 0 auto;
+}
+
+/* Login.js */
+
+.loginCSS h1{
+	padding-top: 20px;
+}
+
+.loginForm{
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.loginForm table{
+	margin: 0 auto;
+}
+
+.loginForm table label{
+	font-family: var(--Gmartket);
+	margin-right: 10px;
+	font-size: 20px;
+	margin-top: 3px;
+}
+
+.loginForm table button {
+	width: 100px;
+	margin-top: 3px;
+	height: 67px;
+	font-family: var(--Gmartket);
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	transition: color 0.4s ease;
+	transition: background-color 0.4s ease;
+	margin-left: 3px;
+}
+
+.loginForm table button:hover{
+	background-color: #2f4485;
+	color: white;
+}
+
+.loginForm input{
+	width: 100%;
+	margin-top: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	background-color: rgba(255, 255, 255, 0.8);
+	caret-color: var(--back-color);
+	padding-left: 10px;
+	transition: background-color 0.4s ease;
+}
+
+.loginForm input:focus{
+	outline: none;
+	background-color: var(--back-color);
+	color: white;
+	caret-color: white;
 }

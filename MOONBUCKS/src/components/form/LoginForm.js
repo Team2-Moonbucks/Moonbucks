@@ -58,26 +58,35 @@ function LoginForm() {
 	);
 
 	return (
-		<>
-			<div>
-				<label>ID : </label>
-				<input
-					type="text"
-					name="id"
-					value={loginInfo.id}
-					onChange={onChangeHandler}
-				/>
-				&nbsp;&nbsp;&nbsp;
-				<label>PW : </label>
-				<input
-					type="password"
-					name="password"
-					value={loginInfo.password}
-					onChange={onChangeHandler}
-				/>
-				<button onClick={onClickHandler}>로그인</button>
-			</div>
-		</>
+		<div className='loginForm'>
+			<table>
+				<tbody>
+					<tr>
+						<td><label>ID</label></td>
+						<td><input
+							type="text"
+							name="id"
+							value={loginInfo.id}
+							onChange={onChangeHandler}
+							/>
+						</td>
+						<td rowSpan={3}><button onClick={onClickHandler}>로그인</button></td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td><label>PW</label></td>
+						<td><input
+							type="password"
+							name="password"
+							value={loginInfo.password}
+							onChange={onChangeHandler}
+							/>
+						</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	);
 }
 
