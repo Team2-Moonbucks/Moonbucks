@@ -23,6 +23,7 @@ import CoffeeMenu from './pages/CoffeeMenu';
 import CoffeeDetail from './pages/CoffeeDetail';
 import CoffeeRegist from './pages/CoffeeRegist';
 import CoffeeModify from './pages/CoffeeModify';
+import SignIn from './pages/SignIn';
 
 
 /* 추가 설치해야 하는 패키지 목록
@@ -56,6 +57,7 @@ function App() {
 
 					<Route path="login" element={<Login />} />
 					<Route path="main" element={<Main />} />
+					<Route path="signIn" element={<SignIn />} />
 
 
 					{/* shop route */}

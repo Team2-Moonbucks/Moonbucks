@@ -53,7 +53,7 @@ function Header() {
 								!isUser ? (
 									<>
 										<li><NavLink to='/login'>Login</NavLink></li>
-										<li><NavLink to="/">Sign In</NavLink></li>
+										<li><NavLink to="/signIn">Sign In</NavLink></li>
 									</>
 								) : (
 									<>
