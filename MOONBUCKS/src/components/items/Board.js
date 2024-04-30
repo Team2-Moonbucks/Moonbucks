@@ -27,11 +27,11 @@ function Board({ id }) {
 						</tr>
 						<tr>
 							<td><span>작성자</span>|</td>
-							<td>{board.date}</td>
+							<td>{board.author}</td>
 						</tr>
 						<tr>
 							<td><span>작성일</span>|</td>
-							<td>{board.author}</td>
+							<td>{board.date}</td>
 						</tr>
 						<tr>
 							<td><span>내용</span>|</td>

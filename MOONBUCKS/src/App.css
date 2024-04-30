@@ -506,6 +506,18 @@ a {
 	padding-left: 10px;
 }
 
+.formTotal input[type="password"]{
+	width: 100%;
+	margin-top: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30;
+	background-color: rgba(255, 255, 255, 0.8);
+	caret-color: var(--back-color);
+	padding-left: 10px;
+}
+
 .formTotal input[type="number"]{
 	width: 100%;
 	margin-top: 5px;
@@ -796,11 +808,11 @@ input[type=file]::file-selector-button {
 .boardItem ul li:nth-child(1),
 .boardBox ul li:nth-child(1)
 {
-	width: 20%;
+	width: 30%;
 }
 .boardItem ul li:nth-child(2),
 .boardBox ul li:nth-child(2){
-	width: 40%;
+	width: 30%;
 }
 .boardItem ul li:nth-child(3),
 .boardBox ul li:nth-child(3){

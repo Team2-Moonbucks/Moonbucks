@@ -8,9 +8,12 @@ function BoardModify() {
 
 	/* 관리자 로그인 상태 확인 */
 	const isAdmin = !!localStorage.getItem('isAdmin');
+	const isUser = !!localStorage.getItem('isUser');
 
 	if (!isAdmin) {
-		return <Navigate to="/login" replace={true} />
+		if(!isUser){
+			return <Navigate to="/login" replace={true} />
+		}
 	}
 
 	return (

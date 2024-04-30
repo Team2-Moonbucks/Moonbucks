@@ -124,7 +124,7 @@ function BoardModifyForm() {
 			<input type="text" name="title" value={modifyBoard.title} onChange={onChangeHandler} />
 			<br />
 			<label>작성자</label><br/>
-			<input type="text" name="author" value={modifyBoard.author} onChange={onChangeHandler} />
+			<input type="text" name="author" readOnly={true} value={modifyBoard.author} onChange={onChangeHandler} />
 			<label>작성일</label><br/>
 			<input type="text" name="author" readOnly={true} value={modifyBoard.date} onChange={onChangeHandler} />
 			<label>내용</label><br/>
