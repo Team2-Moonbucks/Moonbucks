@@ -4,11 +4,26 @@ import { useNavigate } from "react-router-dom";
 
 function CoffeeMenu() {
     const [category, setCategory] = useState('전체');
-    const isAuthorized = !!localStorage.getItem('isLogin');
+    const [searchTerm, setSearchTerm] = useState('');
+    const [activeSearchTerm, setActiveSearchTerm] = useState('');
+    const [searchPerformed, setSearchPerformed] = useState(false);
+    const isAuthorized = !!localStorage.getItem('isAdmin');
     const navigate = useNavigate();
 
     const handleCategoryChange = (newCategory) => {
         setCategory(newCategory);
+        setSearchTerm('');
+        setActiveSearchTerm('');
+        setSearchPerformed(false);
+    };
+
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handleSearch = () => {
+        setActiveSearchTerm(searchTerm);
+        setSearchPerformed(true);
     };
 
     const buttonStyle = (cat) => ({
@@ -29,10 +44,12 @@ function CoffeeMenu() {
             <button style={buttonStyle('커피')} onClick={() => handleCategoryChange('커피')}>커피</button>
             <button style={buttonStyle('차')} onClick={() => handleCategoryChange('차')}>티</button>
             <button style={buttonStyle('블렌디드')} onClick={() => handleCategoryChange('블렌디드')}>블렌디드</button>
-            <input type="search" placeholder='검색어를 입력하세요.'></input>
-            <button>검색</button>
+            <input type="search" placeholder='검색어를 입력하세요.' value={searchTerm} onChange={handleSearchChange}></input>
+            <button onClick={handleSearch}>검색</button>
 
-            <CoffeeList category={category} />
+            {searchPerformed && <p>"{activeSearchTerm}" 검색 결과입니다.</p>}
+
+            <CoffeeList category={category} searchTerm={activeSearchTerm} searchTriggered={searchPerformed}/>
         </div>
     );
 }

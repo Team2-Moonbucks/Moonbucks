@@ -30,6 +30,14 @@ import DessertDetail from './pages/DessertDetail';
 import DessertRegist from './pages/DessertRegist';
 import DessertModify from './pages/DessertModify';
 
+import MyMoonBucks from './pages/MyMoonBucks';
+
+// import Mymoonbu
+import BoardPage from './pages/BoardPage';
+import BoardRegist from './pages/BoardRegist';
+import BoardDetail from './pages/BoardDetail';
+import BoardModify from './pages/BoardModify';
+
 
 /* 추가 설치해야 하는 패키지 목록
  * react-router-dom
@@ -91,6 +99,18 @@ function App() {
 						<Route path="modify" >
 							<Route path=":id" element={<DessertModify />} />
 						</Route>
+					</Route>
+					<Route path="board" >
+						<Route index element={<BoardPage />} />
+						<Route path=":id" element={<BoardDetail />} />
+						<Route path="regist" element={<BoardRegist />} />
+						<Route path="modify" >
+							<Route path=":id" element={<BoardModify />} />
+						</Route>
+					</Route>
+
+					<Route path="mymoonbucks">
+						<Route index element={<MyMoonBucks />} />
 					</Route>
 
 

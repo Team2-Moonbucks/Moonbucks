@@ -59,7 +59,7 @@ function Header() {
 									<>
 										<li><p><span>'{nickname}'</span>님 환영합니다</p></li>
 										<li onClick={logoutHandler}><a href="">LogOut</a></li>
-										<li><NavLink to="/">My Moonbucks</NavLink></li>
+										<li><NavLink to="/mymoonbucks">My Moonbucks</NavLink></li>
 									</>
 								)
 							) : (
