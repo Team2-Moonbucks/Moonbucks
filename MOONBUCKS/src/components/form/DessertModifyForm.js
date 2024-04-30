@@ -27,7 +27,7 @@ function DessertModifyForm() {
 			id: id,
 			menuName: '',
 			menuPrice: 0,
-			categoryName: '브레드',
+			categoryName: '',
 			detail: {
 				description: '',
 				image: ''

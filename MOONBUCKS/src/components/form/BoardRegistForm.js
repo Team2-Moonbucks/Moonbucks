@@ -47,11 +47,11 @@ function BoardRegistForm() {
 
 		const currentDateTime = new Date().toLocaleString();
 		console.log('currentDateTime : ', currentDateTime.toLocaleString());
+		console.log('boardList.length', boardList.length);
 
 		setRegistBoard(
 			{
 				...registBoard,
-				id: `${boardList.length+1}`,
 				date: currentDateTime,
 				[name]: value
 			}
@@ -61,6 +61,32 @@ function BoardRegistForm() {
 		console.log(registBoard);
 
 	}
+
+	useEffect(
+		() => {
+
+			if(boardList && boardList.length > 0) {
+				console.log('boardList : ', boardList);
+
+				let maxId = boardList.reduce((max, board) => {
+					const parsedId = parseInt(board.id, 10);
+					return Math.max(max, isNaN(parsedId) ? 0 : parsedId);
+				}, 0);
+				let nextId = maxId + 1;
+
+				console.log(`maxId:  ${maxId}, nextId: ${nextId}`);
+
+
+				setRegistBoard(
+					{
+						...registBoard,
+						id: `${nextId}`
+					}
+				);
+			}
+		},
+		[]
+	)
 
 	/* 파일 첨부 시 동작하는 이벤트 핸들러 */
 	const fileChangeHandler = async (e) => {

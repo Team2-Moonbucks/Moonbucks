@@ -25,15 +25,36 @@ function CoffeeModifyForm() {
 	const [modifyCoffee, setModifyCoffee] = useState(
 		{
 			id: id,
-			coffeeName: coffee.coffeeName,
-			coffeePrice: coffee.coffeePrice,
-			categoryName: '커피',
+			coffeeName: '',
+			coffeePrice: 0,
+			categoryName: '',
 			detail: {
-				description: coffee.detail.description,
-				image: coffee.detail.image
+				description: '',
+				image: ''
 			}
 		}
 	);
+
+	useEffect(
+		() => {
+			if(coffee){
+				setModifyCoffee(
+										{
+						id: id,
+						coffeeName: coffee.coffeeName,
+						coffeePrice: coffee.coffeePrice,
+						categoryName: coffee.categoryName,
+						detail: {
+							description: coffee.detail.description,
+							image: coffee.detail.image
+						}
+					}					
+				)
+			}
+		},
+		[]
+	)
+
 
 	/* 입력 값 변경 시 이벤트 핸들러 */
 	const onChangeHandler = (e) => {

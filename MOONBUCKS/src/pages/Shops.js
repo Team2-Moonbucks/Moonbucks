@@ -26,7 +26,7 @@ function Shops() {
 
 	return (
 		<div className="pageTitle shopTitle">
-			<h1>매장 목록 {(isAdmin) && <button onClick={() => navigate(`/shop/regist`)}>매장 추가</button>} </h1>
+			<h1>매장 목록 {(isAdmin) && <button className='coffeeRegistBtn' onClick={() => navigate(`/shop/regist`)}>매장 추가</button>} </h1>
 			<div>
                 <button className={`${(shopCategory === '전체보기' ? 'active' : '')} TotalBtn` } onClick={() => handleCategoryChange('전체보기')}>전체보기</button>
                 <button className={`${(shopCategory === '일반 매장' ? 'active' : '')} breadBtn` } onClick={() => handleCategoryChange('일반 매장')}>일반 매장</button>
