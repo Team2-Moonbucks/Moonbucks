@@ -8,7 +8,7 @@ function BoardPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [activeSearchTerm, setActiveSearchTerm] = useState('');
     const [searchPerformed, setSearchPerformed] = useState(false);
-	const isLogin = !!localStorage.getItem('isLogin');
+	// const isLogin = !!localStorage.getItem('isLogin');
 
 	const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
