@@ -25,6 +25,11 @@ import CoffeeRegist from './pages/CoffeeRegist';
 import CoffeeModify from './pages/CoffeeModify';
 import SignIn from './pages/SignIn';
 
+import DessertMenus from './pages/DessertMenus';
+import DessertDetail from './pages/DessertDetail';
+import DessertRegist from './pages/DessertRegist';
+import DessertModify from './pages/DessertModify';
+
 
 /* 추가 설치해야 하는 패키지 목록
  * react-router-dom
@@ -79,7 +84,14 @@ function App() {
 							<Route path=":id" element={<CoffeeModify />} />
 						</Route>
 					</Route>
-
+					<Route path="dessert" >
+						<Route index element={<DessertMenus />} />
+						<Route path=":id" element={<DessertDetail />} />
+						<Route path="regist" element={<DessertRegist />} />
+						<Route path="modify" >
+							<Route path=":id" element={<DessertModify />} />
+						</Route>
+					</Route>
 
 
 				</Route>

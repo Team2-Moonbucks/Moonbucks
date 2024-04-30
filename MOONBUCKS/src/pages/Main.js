@@ -10,11 +10,11 @@ function Main() {
 			{/* <h1>Main</h1> */}
 			<div className="mainCSS d-block d-lg-none">
 				<span><img src="../dessert_mini.jpg"></img></span>
-				<button onClick={() => navigate(`/menu`)}>Detail More</button>
+				<button onClick={() => navigate(`/dessert`)}>Detail More</button>
 			</div>
 			<div className="mainCSS d-none d-lg-block">
 				<span><img src="../dessert_main.jpg"></img></span>
-				<button onClick={() => navigate(`/menu`)}>Detail More</button>
+				<button onClick={() => navigate(`/dessert`)}>Detail More</button>
 			</div>
 			<div className="coffeeMain mainCSS d-block d-lg-none">
 				<span><img src="../coffee_mini.jpg"></img></span>

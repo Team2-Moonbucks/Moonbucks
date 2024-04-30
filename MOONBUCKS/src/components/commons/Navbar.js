@@ -43,7 +43,7 @@ function Navbars() {
 							<Nav className="me-auto navbar-me-auto">
 									<li><NavLink to='/main' style={({isActive}) => isActive? activeStyle : undefined}>Main</NavLink></li>
 									<li><NavLink to='/coffee' style={({isActive}) => isActive? activeStyle : undefined}>Coffee</NavLink></li>
-									<li><NavLink to='/Desset' style={({isActive}) => isActive? activeStyle : undefined}>Dessert</NavLink></li>
+									<li><NavLink to='/dessert' style={({isActive}) => isActive? activeStyle : undefined}>Dessert</NavLink></li>
 									<li><NavLink to='/menu' style={({isActive}) => isActive? activeStyle : undefined}>Menu</NavLink></li>
 									<li><NavLink to='/shop' style={({isActive}) => isActive? activeStyle : undefined}>Shop</NavLink></li>
 									<li><NavLink to='/Board' style={({isActive}) => isActive? activeStyle : undefined}>Board</NavLink></li>						
