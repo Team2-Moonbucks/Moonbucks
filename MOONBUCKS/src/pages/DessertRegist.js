@@ -15,10 +15,11 @@ function DessertRegist() {
 	}
 
 	return (
-		<>
+		<div className='pageTitle'>
 			<h1>Dessert 등록 페이지</h1>
+			<hr/>
 			<DessertRegistForm />
-		</>
+		</div>
 	);
 }
 

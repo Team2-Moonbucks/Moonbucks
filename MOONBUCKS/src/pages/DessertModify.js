@@ -14,10 +14,11 @@ function DessertModify() {
 	}
 
 	return (
-		<>
+		<div className='pageTitle'>
 			<h1>Dessert 수정 페이지</h1>
+			<hr/>
 			<DessertModifyForm />
-		</>
+		</div>
 	);
 }
 

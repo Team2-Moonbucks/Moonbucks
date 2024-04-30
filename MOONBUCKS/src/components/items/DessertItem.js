@@ -6,10 +6,8 @@ function DessertItem({ dessert }) {
 		
 				
 			<Link to={`/dessert/${dessert.id}`}>
-				<div className='DessertItem'>
+				<div className='dessertItem'>
 					<img src={dessert.detail.image} alt={dessert.menuName}/>
-				</div>
-				<div className="DessertItem">
 					<h3>{dessert.menuName}</h3>
 				</div>
 			</Link>

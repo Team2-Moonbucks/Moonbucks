@@ -18,13 +18,32 @@ function Dessert({ id }) {
 
 	return (
 		dessert && (
-			<>
-				<h3>메뉴 이름 : {dessert.menuName}</h3>
-				<h3>메뉴 가격 : {dessert.menuPrice}</h3>
-				<h3>메뉴 종류 : {dessert.categoryName}</h3>
-				<h3>메뉴 상세 : {dessert.detail.description}</h3>
-				<img src={dessert.detail.image} style={{ maxWidth: 500 }} alt={dessert.menuName} />
-			</>
+			<div className='DetailBox DessertBox'>
+				<table>
+					<tbody>
+						<tr>
+							<td className='tdimg' colSpan={2}><img src={dessert.detail.image} style={{ maxWidth: 500 }} alt={dessert.menuName} /></td>
+						</tr>
+						<tr class="space"></tr>
+						<tr>
+							<td><span>이름</span>|</td>
+							<td>{dessert.menuName}</td>
+						</tr>
+						<tr>
+							<td><span>가격</span>|</td>
+							<td>{dessert.menuPrice}</td>
+						</tr>
+						<tr>
+							<td><span>종류</span>|</td>
+							<td>{dessert.categoryName}</td>
+						</tr>
+						<tr>
+							<td><span>상세</span>|</td>
+							<td>{dessert.detail.description}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		)
 	);
 }
