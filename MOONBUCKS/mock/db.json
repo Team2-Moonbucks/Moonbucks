@@ -13,6 +13,13 @@
       "nickname": "유저01",
       "role": "user",
       "email": ""
+    },
+    {
+      "id": "user02",
+      "password": "pass02",
+      "nickname": "user02",
+      "role": "user",
+      "email": ""
     }
   ],
   "shop": [
@@ -2139,7 +2146,6 @@
         "image": "/images/21.PNG"
       }
     }
-    
   ],
   "coffee": [
     {
