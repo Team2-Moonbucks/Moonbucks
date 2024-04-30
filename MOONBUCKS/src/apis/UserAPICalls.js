@@ -40,16 +40,16 @@ export function callGetUserListAPI() {
 	}
 }
 
-export function callGetUserAPI(id) {
+export function callGetUserAPI(nickname) {
 
 	console.log('getUser api calls...');
 
 	return async (dispatch, getState) => {
 
-		const result = await request('GET', `/user/${id}`);
+		const result = await request('GET', `/user?nickname=${nickname}`);
 		console.log('getUser result : ', result);
 
-		dispatch(getUser(result));
+		dispatch(getUser(result[0]));
 	}
 }
 

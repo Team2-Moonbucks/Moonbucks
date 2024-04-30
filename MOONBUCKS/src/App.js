@@ -30,7 +30,8 @@ import DessertDetail from './pages/DessertDetail';
 import DessertRegist from './pages/DessertRegist';
 import DessertModify from './pages/DessertModify';
 
-import MyMoonBucks from './pages/MyMoonBucks';
+import UserModify from './pages/UserModify';
+import UserDetail from './pages/MyMoonBucks';
 
 // import Mymoonbu
 
@@ -98,7 +99,11 @@ function App() {
 					</Route>
 
 					<Route path="mymoonbucks">
-						<Route index element={<MyMoonBucks />} />
+						<Route index element={<UserDetail />} />
+						<Route path="modify" >
+							<Route index element={<UserModify />} />
+						</Route>
+						
 					</Route>
 
 

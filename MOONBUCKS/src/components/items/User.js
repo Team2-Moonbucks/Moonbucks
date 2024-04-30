@@ -1,0 +1,45 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { callGetUserAPI } from '../../apis/UserAPICalls';
+
+function User({ nickname }) {
+
+	const result = useSelector(state => state.userReducer);
+	const user = result.user;
+	const dispatch = useDispatch();
+
+	useEffect(
+		() => {
+			/* user 호출 API */
+			dispatch(callGetUserAPI(nickname));
+		},
+		[]
+	);
+
+
+
+	return (
+		user && (
+			<div className='DetailBox'>
+				<table>
+					<tbody>
+						<tr>
+							<td><span>아이디</span>|</td>
+							<td>{user.id}</td>
+						</tr>
+						<tr>
+							<td><span>닉네임</span>|</td>
+							<td>{user.nickname}</td>
+						</tr>
+						<tr>
+							<td><span>Email</span>|</td>
+							<td>{user.email}</td>
+						</tr>
+					</tbody>					
+				</table>
+			</div>
+		)
+	);
+}
+
+export default User;

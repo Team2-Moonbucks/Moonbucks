@@ -38,6 +38,8 @@ const userReducer = handleActions(
 				localStorage.setItem("LoginNickname", res.nickname);
 				localStorage.setItem("isUser", true);
 				localStorage.setItem("isLogin", true);
+				localStorage.setItem("LoginEamil", res.email);
+				localStorage.setItem("LoginID", res.id);
 			} else {
 				res = { message: 'LOGIN_FAIL' };
 			}

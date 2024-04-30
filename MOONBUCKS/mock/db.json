@@ -5,21 +5,28 @@
       "password": "admin",
       "nickname": "관리자",
       "role": "admin",
-      "email": ""
+      "email": "admin@moonbucks.com"
     },
     {
       "id": "user01",
       "password": "pass01",
       "nickname": "유저01",
       "role": "user",
-      "email": ""
+      "email": "user01@moonbucks.com"
     },
     {
       "id": "user02",
       "password": "pass02",
-      "nickname": "user02",
+      "nickname": "유저02",
       "role": "user",
-      "email": ""
+      "email": "user02@moonbucks.com"
+    },
+    {
+      "id": "user03",
+      "password": "pass03",
+      "nickname": "테스트용",
+      "role": "user",
+      "email": "test test"
     }
   ],
   "shop": [
