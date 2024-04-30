@@ -5,28 +5,28 @@
       "password": "admin",
       "nickname": "관리자",
       "role": "admin",
-      "email": ""
+      "email": "일반 매장"
     },
     {
       "id": "user01",
       "password": "pass01",
       "nickname": "유저01",
       "role": "user",
-      "email": ""
+      "email": "일반 매장"
     },
     {
       "id": "user02",
       "password": "pass02",
       "nickname": "user02",
       "role": "user",
-      "email": ""
+      "email": "일반 매장"
     },
     {
       "id": "user03",
       "password": "pass03",
       "nickname": "와우와우",
       "role": "user",
-      "email": ""
+      "email": "일반 매장"
     },
     {
       "id": "작성자",
@@ -42,7 +42,7 @@
       "shopName": "신림사거리",
       "shopAddr": "서울특별시 관악구 남부순환로 1619 (신림동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.484768",
       "shopXcoordinate": "126.930467"
     },
@@ -51,7 +51,7 @@
       "shopName": "신림",
       "shopAddr": "서울특별시 관악구 신림로 355-1 (신림동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.48609493",
       "shopXcoordinate": "126.9291602"
     },
@@ -60,7 +60,7 @@
       "shopName": "서울대입구역",
       "shopAddr": "서울특별시 관악구 남부순환로 1812 (봉천동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.48118",
       "shopXcoordinate": "126.951324"
     },
@@ -69,7 +69,7 @@
       "shopName": "서울대역",
       "shopAddr": "서울특별시 관악구 남부순환로 1817 (봉천동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.481599",
       "shopXcoordinate": "126.9522"
     },
@@ -87,7 +87,7 @@
       "shopName": "신대방삼거리역",
       "shopAddr": "서울특별시 동작구 상도로 102 (상도동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.499914",
       "shopXcoordinate": "126.931766"
     },
@@ -96,7 +96,7 @@
       "shopName": "숭실대입구역",
       "shopAddr": "서울특별시 동작구 상도로 354 (상도동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4968346",
       "shopXcoordinate": "126.9527123"
     },
@@ -105,7 +105,7 @@
       "shopName": "역삼아레나빌딩",
       "shopAddr": "서울특별시 강남구 언주로 425 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.501087",
       "shopXcoordinate": "127.043069"
     },
@@ -114,7 +114,7 @@
       "shopName": "논현역사거리",
       "shopAddr": "서울특별시 강남구 강남대로 538 (논현동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.510178",
       "shopXcoordinate": "127.022223"
     },
@@ -123,7 +123,7 @@
       "shopName": "신사역성일빌딩",
       "shopAddr": "서울특별시 강남구 강남대로 584 (논현동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.514132",
       "shopXcoordinate": "127.020563"
     },
@@ -132,7 +132,7 @@
       "shopName": "국기원사거리",
       "shopAddr": "서울특별시 강남구 테헤란로 125 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.499517",
       "shopXcoordinate": "127.031495"
     },
@@ -150,7 +150,7 @@
       "shopName": "봉은사역",
       "shopAddr": "서울특별시 강남구 봉은사로 619 (삼성동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.515",
       "shopXcoordinate": "127.063196"
     },
@@ -159,7 +159,7 @@
       "shopName": "압구정윤성빌딩",
       "shopAddr": "서울특별시 강남구 논현로 834 (신사동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5227934",
       "shopXcoordinate": "127.0286009"
     },
@@ -168,7 +168,7 @@
       "shopName": "코엑스별마당",
       "shopAddr": "서울특별시 강남구 영동대로 513 (삼성동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.51015",
       "shopXcoordinate": "127.060275"
     },
@@ -222,7 +222,7 @@
       "shopName": "봉은사로선정릉",
       "shopAddr": "서울특별시 강남구 봉은사로 446 (삼성동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.511293",
       "shopXcoordinate": "127.048409"
     },
@@ -231,7 +231,7 @@
       "shopName": "강남오거리",
       "shopAddr": "서울특별시 강남구 봉은사로2길 39 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.502117",
       "shopXcoordinate": "127.026672"
     },
@@ -249,7 +249,7 @@
       "shopName": "강남구청정문",
       "shopAddr": "서울특별시 강남구 학동로 419 (청담동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.518181",
       "shopXcoordinate": "127.045995"
     },
@@ -258,7 +258,7 @@
       "shopName": "도곡공원",
       "shopAddr": "서울특별시 강남구 도곡로 205 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.492805",
       "shopXcoordinate": "127.041309"
     },
@@ -276,7 +276,7 @@
       "shopName": "대치은마사거리",
       "shopAddr": "서울특별시 강남구 도곡로 457 (대치동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.498973",
       "shopXcoordinate": "127.060172"
     },
@@ -285,7 +285,7 @@
       "shopName": "청담영동대로",
       "shopAddr": "서울특별시 강남구 영동대로 720 (청담동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.522156",
       "shopXcoordinate": "127.056449"
     },
@@ -294,7 +294,7 @@
       "shopName": "압구정",
       "shopAddr": "서울특별시 강남구 압구정로30길 17 (신사동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.526283",
       "shopXcoordinate": "127.02956"
     },
@@ -303,7 +303,7 @@
       "shopName": "신사가로수",
       "shopAddr": "서울특별시 강남구 압구정로12길 32 (신사동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.521852",
       "shopXcoordinate": "127.02251"
     },
@@ -321,7 +321,7 @@
       "shopName": "강남우성",
       "shopAddr": "서울특별시 강남구 강남대로 328 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.492396",
       "shopXcoordinate": "127.03091"
     },
@@ -330,7 +330,7 @@
       "shopName": "학동사거리",
       "shopAddr": "서울특별시 강남구 도산대로 328 (논현동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5223645",
       "shopXcoordinate": "127.0379543"
     },
@@ -339,7 +339,7 @@
       "shopName": "대치사거리",
       "shopAddr": "서울특별시 강남구 삼성로 402 (대치동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.503331",
       "shopXcoordinate": "127.058817"
     },
@@ -348,7 +348,7 @@
       "shopName": "포스코사거리",
       "shopAddr": "서울특별시 강남구 테헤란로 505 (삼성동) 화진빌딩",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5075307",
       "shopXcoordinate": "127.0574271"
     },
@@ -357,7 +357,7 @@
       "shopName": "신사역",
       "shopAddr": "서울특별시 강남구 도산대로 108 (논현동) 렉스타워",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5162021",
       "shopXcoordinate": "127.0207428"
     },
@@ -366,7 +366,7 @@
       "shopName": "도곡역",
       "shopAddr": "서울특별시 강남구 남부순환로 2909 (대치동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.492167",
       "shopXcoordinate": "127.057398"
     },
@@ -375,7 +375,7 @@
       "shopName": "서울세관사거리",
       "shopAddr": "서울특별시 강남구 언주로 650 (논현동) 한국건설기술인협회",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.514887",
       "shopXcoordinate": "127.035653"
     },
@@ -384,7 +384,7 @@
       "shopName": "청담사거리",
       "shopAddr": "서울특별시 강남구 도산대로 458 (청담동) 리츠타워",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5236351",
       "shopXcoordinate": "127.0468651"
     },
@@ -393,7 +393,7 @@
       "shopName": "역삼초교사거리",
       "shopAddr": "서울특별시 강남구 역삼로 123 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4941059",
       "shopXcoordinate": "127.0329973"
     },
@@ -402,7 +402,7 @@
       "shopName": "코엑스몰",
       "shopAddr": "서울특별시 강남구 영동대로 513 (삼성동) 코엑스 O103호",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.513715",
       "shopXcoordinate": "127.059245"
     },
@@ -411,7 +411,7 @@
       "shopName": "삼성도심공항",
       "shopAddr": "서울특별시 강남구 테헤란로87길 33 (삼성동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5097863",
       "shopXcoordinate": "127.0579134"
     },
@@ -420,7 +420,7 @@
       "shopName": "학동역",
       "shopAddr": "서울특별시 강남구 논현로 704 (논현동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.51464884",
       "shopXcoordinate": "127.0307302"
     },
@@ -429,7 +429,7 @@
       "shopName": "대치",
       "shopAddr": "서울특별시 강남구 도곡로 511 (대치동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49966175",
       "shopXcoordinate": "127.0622171"
     },
@@ -438,7 +438,7 @@
       "shopName": "압구정로",
       "shopAddr": "서울특별시 강남구 압구정로42길 32 (신사동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.52680046",
       "shopXcoordinate": "127.0347174"
     },
@@ -447,7 +447,7 @@
       "shopName": "구역삼사거리",
       "shopAddr": "서울특별시 강남구 논현로 401 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49592355",
       "shopXcoordinate": "127.0388645"
     },
@@ -456,7 +456,7 @@
       "shopName": "포이",
       "shopAddr": "서울특별시 강남구 논현로 88 (개포동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.47781106",
       "shopXcoordinate": "127.0451411"
     },
@@ -465,7 +465,7 @@
       "shopName": "아크플레이스",
       "shopAddr": "서울특별시 강남구 테헤란로 142 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49971982",
       "shopXcoordinate": "127.0349084"
     },
@@ -474,7 +474,7 @@
       "shopName": "학여울역",
       "shopAddr": "서울특별시 강남구 영동대로 215 (대치동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49803646",
       "shopXcoordinate": "127.0684943"
     },
@@ -483,7 +483,7 @@
       "shopName": "선정릉역",
       "shopAddr": "서울특별시 강남구 봉은사로 407 (삼성동) 에프오빌딩",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5107549",
       "shopXcoordinate": "127.0445597"
     },
@@ -492,7 +492,7 @@
       "shopName": "삼성현대힐",
       "shopAddr": "서울특별시 강남구 삼성로 605 (삼성동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.51354184",
       "shopXcoordinate": "127.0527183"
     },
@@ -501,7 +501,7 @@
       "shopName": "GS타워",
       "shopAddr": "서울특별시 강남구 논현로 508 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5018592",
       "shopXcoordinate": "127.0372776"
     },
@@ -510,7 +510,7 @@
       "shopName": "압구정미소",
       "shopAddr": "서울특별시 강남구 논현로 841 (신사동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.52405601",
       "shopXcoordinate": "127.027915"
     },
@@ -519,7 +519,7 @@
       "shopName": "수서",
       "shopAddr": "서울특별시 강남구 밤고개로1길 10 (수서동) 수서현대벤쳐빌 지하2층",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.48801132",
       "shopXcoordinate": "127.1017508"
     },
@@ -528,7 +528,7 @@
       "shopName": "코엑스사거리",
       "shopAddr": "서울특별시 강남구 영동대로 616 (삼성동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.515351",
       "shopXcoordinate": "127.060109"
     },
@@ -537,7 +537,7 @@
       "shopName": "역삼럭키",
       "shopAddr": "서울특별시 강남구 도곡로 183 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.492209",
       "shopXcoordinate": "127.039389"
     },
@@ -546,7 +546,7 @@
       "shopName": "청담공원",
       "shopAddr": "서울특별시 강남구 학동로 506 (삼성동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5186549",
       "shopXcoordinate": "127.0514387"
     },
@@ -555,7 +555,7 @@
       "shopName": "신압구정",
       "shopAddr": "서울특별시 강남구 언주로174길 29 (신사동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.528115",
       "shopXcoordinate": "127.036441"
     },
@@ -564,7 +564,7 @@
       "shopName": "뱅뱅사거리",
       "shopAddr": "서울특별시 강남구 강남대로 282 (도곡동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.488585",
       "shopXcoordinate": "127.032415"
     },
@@ -573,7 +573,7 @@
       "shopName": "르네상스사거리",
       "shopAddr": "서울특별시 강남구 테헤란로 306 (역삼동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.502721",
       "shopXcoordinate": "127.044308"
     },
@@ -582,7 +582,7 @@
       "shopName": "삼성역",
       "shopAddr": "서울특별시 강남구 테헤란로103길 9 (삼성동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.510015",
       "shopXcoordinate": "127.063864"
     },
@@ -591,7 +591,7 @@
       "shopName": "논현힐탑",
       "shopAddr": "서울특별시 강남구 논현로 648 (논현동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5115577",
       "shopXcoordinate": "127.032262"
     },
@@ -600,7 +600,7 @@
       "shopName": "미아뉴타운",
       "shopAddr": "서울특별시 강북구 삼양로 161 (미아동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.618319",
       "shopXcoordinate": "127.021072"
     },
@@ -609,7 +609,7 @@
       "shopName": "강북구청사거리",
       "shopAddr": "서울특별시 강북구 도봉로 365 (수유동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.6400354",
       "shopXcoordinate": "127.0273766"
     },
@@ -618,7 +618,7 @@
       "shopName": "미아사거리역",
       "shopAddr": "서울특별시 강북구 도봉로 32 (미아동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.611809",
       "shopXcoordinate": "127.0306971"
     },
@@ -627,7 +627,7 @@
       "shopName": "수유역",
       "shopAddr": "서울특별시 강북구 도봉로 342 (번동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.6380167",
       "shopXcoordinate": "127.026135"
     },
@@ -636,7 +636,7 @@
       "shopName": "미아역",
       "shopAddr": "서울특별시 강북구 도봉로 196 (미아동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.626148",
       "shopXcoordinate": "127.026578"
     },
@@ -645,7 +645,7 @@
       "shopName": "발산역사거리",
       "shopAddr": "서울특별시 강서구 공항대로 248 (마곡동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.558509",
       "shopXcoordinate": "126.835096"
     },
@@ -654,7 +654,7 @@
       "shopName": "마곡역",
       "shopAddr": "서울특별시 강서구 공항대로 168 (마곡동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.559611",
       "shopXcoordinate": "126.826298"
     },
@@ -663,7 +663,7 @@
       "shopName": "우장산역",
       "shopAddr": "서울특별시 강서구 강서로 267 (내발산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.549501",
       "shopXcoordinate": "126.835984"
     },
@@ -690,7 +690,7 @@
       "shopName": "마곡나루역",
       "shopAddr": "서울특별시 강서구 마곡중앙로 161-17 (마곡동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.56813",
       "shopXcoordinate": "126.82614"
     },
@@ -699,7 +699,7 @@
       "shopName": "가양역",
       "shopAddr": "서울특별시 강서구 양천로 476 (등촌동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.56164",
       "shopXcoordinate": "126.853327"
     },
@@ -717,7 +717,7 @@
       "shopName": "양천향교역",
       "shopAddr": "서울특별시 강서구 강서로 463 (마곡동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.566964",
       "shopXcoordinate": "126.840731"
     },
@@ -726,7 +726,7 @@
       "shopName": "화곡동",
       "shopAddr": "서울특별시 강서구 화곡로 142(화곡동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5405115",
       "shopXcoordinate": "126.8372413"
     },
@@ -735,7 +735,7 @@
       "shopName": "등촌",
       "shopAddr": "서울특별시 강서구 공항대로 329 (등촌동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5582043",
       "shopXcoordinate": "126.8443392"
     },
@@ -744,7 +744,7 @@
       "shopName": "염창역",
       "shopAddr": "서울특별시 강서구 공항대로 627 (염창동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.547359",
       "shopXcoordinate": "126.874436"
     },
@@ -753,7 +753,7 @@
       "shopName": "발산역",
       "shopAddr": "서울특별시 강서구 강서로 388 (등촌동) 그랜드마트",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.56033",
       "shopXcoordinate": "126.839279"
     },
@@ -762,7 +762,7 @@
       "shopName": "까치산역",
       "shopAddr": "서울특별시 강서구 강서로13길 3 (화곡동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.532303",
       "shopXcoordinate": "126.846077"
     },
@@ -771,7 +771,7 @@
       "shopName": "낙성대역",
       "shopAddr": "서울특별시 관악구 남부순환로 1908 (봉천동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.477946",
       "shopXcoordinate": "126.961193"
     },
@@ -807,7 +807,7 @@
       "shopName": "건국대",
       "shopAddr": "서울특별시 광진구 능동로 117 (화양동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5415592",
       "shopXcoordinate": "127.0711244"
     },
@@ -816,7 +816,7 @@
       "shopName": "어린이대공원역",
       "shopAddr": "서울시 광진구 능동로243",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.551946",
       "shopXcoordinate": "127.076404"
     },
@@ -825,7 +825,7 @@
       "shopName": "아차산역",
       "shopAddr": "서울시 광진구 천호대로 676",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5505388",
       "shopXcoordinate": "127.0898757"
     },
@@ -834,7 +834,7 @@
       "shopName": "올림픽대교북단",
       "shopAddr": "서울특별시 광진구 광나루로 608 (구의동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.541129",
       "shopXcoordinate": "127.09524"
     },
@@ -852,7 +852,7 @@
       "shopName": "자양사거리",
       "shopAddr": "서울특별시 광진구 아차산로 355",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5371158",
       "shopXcoordinate": "127.0825821"
     },
@@ -861,7 +861,7 @@
       "shopName": "군자역",
       "shopAddr": "서울특별시 광진구 천호대로 548 (군자동) 중앙빌딩",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.556965",
       "shopXcoordinate": "127.079032"
     },
@@ -870,7 +870,7 @@
       "shopName": "건대스타시티",
       "shopAddr": "서울특별시 광진구 아차산로 262 (자양동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.538544",
       "shopXcoordinate": "127.073009"
     },
@@ -879,7 +879,7 @@
       "shopName": "자양",
       "shopAddr": "서울특별시 광진구 능동로 50 (자양동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5354769",
       "shopXcoordinate": "127.0691462"
     },
@@ -888,7 +888,7 @@
       "shopName": "강변역",
       "shopAddr": "서울특별시 광진구 구의강변로 64 (구의동) 구의아크로리버",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.536155",
       "shopXcoordinate": "127.093086"
     },
@@ -897,7 +897,7 @@
       "shopName": "건대입구",
       "shopAddr": "서울특별시 광진구 능동로 107 (화양동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5406604",
       "shopXcoordinate": "127.0707225"
     },
@@ -906,7 +906,7 @@
       "shopName": "구의역",
       "shopAddr": "서울특별시 광진구 아차산로 373 (구의동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.53698",
       "shopXcoordinate": "127.084015"
     },
@@ -915,7 +915,7 @@
       "shopName": "광장",
       "shopAddr": "서울특별시 광진구 아차산로 537-17 (광장동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.542518",
       "shopXcoordinate": "127.099651"
     },
@@ -924,7 +924,7 @@
       "shopName": "건국클래식",
       "shopAddr": "서울특별시 광진구 능동로 90 (자양동) 더 클래식500",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.538466",
       "shopXcoordinate": "127.071271"
     },
@@ -933,7 +933,7 @@
       "shopName": "가산에스케이",
       "shopAddr": "서울특별시 금천구 가산디지털1로 171 (가산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.48061318",
       "shopXcoordinate": "126.8805702"
     },
@@ -942,7 +942,7 @@
       "shopName": "독산사거리",
       "shopAddr": "서울특별시 금천구 시흥대로 426 (독산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.471511",
       "shopXcoordinate": "126.898775"
     },
@@ -951,7 +951,7 @@
       "shopName": "금천시흥",
       "shopAddr": "서울특별시 금천구 시흥대로 164 (시흥동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.448624",
       "shopXcoordinate": "126.903183"
     },
@@ -960,7 +960,7 @@
       "shopName": "가산디지털단지역",
       "shopAddr": "서울특별시 금천구 벚꽃로 298 (가산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.481324",
       "shopXcoordinate": "126.883779"
     },
@@ -969,7 +969,7 @@
       "shopName": "금천독산",
       "shopAddr": "서울특별시 금천구 두산로 70 (독산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.46914",
       "shopXcoordinate": "126.895246"
     },
@@ -978,7 +978,7 @@
       "shopName": "가산디지털",
       "shopAddr": "서울특별시 금천구 가산디지털1로 168 (가산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4798346",
       "shopXcoordinate": "126.8824997"
     },
@@ -987,7 +987,7 @@
       "shopName": "W-Mall",
       "shopAddr": "서울특별시 금천구 디지털로 188 (가산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.47730499",
       "shopXcoordinate": "126.8876908"
     },
@@ -996,7 +996,7 @@
       "shopName": "마리오아울렛",
       "shopAddr": "서울특별시 금천구 벚꽃로 266 마리오아울렛3관",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.478701",
       "shopXcoordinate": "126.885076"
     },
@@ -1005,7 +1005,7 @@
       "shopName": "가산브이타워",
       "shopAddr": "서울특별시 금천구 가산디지털1로 128 (가산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.477221",
       "shopXcoordinate": "126.883683"
     },
@@ -1014,7 +1014,7 @@
       "shopName": "월계트레이더스",
       "shopAddr": "서울시 노원구 마들로3길 15",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.6277053",
       "shopXcoordinate": "127.0614978"
     },
@@ -1023,7 +1023,7 @@
       "shopName": "상계초교사거리",
       "shopAddr": "서울 노원구 노원로 449",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.656776",
       "shopXcoordinate": "127.066442"
     },
@@ -1041,7 +1041,7 @@
       "shopName": "공릉역",
       "shopAddr": "서울특별시 노원구 동일로 1081 (공릉동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.626337",
       "shopXcoordinate": "127.072252"
     },
@@ -1050,7 +1050,7 @@
       "shopName": "서울여대",
       "shopAddr": "서울특별시 노원구 화랑로 621 (공릉동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.626163",
       "shopXcoordinate": "127.093084"
     },
@@ -1059,7 +1059,7 @@
       "shopName": "광운대",
       "shopAddr": "서울특별시 노원구 석계로 104 (월계동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.6231479",
       "shopXcoordinate": "127.0607009"
     },
@@ -1068,7 +1068,7 @@
       "shopName": "월계이마트",
       "shopAddr": "서울특별시 노원구 마들로3길 15 (월계동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.627155",
       "shopXcoordinate": "127.062094"
     },
@@ -1077,7 +1077,7 @@
       "shopName": "창동이마트",
       "shopAddr": "서울특별시 도봉구 노해로65길 4 (창동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.651645",
       "shopXcoordinate": "127.046869"
     },
@@ -1086,7 +1086,7 @@
       "shopName": "쌍문역",
       "shopAddr": "서울특별시 도봉구 도봉로 480 (창동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.648456",
       "shopXcoordinate": "127.034783"
     },
@@ -1095,7 +1095,7 @@
       "shopName": "남성역",
       "shopAddr": "서울특별시 동작구 사당로 219 (사당동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4841198",
       "shopXcoordinate": "126.9725739"
     },
@@ -1104,7 +1104,7 @@
       "shopName": "상도역",
       "shopAddr": "서울특별시 동작구 상도로37길 1 (상도1동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5031936",
       "shopXcoordinate": "126.9484581"
     },
@@ -1113,7 +1113,7 @@
       "shopName": "이수자이",
       "shopAddr": "서울특별시 동작구 사당로 300 (사당동 이수자이)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.484414",
       "shopXcoordinate": "126.980047"
     },
@@ -1122,7 +1122,7 @@
       "shopName": "노량진역",
       "shopAddr": "서울특별시 동작구 노량진로 134 (노량진동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.51339",
       "shopXcoordinate": "126.940879"
     },
@@ -1131,7 +1131,7 @@
       "shopName": "중앙대",
       "shopAddr": "서울특별시 동작구 흑석로 75-1 (흑석동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.506933",
       "shopXcoordinate": "126.958125"
     },
@@ -1140,7 +1140,7 @@
       "shopName": "숭실대",
       "shopAddr": "서울특별시 동작구 사당로 4 (상도동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49538073",
       "shopXcoordinate": "126.9548891"
     },
@@ -1149,7 +1149,7 @@
       "shopName": "서강대프라자",
       "shopAddr": "서울특별시 마포구 백범로 35 (신수동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.551073",
       "shopXcoordinate": "126.943096"
     },
@@ -1158,7 +1158,7 @@
       "shopName": "상암YTN",
       "shopAddr": "서울특별시 마포구 상암산로 76 (상암동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.579183",
       "shopXcoordinate": "126.892315"
     },
@@ -1167,7 +1167,7 @@
       "shopName": "마포용강동",
       "shopAddr": "서울특별시 마포구 토정로 295 (용강동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.541186",
       "shopXcoordinate": "126.942209"
     },
@@ -1185,7 +1185,7 @@
       "shopName": "마포경찰서후문",
       "shopAddr": "서울특별시 마포구 마포대로 173-14 (아현동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5508",
       "shopXcoordinate": "126.953432"
     },
@@ -1194,7 +1194,7 @@
       "shopName": "공덕",
       "shopAddr": "서울특별시 마포구 마포대로 130 (공덕동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.545913",
       "shopXcoordinate": "126.952956"
     },
@@ -1203,7 +1203,7 @@
       "shopName": "홍대공항철도역",
       "shopAddr": "서울특별시 마포구 양화로 178 (동교동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.557491",
       "shopXcoordinate": "126.925146"
     },
@@ -1212,7 +1212,7 @@
       "shopName": "마포염리",
       "shopAddr": "서울특별시 마포구 독막로 311 (염리동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.543876",
       "shopXcoordinate": "126.94768"
     },
@@ -1221,7 +1221,7 @@
       "shopName": "서강광흥창역",
       "shopAddr": "서울특별시 마포구 서강로 69 (창전동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.549377",
       "shopXcoordinate": "126.931661"
     },
@@ -1230,7 +1230,7 @@
       "shopName": "서강대흥역",
       "shopAddr": "서울특별시 마포구 백범로 89-5 (대흥동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.548178",
       "shopXcoordinate": "126.941576"
     },
@@ -1239,7 +1239,7 @@
       "shopName": "서교동사거리",
       "shopAddr": "서울특별시 마포구 양화로 105 (서교동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.553376",
       "shopXcoordinate": "126.918564"
     },
@@ -1248,7 +1248,7 @@
       "shopName": "상암사보이시티",
       "shopAddr": "서울특별시 마포구 월드컵북로54길 17 (상암동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.58147",
       "shopXcoordinate": "126.888983"
     },
@@ -1257,7 +1257,7 @@
       "shopName": "신촌오거리",
       "shopAddr": "서울특별시 마포구 신촌로16길 10 (노고산동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.555137",
       "shopXcoordinate": "126.934694"
     },
@@ -1266,7 +1266,7 @@
       "shopName": "상암디지털큐브",
       "shopAddr": "서울특별시 마포구 상암산로 34",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5763132",
       "shopXcoordinate": "126.8892477"
     },
@@ -1275,7 +1275,7 @@
       "shopName": "상수역",
       "shopAddr": "서울특별시 마포구 독막로 88 (상수동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5474817",
       "shopXcoordinate": "126.9232158"
     },
@@ -1284,7 +1284,7 @@
       "shopName": "공덕오거리",
       "shopAddr": "서울특별시 마포구 마포대로 86 (도화동) 창강빌딩",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5424641",
       "shopXcoordinate": "126.9505773"
     },
@@ -1293,7 +1293,7 @@
       "shopName": "서교",
       "shopAddr": "서울특별시 마포구 양화로 78 (서교동) 서교빌딩 1층",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.551385",
       "shopXcoordinate": "126.9169208"
     },
@@ -1302,7 +1302,7 @@
       "shopName": "서강대",
       "shopAddr": "서울특별시 마포구 백범로 23 (신수동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5524584",
       "shopXcoordinate": "126.9378262"
     },
@@ -1311,7 +1311,7 @@
       "shopName": "상암MBC",
       "shopAddr": "서울특별시 마포구 성암로 267 (상암동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.581297",
       "shopXcoordinate": "126.890908"
     },
@@ -1320,7 +1320,7 @@
       "shopName": "마포아크로",
       "shopAddr": "서울특별시 마포구 마포대로 68 (도화동) 마포아크로타워",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.54145556",
       "shopXcoordinate": "126.948819"
     },
@@ -1329,7 +1329,7 @@
       "shopName": "홍대삼거리",
       "shopAddr": "서울특별시 마포구 와우산로 64 (상수동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.550266",
       "shopXcoordinate": "126.923179"
     },
@@ -1338,7 +1338,7 @@
       "shopName": "망원역",
       "shopAddr": "서울특별시 마포구 월드컵로 74 (서교동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.555829",
       "shopXcoordinate": "126.910637"
     },
@@ -1347,7 +1347,7 @@
       "shopName": "마포이마트",
       "shopAddr": "서울특별시 마포구 백범로 212 (신공덕동) 마포이마트",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.542421",
       "shopXcoordinate": "126.953341"
     },
@@ -1356,7 +1356,7 @@
       "shopName": "가재울뉴타운",
       "shopAddr": "서울 서대문구 가재울미래로 2",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5749841",
       "shopXcoordinate": "126.9164441"
     },
@@ -1365,7 +1365,7 @@
       "shopName": "신촌역",
       "shopAddr": "서울특별시 서대문구 신촌로 73 (창천동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.556167",
       "shopXcoordinate": "126.934673"
     },
@@ -1374,7 +1374,7 @@
       "shopName": "연희동",
       "shopAddr": "서울특별시 서대문구 연희로 97 (연희동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.566702",
       "shopXcoordinate": "126.930475"
     },
@@ -1383,7 +1383,7 @@
       "shopName": "홍제역",
       "shopAddr": "서울특별시 서대문구 통일로 451 (홍제동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.588658",
       "shopXcoordinate": "126.943864"
     },
@@ -1392,7 +1392,7 @@
       "shopName": "연세백양로",
       "shopAddr": "서울특별시 서대문구 연세로 50 (신촌동) 연세대학교",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.562644",
       "shopXcoordinate": "126.937529"
     },
@@ -1410,7 +1410,7 @@
       "shopName": "경기대",
       "shopAddr": "서울특별시 서대문구 충정로 53 (충정로2가)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.56367995",
       "shopXcoordinate": "126.9646045"
     },
@@ -1419,7 +1419,7 @@
       "shopName": "신촌",
       "shopAddr": "서울특별시 서대문구 연세로 10-1 (창천동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.55648577",
       "shopXcoordinate": "126.9371155"
     },
@@ -1437,7 +1437,7 @@
       "shopName": "이대ECC",
       "shopAddr": "서울특별시 서대문구 이화여대길 52 (대현동) 이화여자대학교 B415호",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.561631",
       "shopXcoordinate": "126.94735"
     },
@@ -1446,7 +1446,7 @@
       "shopName": "연대",
       "shopAddr": "서울특별시 서대문구 연세로 35 (창천동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.558706",
       "shopXcoordinate": "126.936727"
     },
@@ -1455,7 +1455,7 @@
       "shopName": "신촌아트레온",
       "shopAddr": "서울특별시 서대문구 신촌로 129 (창천동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.556505",
       "shopXcoordinate": "126.940238"
     },
@@ -1464,7 +1464,7 @@
       "shopName": "충정로역",
       "shopAddr": "서울특별시 서대문구 충정로 23",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.56137",
       "shopXcoordinate": "126.963219"
     },
@@ -1473,7 +1473,7 @@
       "shopName": "연대동문",
       "shopAddr": "서울특별시 서대문구 성산로 565 (대신동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.566385",
       "shopXcoordinate": "126.946273"
     },
@@ -1482,7 +1482,7 @@
       "shopName": "방배로",
       "shopAddr": "서울특별시 서초구 방배로 52 (방배동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4793434",
       "shopXcoordinate": "126.9994968"
     },
@@ -1500,7 +1500,7 @@
       "shopName": "방배다이치빌딩",
       "shopAddr": "서울특별시 서초구 방배로 114 (방배동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.484329",
       "shopXcoordinate": "126.995872"
     },
@@ -1509,7 +1509,7 @@
       "shopName": "센트럴F1",
       "shopAddr": "서울특별시 서초구 신반포로 176 (반포동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.505148",
       "shopXcoordinate": "127.004395"
     },
@@ -1518,7 +1518,7 @@
       "shopName": "서초역이화빌딩",
       "shopAddr": "서울특별시 서초구 반포대로21길 3 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.487931",
       "shopXcoordinate": "127.009126"
     },
@@ -1527,7 +1527,7 @@
       "shopName": "서초구청",
       "shopAddr": "서울특별시 서초구 남부순환로 2557 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.484206",
       "shopXcoordinate": "127.030103"
     },
@@ -1536,7 +1536,7 @@
       "shopName": "서초우성사거리",
       "shopAddr": "서울특별시 서초구 강남대로 343 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.493545",
       "shopXcoordinate": "127.02943"
     },
@@ -1545,7 +1545,7 @@
       "shopName": "강남대로신사",
       "shopAddr": "서울특별시 서초구 강남대로 595 (잠원동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.51489",
       "shopXcoordinate": "127.019469"
     },
@@ -1554,7 +1554,7 @@
       "shopName": "서울고속터미널",
       "shopAddr": "서울특별시 서초구 신반포로 194 (반포동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.504406",
       "shopXcoordinate": "127.005648"
     },
@@ -1572,7 +1572,7 @@
       "shopName": "방배",
       "shopAddr": "서울특별시 서초구 방배로 211",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.491914",
       "shopXcoordinate": "126.9904974"
     },
@@ -1581,7 +1581,7 @@
       "shopName": "방배카페거리.",
       "shopAddr": "서울특별시 서초구 방배중앙로 162 (방배동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4934767",
       "shopXcoordinate": "126.9865297"
     },
@@ -1590,7 +1590,7 @@
       "shopName": "서초법원",
       "shopAddr": "서울특별시 서초구 서초대로 274 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49297",
       "shopXcoordinate": "127.011875"
     },
@@ -1599,7 +1599,7 @@
       "shopName": "청계산입구역",
       "shopAddr": "서울특별시 서초구 청계산로 203 (신원동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.447323",
       "shopXcoordinate": "127.05625"
     },
@@ -1608,7 +1608,7 @@
       "shopName": "사당로데오",
       "shopAddr": "서울특별시 서초구 방배천로 5-4(방배동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4772752",
       "shopXcoordinate": "126.9821605"
     },
@@ -1626,7 +1626,7 @@
       "shopName": "교대역",
       "shopAddr": "서울특별시 서초구 서초중앙로 138 (서초동) 우림빌딩",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.494207",
       "shopXcoordinate": "127.01394"
     },
@@ -1644,7 +1644,7 @@
       "shopName": "논현역",
       "shopAddr": "서울특별시 서초구 강남대로 557 (잠원동) 1~2층",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.5111983",
       "shopXcoordinate": "127.0205875"
     },
@@ -1662,7 +1662,7 @@
       "shopName": "내방역",
       "shopAddr": "서울특별시 서초구 방배로 184 (방배동) 대풍빌딩",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.490004",
       "shopXcoordinate": "126.992455"
     },
@@ -1671,7 +1671,7 @@
       "shopName": "서초파라곤",
       "shopAddr": "서울특별시 서초구 서초대로74길 29 (서초동) 서초파라곤",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.494941",
       "shopXcoordinate": "127.027422"
     },
@@ -1680,7 +1680,7 @@
       "shopName": "서울아트센터",
       "shopAddr": "서울특별시 서초구 남부순환로 2395 (서초동) 호경빌딩",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.480866",
       "shopXcoordinate": "127.012368"
     },
@@ -1689,7 +1689,7 @@
       "shopName": "서초중앙로",
       "shopAddr": "서울특별시 서초구 서초중앙로 225",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.501691",
       "shopXcoordinate": "127.01152"
     },
@@ -1698,7 +1698,7 @@
       "shopName": "센트럴시티",
       "shopAddr": "서울특별시 서초구 신반포로 176 (반포동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.504707",
       "shopXcoordinate": "127.004459"
     },
@@ -1707,7 +1707,7 @@
       "shopName": "강남삼성타운",
       "shopAddr": "서울특별시 서초구 서초대로78길 24 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49562035",
       "shopXcoordinate": "127.0277144"
     },
@@ -1716,7 +1716,7 @@
       "shopName": "방배역",
       "shopAddr": "서울특별시 서초구 방배로 84 (방배동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.48200755",
       "shopXcoordinate": "126.9976438"
     },
@@ -1725,7 +1725,7 @@
       "shopName": "반포역",
       "shopAddr": "서울특별시 서초구 신반포로 257 (잠원동) 신반포11차상가",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.508589",
       "shopXcoordinate": "127.011959"
     },
@@ -1734,7 +1734,7 @@
       "shopName": "뉴코아강남",
       "shopAddr": "서울특별시 서초구 잠원로 69 (잠원동) 킴스클럽",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.51031339",
       "shopXcoordinate": "127.0069582"
     },
@@ -1743,7 +1743,7 @@
       "shopName": "교대",
       "shopAddr": "서울특별시 서초구 서초중앙로 118 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4923611",
       "shopXcoordinate": "127.0142207"
     },
@@ -1752,7 +1752,7 @@
       "shopName": "신논현역",
       "shopAddr": "서울특별시 서초구 강남대로 483 (반포동) 청호빌딩",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.50529",
       "shopXcoordinate": "127.023636"
     },
@@ -1761,7 +1761,7 @@
       "shopName": "남부터미널2",
       "shopAddr": "서울특별시 서초구 효령로 274 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.48436736",
       "shopXcoordinate": "127.0142192"
     },
@@ -1770,7 +1770,7 @@
       "shopName": "서래마을입구",
       "shopAddr": "서울특별시 서초구 서래로 48 (반포동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49925284",
       "shopXcoordinate": "126.9984801"
     },
@@ -1779,7 +1779,7 @@
       "shopName": "몬테소리",
       "shopAddr": "서울특별시 서초구 강남대로 399 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.4982695",
       "shopXcoordinate": "127.026865"
     },
@@ -1788,7 +1788,7 @@
       "shopName": "서초역",
       "shopAddr": "서울특별시 서초구 반포대로 118 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.49067495",
       "shopXcoordinate": "127.0086118"
     },
@@ -1797,7 +1797,7 @@
       "shopName": "교대법원",
       "shopAddr": "서울특별시 서초구 서초중앙로 164 (서초동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.496329",
       "shopXcoordinate": "127.013336"
     },
@@ -1806,7 +1806,7 @@
       "shopName": "길음역",
       "shopAddr": "서울특별시 성북구 정릉로 376 (돈암동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.602139",
       "shopXcoordinate": "127.025271"
     },
@@ -1815,7 +1815,7 @@
       "shopName": "미아이마트",
       "shopAddr": "서울 성북구 도봉로 17",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.610678",
       "shopXcoordinate": "127.029921"
     },
@@ -1833,7 +1833,7 @@
       "shopName": "미아",
       "shopAddr": "서울특별시 성북구 동소문로 314 (하월곡동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.607581",
       "shopXcoordinate": "127.029303"
     },
@@ -1842,7 +1842,7 @@
       "shopName": "성신여대정문",
       "shopAddr": "서울특별시 성북구 보문로34길 62 (동선동2가)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.59091",
       "shopXcoordinate": "127.0188"
     },
@@ -1851,7 +1851,7 @@
       "shopName": "종암",
       "shopAddr": "서울특별시 성북구 종암로 122 (종암동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.601095",
       "shopXcoordinate": "127.033847"
     },
@@ -1860,7 +1860,7 @@
       "shopName": "삼선교",
       "shopAddr": "서울특별시 성북구 동소문로 10 (동소문동2가)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.588696",
       "shopXcoordinate": "127.0073207"
     },
@@ -1869,7 +1869,7 @@
       "shopName": "고대",
       "shopAddr": "서울특별시 성북구 고려대로 24길 51 (안암동5가)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.58397192",
       "shopXcoordinate": "127.0297352"
     },
@@ -1878,7 +1878,7 @@
       "shopName": "성신여대",
       "shopAddr": "서울특별시 성북구 동소문로24길 12 (동선동1가)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.593135",
       "shopXcoordinate": "127.018379"
     },
@@ -1887,7 +1887,7 @@
       "shopName": "안암역",
       "shopAddr": "서울특별시 성북구 고려대로 102-2 (안암동5가)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.586319",
       "shopXcoordinate": "127.030556"
     },
@@ -1896,7 +1896,7 @@
       "shopName": "한성대입구역",
       "shopAddr": "서울특별시 성북구 성북로 11 (성북동1가)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.589054",
       "shopXcoordinate": "127.004839"
     },
@@ -1914,7 +1914,7 @@
       "shopName": "잠실시그마타워",
       "shopAddr": "서울특별시 송파구 올림픽로 289 (신천동)",
       "shopPhone": "1522-3232",
-      "shopCategory": "",
+      "shopCategory": "일반 매장",
       "shopYcoordinate": "37.514567",
       "shopXcoordinate": "127.102493"
     },

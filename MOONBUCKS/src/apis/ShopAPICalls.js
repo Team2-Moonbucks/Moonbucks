@@ -1,6 +1,17 @@
 import { request } from "./Api";
 import { getShoplist, getShop, registShop, modifyShop, deleteShop } from "../modules/ShopModule";
 
+export function callGetShopListByCategoryAPI(shopCategory)  {
+    console.log('getGetShopListByCategory api calls...');
+    const endpoint = shopCategory === '전체보기' ? '/shop' : `/shop?shopCategory=${shopCategory}`;
+    return async (dispatch, getState) => {
+        const result = await request('GET', endpoint);
+        console.log('getDessertList result : ', result);
+        dispatch(getShoplist(result));
+    }
+}
+
+
 export function callGetShoplistAPI() {
 
 	console.log('getShoplist api calls...');
