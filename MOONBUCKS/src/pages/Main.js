@@ -22,11 +22,6 @@ function Main() {
 			</div>
 			<div className="coffeeMain mainCSS d-none d-lg-block">
 				<span><img src="../coffee_main.jpg"></img></span>
-				<button onClick={() => navigate(`/menu`)}>Detail More</button>
-				<button onClick={() => navigate(`/coffee`)}>Detail More</button>
-			</div>
-			<div className="coffeeMain mainCSS d-none d-lg-block">
-				<span><img src="../coffee_main.jpg"></img></span>
 				<button onClick={() => navigate(`/coffee`)}>Detail More</button>
 			</div>
 		</Container>
