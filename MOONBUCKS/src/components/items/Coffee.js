@@ -18,13 +18,32 @@ function Coffee({id}) {
 
 	return (
 		coffee && (
-			<>
-				<h3>메뉴 이름 : {coffee.coffeeName}</h3>
-				<h3>메뉴 가격 : {coffee.coffeePrice}</h3>
-				<h3>메뉴 종류 : {coffee.categoryName}</h3>
-				<h3>메뉴 상세 : {coffee.detail.description}</h3>
-				<img src={coffee.detail.image} style={{ maxWidth: 500 }} alt={coffee.coffeeName} />
-			</>
+			<div className='DetailBox CoffeeBox'>
+				<table>
+					<tbody>
+						<tr>
+							<td className='tdimg' colSpan={2}><img src={coffee.detail.image} style={{ maxWidth: 500 }} alt={coffee.menuName} /></td>
+						</tr>
+						<tr class="space"></tr>
+						<tr>
+							<td><span>이름</span>|</td>
+							<td>{coffee.coffeeName}</td>
+						</tr>
+						<tr>
+							<td><span>가격</span>|</td>
+							<td>{coffee.coffeePrice}</td>
+						</tr>
+						<tr>
+							<td><span>종류</span>|</td>
+							<td>{coffee.categoryName}</td>
+						</tr>
+						<tr>
+							<td><span>상세</span>|</td>
+							<td>{coffee.detail.description}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		)
 	);
 }

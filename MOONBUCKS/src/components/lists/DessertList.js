@@ -26,7 +26,6 @@ function DessertList() {
 
 	return (
 
-
 			dessertList && (
 				<div className="dessertBox">
 					{dessertList.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}

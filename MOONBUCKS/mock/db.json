@@ -20,6 +20,13 @@
       "nickname": "user02",
       "role": "user",
       "email": ""
+    },
+    {
+      "id": "user03",
+      "password": "pass03",
+      "nickname": "와우와우",
+      "role": "user",
+      "email": ""
     }
   ],
   "shop": [
