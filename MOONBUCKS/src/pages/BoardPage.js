@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function BoardPage() {
 
-	const isAuthorized = !!localStorage.getItem('isLogin');
+	const isLogin = !!localStorage.getItem('isLogin');
 
 	/* 관리자 로그인 상태 확인 */
 	const isAdmin = !!localStorage.getItem('isAdmin');
@@ -12,7 +12,7 @@ function BoardPage() {
 
 	return (
 		<div>
-			<h1>게시글 목록 {(isAdmin) && <button onClick={() => navigate(`/board/regist`)}>등록</button>} </h1>
+			<h1>게시글 목록 {(isAdmin || isLogin) && <button onClick={() => navigate(`/board/regist`)}>등록</button>} </h1>
 			<BoardList />
 		</div>
 	);
