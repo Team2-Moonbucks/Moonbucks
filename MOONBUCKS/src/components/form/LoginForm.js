@@ -51,6 +51,7 @@ function LoginForm() {
 				);
 				dispatch(resetLoginUser());
 			} else if (isAuthorized) {
+				alert(`${loginInfo.id}님 환영합니다!`);
 				navigate('/');
 			}
 		}, // eslint-disable-next-line
