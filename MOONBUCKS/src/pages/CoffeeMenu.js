@@ -10,7 +10,6 @@ function CoffeeMenu() {
     const isAuthorized = !!localStorage.getItem('isAdmin');
     const navigate = useNavigate();
 
-    const { history, location } = window;
 
     const handleCategoryChange = (newCategory) => {
         setCategory(newCategory);
