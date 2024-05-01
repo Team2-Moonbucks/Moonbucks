@@ -24,14 +24,11 @@ export function callGetShopAPI(id) {
 	console.log('getShop api calls...');
 	return async (dispatch, getState) => {
 
-		try{
-			const result = await request('GET', `/shop?id=${id}`);
-			console.log('result : ', result);
-			dispatch(getShop(result[0]));
+		const result = await request('GET', `/shop/${id}`);
+		console.log('result : ', result);
+		dispatch(getShop(result));
 			
-		} catch (error) {
-			console.log('잘못된 요청!')
-		}
+		
 
 
 	};
