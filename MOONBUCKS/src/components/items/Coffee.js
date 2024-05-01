@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { callGetCoffeeAPI } from '../../apis/CoffeeAPICalls';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Coffee({id}) {
 
@@ -15,7 +18,7 @@ function Coffee({id}) {
 		},
 		[]
 	);
-	
+
 
 	return (
 		coffee && (

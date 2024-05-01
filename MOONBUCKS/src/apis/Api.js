@@ -13,6 +13,6 @@ export const request = async (method, url, data) => {
     })
     .catch(error => {
         console.log('error : ',error);
-        throw error;
+        return error;
     });
 };
