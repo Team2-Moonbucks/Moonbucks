@@ -151,7 +151,14 @@ function DessertModifyForm() {
 			<textarea name="description" value={modifyDessert.detail.description} onChange={onChangeHandler}></textarea>
 			<br/>
 			<label>사진</label><br/>
+			{modifyDessert.detail.image && (
+				<div className='imgBox'>
+					<img className='imgUpload' src={modifyDessert.detail.image} alt="이전 이미지" />
+					<br />
+				</div>
+			)}
 			<input
+				id="input-file"
 				type="file"
 				name="image"
 				accept='image/*'
