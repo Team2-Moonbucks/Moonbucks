@@ -8,6 +8,11 @@ export const request = async (method, url, data) => {
             url : `${DOMAIN}${url}`,
             data
     })
-    .then(res => res.data)
-    .catch(error => console.log(error));
+    .then((res) => {
+        return res.data;
+    })
+    .catch(error => {
+        console.log('error : ',error);
+        throw error;
+    });
 };

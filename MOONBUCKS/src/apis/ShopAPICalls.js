@@ -20,16 +20,24 @@ export function callGetShoplistAPI(shopCategory) {
 
 export function callGetShopAPI(id) {
 
-	console.log('getShop api calls...');
 
+	console.log('getShop api calls...');
 	return async (dispatch, getState) => {
 
-		const result = await request('GET', `/shop?id=${id}`);
-		console.log('getShop result : ', result[0]);
+		try{
+			const result = await request('GET', `/shop?id=${id}`);
+			console.log('result : ', result);
+			dispatch(getShop(result[0]));
+			
+		} catch (error) {
+			console.log('잘못된 요청!')
+		}
 
-		dispatch(getShop(result[0]));
-	}
+
+	};
 }
+
+
 
 export function callRegistShopAPI(shop) {
 
@@ -39,7 +47,6 @@ export function callRegistShopAPI(shop) {
 
 		const result = await request('POST', '/shop/', shop);
 		console.log('registShop result : ', result);
-
 		dispatch(registShop(result));
 	}
 }
@@ -69,3 +76,4 @@ export function callDeleteShopAPI(id) {
 		dispatch(deleteShop(result));
 	}
 }
+

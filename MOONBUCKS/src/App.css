@@ -1012,3 +1012,15 @@ input[type="file"]:hover::file-selector-button{
 	background-color: #2f4485;
 	color: white;
 }
+
+.ErrorImg{
+	width: 80vw;
+	height: 50vh;
+	margin-top: 40px !important;
+	margin-bottom: 30px;
+	background-image: url(../public/errorlogo.jpg) ;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	margin: 0 auto;
+}

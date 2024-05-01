@@ -39,7 +39,8 @@ function CoffeeModifyForm() {
 		() => {
 
 			if(coffee){
-				setModifyCoffee({
+				setModifyCoffee(
+										{
 						id: id,
 						coffeeName: coffee.coffeeName,
 						coffeePrice: coffee.coffeePrice,

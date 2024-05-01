@@ -13,9 +13,11 @@ function ShopModifyForm() {
 	const result = useSelector(state => state.shopReducer);
 	const shop = result.shop;
 
+	
+	
 	console.log('[ShopModifyForm] result', result);
-
-
+	
+	
 	/* 수정할 메뉴 초기값 불러오기 */
 	useEffect(
 		() => {
@@ -25,6 +27,27 @@ function ShopModifyForm() {
 		[]
 	);
 
+	useEffect(
+		()=> {
+			
+			
+			const isShoplist = !!(result && result.shoplist!== undefined);
+			const isShopId = !!(result && result.shop && result.shop.id !== undefined);
+
+			if(!isShopId){
+				if(!isShoplist){
+					if(Object.keys(result).length==1){
+						console.log('에러페이지 호출!');
+						navigate("/error");
+					}
+				}
+			}
+			
+		},[result]
+	)
+
+
+	
 	/* 입력 값 state 저장 */
 	const [modifyShop, setModifyShop] = useState(
 		{

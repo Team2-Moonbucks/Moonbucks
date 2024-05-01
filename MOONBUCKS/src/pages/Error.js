@@ -7,7 +7,7 @@ function Error() {
 
 	return (
 		<div className='errorCSS'>
-			<img src="../errorlogo.jpg"></img>
+			<div className='ErrorImg'></div>
 			<h1>죄송합니다. 현재 찾을 수 없는 페이지를 요청 하셨습니다.</h1>
 			<h3>페이지의 주소가 잘못 입력되었거나, <br/> 주소가 변경 혹은 삭제되어 요청하신 페이지를 찾을 수 없습니다.</h3>
 			<Link to={'/'}>

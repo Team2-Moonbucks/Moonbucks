@@ -15,6 +15,7 @@ function Coffee({id}) {
 		},
 		[]
 	);
+	
 
 	return (
 		coffee && (

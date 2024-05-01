@@ -1,25 +1,51 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { callGetShopAPI } from '../../apis/ShopAPICalls';
+import { useNavigate } from 'react-router-dom';
+
 import KaKaoMap from './KaKaoMap';
+
 
 function Shop({ id }) {
 
 	const result = useSelector(state => state.shopReducer);
 	const shop = result.shop;
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
+
+	console.log('[shop]result : ', result);
+
+	const isObject = (obj) => {
+		return Object.prototype.toString.call(obj) === '[object Object]';
+	};
 
 	useEffect(
 		() => {
 			/* shop 호출 API */
 			dispatch(callGetShopAPI(id));
-
-
+			
 		},
 		[]
 	);
 
+	useEffect(
+		()=> {
+			
+			
+			const isShoplist = !!(result && result.shoplist!== undefined);
+			const isShopId = !!(result && result.shop && result.shop.id !== undefined);
 
+			if(!isShopId){
+				if(!isShoplist){
+					if(Object.keys(result).length==1){
+						console.log('에러페이지 호출!');
+						navigate("/error");
+					}
+				}
+			}
+			
+		},[result]
+	)
 
 	return (
 		shop && (
