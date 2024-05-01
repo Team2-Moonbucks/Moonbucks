@@ -26,16 +26,7 @@ function CoffeeMenu() {
         setSearchPerformed(true);
     };
 
-    const buttonStyle = (cat) => ({
-        margin: '5px',
-        padding: '10px 20px',
-        borderRadius: '5px',
-        border: 'none',
-        cursor: 'pointer',
-        backgroundColor: category === cat ? 'magenta' : '#f8f9fa', 
-        color: category === cat ? 'white' : 'black',
-        fontWeight: category === cat ? 'bold' : 'normal'
-    });
+    
 
     return (
         <div className="pageTitle dessertTitle">
