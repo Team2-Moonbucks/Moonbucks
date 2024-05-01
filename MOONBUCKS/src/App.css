@@ -976,11 +976,18 @@ input[type=file]::file-selector-button {
 	margin-bottom: 5px;
 }
 
+.imgBox > span{
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
 .imgUpload{
 	height: 300px;
 	position: relative;
-	left: calc(50% - 150px);
+	margin: 0 auto;
 }
+
 
 
 .imageLabel {
