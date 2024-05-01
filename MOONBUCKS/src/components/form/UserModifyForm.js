@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { callModifyUserAPI } from '../../apis/UserAPICalls';
+import { callGetUserListAPI, callModifyUserAPI } from '../../apis/UserAPICalls';
 import { callGetUserAPI } from '../../apis/UserAPICalls';
 
 function UserModifyForm() {
@@ -10,7 +10,9 @@ function UserModifyForm() {
 	const navigate = useNavigate();
 	const result = useSelector(state => state.userReducer);
 	const user = result.user;
+	const userlist = result.userlist;
 	const nickname = localStorage.getItem('LoginNickname');
+    const nameCaution = document.getElementById('nameCaution');
 
 
 
@@ -20,6 +22,7 @@ function UserModifyForm() {
 		() => {
 			/* user 호출 API */
 			dispatch(callGetUserAPI(nickname));
+			dispatch(callGetUserListAPI());
 		},
 		[]
 	);
@@ -49,6 +52,7 @@ function UserModifyForm() {
 		[user]
 	)
 
+
 	/* 입력 값 변경 시 이벤트 핸들러 */
 	const onChangeHandler = (e) => {
 
@@ -57,6 +61,30 @@ function UserModifyForm() {
 
 		console.log('name : ', name);
 		console.log('value : ', value);
+
+		console.log('userlist : ', userlist);
+
+		if(userlist){
+
+			
+            const userIdValue = document.getElementById('userId').value;
+			const nameCaution = document.getElementById('nameCaution');
+			let isDuplicateName = userlist.some(user => user.nickname === userIdValue);
+			
+			console.log('isDuplicateName : ', isDuplicateName);
+
+            console.log('userIdValue : ', userIdValue);
+			if(userIdValue.trim() === ''){
+				nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
+				nameCaution.style = 'color : rgb(247, 51, 51)';
+			} else if(isDuplicateName){
+				nameCaution.innerHTML = '  * 중복된 닉네임입니다.';
+				nameCaution.style = 'color : rgb(247, 51, 51)';
+			} else{
+				nameCaution.innerHTML = '  * 사용가능한 닉네임입니다.';
+				nameCaution.style = 'color : rgb(29, 252, 96)';
+			}
+		}
 
 		setModifyUser(
 			{
@@ -85,18 +113,28 @@ function UserModifyForm() {
 	);
 
 	const onClickHandler = () => {
-		/* modifyUser에 대한 유효성 검사 후 호출 */
-		dispatch(callModifyUserAPI(modifyUser));
+
+		if(nameCaution){
+			if(nameCaution.innerHTML == '  * 중복된 닉네임입니다.'){
+				alert("중복된 닉네임입니다. 다시 입력해주세요");
+				document.getElementById('userId').focus();
+			}else if(nameCaution.innerHTML == '  * 반드시 작성해야하는 부분입니다.'){
+				alert("닉네임은 반드시 작성해야합니다.");
+				document.getElementById('userId').focus();
+			}else{
+				dispatch(callModifyUserAPI(modifyUser));
+			}
+		}
 	}
 
 	return (
 		<div className='formTotal'>
 			<h1>{nickname}님 회원 정보 수정</h1>
 			<label>아이디 </label><br/>
-			<input type="text" name="id" value={modifyUser.id} onChange={onChangeHandler} />
+			<input type="text" name="id" value={modifyUser.id} readOnly={true} onChange={onChangeHandler} />
 			<br />
-			<label>닉네임 </label><br/>
-			<input type="text" name="nickname" value={modifyUser.nickname} onChange={onChangeHandler} />
+			<label>닉네임 </label><span id="nameCaution" className='nameCaution'></span><br/>
+			<input type="text" name="nickname" id='userId' value={modifyUser.nickname} onChange={onChangeHandler} />
 			<br />
 			<label>Email </label><br/>
 			<input type="text" name="email" value={modifyUser.email} onChange={onChangeHandler} />
