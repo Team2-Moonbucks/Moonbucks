@@ -23,10 +23,10 @@ function DessertMenus() {
         dispatch(callGetDessertListAPI(category));
     };
 
-    const handleSearch = () => {
+    // 입력이 변경될 때마다 자동으로 검색을 수행
+    useEffect(() => {
         dispatch(callGetDessertListAPI(category, searchTerm));
-        dispatch(callGetDessertListAPI(category));
-    };
+    }, [searchTerm, category, dispatch]);
 
     // 페이지가 처음 렌더링될 때 전체보기 카테고리의 API를 호출
     useEffect(() => {
@@ -43,7 +43,6 @@ function DessertMenus() {
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 				/>
-				<button className='searchBtn' onClick={handleSearch} >검색</button>
 			</div>
             <div>
                 <button className={`${(category === '전체보기' ? 'active' : '')} TotalBtn` } onClick={() => handleCategoryChange('전체보기')}>전체보기</button>
