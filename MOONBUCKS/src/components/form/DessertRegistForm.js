@@ -47,6 +47,21 @@ function DessertRegistForm() {
         }
     }, [result, navigate]);
 
+    useEffect (
+        () => {
+            if(dessertList){
+                const userIdValue = document.getElementById('userId').value;
+                const nameCaution = document.getElementById('nameCaution');
+    
+                console.log('userIdValue : ', userIdValue);
+                if(userIdValue.trim() === ''){
+                    nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
+                    nameCaution.style = 'color : rgb(247, 51, 51)';
+                }}
+        },
+        []
+    )
+
     const onChangeHandler = (e) => {
         let name = e.target.name;
         let value = e.target.value;
@@ -118,8 +133,18 @@ function DessertRegistForm() {
    
 
     const onClickHandler = () => {
-		/* registMenu에 대한 유효성 검사 후 호출 */
-		dispatch(callRegistDessertAPI(registDessert));
+
+        if(nameCaution){
+			if(nameCaution.innerHTML == '  * 사용가능한 메뉴이름입니다.'){
+				dispatch(callRegistDessertAPI(registDessert));
+			}else if(nameCaution.innerHTML == '  * 중복된 메뉴이름입니다.'){
+				alert("중복된 메뉴이름입니다. 다시 입력해주세요");
+				document.getElementById('userId').focus();
+			}else{
+				alert("메뉴명은 반드시 작성해야합니다.");
+				document.getElementById('userId').focus();
+			}
+		}
 	}
 
     return (
