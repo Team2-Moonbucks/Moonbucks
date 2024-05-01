@@ -10,6 +10,8 @@ function CoffeeMenu() {
     const isAuthorized = !!localStorage.getItem('isAdmin');
     const navigate = useNavigate();
 
+    const { history, location } = window;
+
     const handleCategoryChange = (newCategory) => {
         setCategory(newCategory);
         setSearchTerm('');
@@ -17,13 +19,20 @@ function CoffeeMenu() {
         setSearchPerformed(false);
     };
 
+
+
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
     };
 
     const handleSearch = () => {
-        setActiveSearchTerm(searchTerm);
-        setSearchPerformed(true);
+        console.log('내가 입력한 검색어 : ', searchTerm);
+        if (searchTerm === "") {
+            alert("검색어를 입력해주세요!");
+        } else {
+            setActiveSearchTerm(searchTerm); // 사용자가 입력한 검색어로 검색 결과 값을 설정
+            setSearchPerformed(true); // 검색 수행 상태를 true로 설정
+        }
     };
 
     const handleKeyDown = (event) => {
@@ -45,7 +54,6 @@ function CoffeeMenu() {
                 <button className='searchBtn' onClick={handleSearch}>검색</button>
             </div>
                 {searchPerformed && <p>"{activeSearchTerm}" 검색 결과입니다.</p>}
-
                 
 
             <CoffeeList category={category} searchTerm={activeSearchTerm} searchTriggered={searchPerformed}/>

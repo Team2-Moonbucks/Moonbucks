@@ -43,7 +43,7 @@ function BoardPage() {
 			</h1>
 			<hr/>
 			<div className='searchBox'>
-                <input type="search" placeholder='검색어를 입력하세요.' value={searchTerm} onChange={handleSearchChange} onKeyDown={handleKeyDown}></input>
+                <input type="search" placeholder='검색하고 싶은 제목을 입력하세요.' value={searchTerm} onChange={handleSearchChange} onKeyDown={handleKeyDown}></input>
                 <button className='searchBtn' onClick={handleSearch}>검색</button>
             </div>
                 {searchPerformed && <p>"{activeSearchTerm}" 검색 결과입니다.</p>}

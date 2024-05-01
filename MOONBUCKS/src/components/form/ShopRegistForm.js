@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { callGetShoplistAPI, callRegistShopAPI } from '../../apis/ShopAPICalls';
-
+import KaKaoMapFind from '../items/KaKaoMapFind';
 
 function ShopRegistForm() {
 
@@ -13,28 +13,43 @@ function ShopRegistForm() {
 	const shopList = result.shoplist;
 	const nameCaution = document.getElementById('nameCaution');
 
-	if(shopList){
-		const shopNameValue = document.getElementById('shopName').value;
-		const nameCaution = document.getElementById('nameCaution');
+	useEffect(
+		() => {
+			if(shopList){
+				const shopNameValue = document.getElementById('shopName').value;
+				const nameCaution = document.getElementById('nameCaution');
+		
+				if(shopNameValue.trim() === ''){
+					nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
+					nameCaution.style = 'color : rgb(247, 51, 51)';
+				} 
+			}
+		},[]
+	)
 
-		if(shopNameValue.trim() === ''){
-			nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
-			nameCaution.style = 'color : rgb(247, 51, 51)';
-		} 
-	}
+
 
 	/* 입력 값 state 저장 */
 	const [registShop, setRegistShop] = useState(
 		{
 			id: 0,
 			shopName: '',
-			shopAddr: '',
+			shopAddr: '서울특별시 서대문구 연세로 10-1',
 			shopPhone: '',
 			shopCategory: '',
-			shopYcoordinate: 0,
-			shopXcoordinate: 0
+			shopYcoordinate: 37.556514,
+			shopXcoordinate: 126.936992
 		}
 	);
+
+	const handleCoordinateChange = (xcoord, ycoord, shopAddress) => {
+        setRegistShop({
+            ...registShop,
+            shopXcoordinate: xcoord,
+            shopYcoordinate: ycoord,
+			shopAddr:shopAddress
+        });
+    }
 
 	/* 입력 값 변경 시 이벤트 핸들러 */
 	const onChangeHandler = (e) => {
@@ -59,6 +74,8 @@ function ShopRegistForm() {
 			const shopNameValue = document.getElementById('shopName').value;
 			const nameCaution = document.getElementById('nameCaution');
 			let isDuplicateName = shopList.some(shop => shop.shopName === shopNameValue);
+
+			console.log('shopNameValue : ', shopNameValue);
 
 			if(shopNameValue.trim() === ''){
 				nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
@@ -131,27 +148,23 @@ function ShopRegistForm() {
 
 	useEffect(
 		() => {
-			if(nameCaution.innerHTML == '  * 사용가능한 매장명입니다.'){
-				dispatch(callGetShoplistAPI());
-			}else if(nameCaution.innerHTML == '  * 중복된 매장명입니다.'){
-				alert("중복된 매장명입니다. 다시 입력해주세요");
-				document.getElementById('shopName').focus();
-			}else{
-				alert("매장명은 반드시 작성해야합니다.");
-				document.getElementById('shopName').focus();
-			}
+			
 		},
-		[]
+		[registShop]
 	)
 
 	useEffect(
 	() => {
-
+			dispatch(callGetShoplistAPI('전체보기'));
 			if(shopList && shopList.length > 0) {
 
-				let maxId = shopList.reduce((max, shop) => Math.max(max, shop.id, 0));
-				let nextId = maxId + 1;
+				let maxId = shopList.reduce((max, shop) => {
+					const parsedId = parseInt(shop.id, 10);
+					return Math.max(max, isNaN(parsedId) ? 0 : parsedId);
+				},0);
 
+				let nextId = maxId + 1;
+				
 				console.log(`maxId:  ${maxId}, nextId: ${nextId}`);
 
 				setRegistShop(
@@ -193,7 +206,17 @@ function ShopRegistForm() {
 
 	const onClickHandler = () => {
 		/* registShop에 대한 유효성 검사 후 호출 */
-		dispatch(callRegistShopAPI(registShop));
+		if(nameCaution){
+			if(nameCaution.innerHTML == '  * 사용가능한 매장명입니다.'){
+				dispatch(callRegistShopAPI(registShop));
+			}else if(nameCaution.innerHTML == '  * 중복된 매장명입니다.'){
+				alert("중복된 매장명입니다. 다시 입력해주세요");
+				document.getElementById('shopName').focus();
+			}else{
+				alert("매장명은 반드시 작성해야합니다.");
+				document.getElementById('shopName').focus();
+			}
+		}
 	}
 
 	return (
@@ -220,6 +243,7 @@ function ShopRegistForm() {
 			<label>매장 y좌표 </label>
 			<input type="text" name="shopYcoordinate" value={registShop.shopYcoordinate} onChange={onChangeHandler} />
 			<br />
+			<KaKaoMapFind onCoordinateChange={handleCoordinateChange} shop={registShop}/>
 			<button onClick={onClickHandler}>매장 등록</button>
 			
 		</div>

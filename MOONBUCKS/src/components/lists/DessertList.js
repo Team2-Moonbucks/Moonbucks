@@ -27,8 +27,10 @@ function DessertList({ searchTerm }) {
 	const filteredDesserts = searchTerm
 	? dessertList.filter(dessert =>
 		dessert.menuName.toLowerCase().includes(searchTerm.toLowerCase())
-	  )
+	)
 	: dessertList;
+
+	console.log('dessertList : ', dessertList);
 
 	return (
 		<div className="dessertBox">

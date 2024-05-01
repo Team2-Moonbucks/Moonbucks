@@ -57,6 +57,12 @@ function LoginForm() {
 		[result]
 	);
 
+	const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            onClickHandler();
+        }
+    };
+
 	return (
 		<div className='loginForm'>
 			<table>
@@ -80,6 +86,7 @@ function LoginForm() {
 							name="password"
 							value={loginInfo.password}
 							onChange={onChangeHandler}
+							onKeyDown={handleKeyDown}
 							/>
 						</td>
 						<td></td>
