@@ -28,7 +28,8 @@ function BoardDetail() {
 	useEffect(
 		() => {
 			/* 메뉴 삭제 완료 확인 후 /board로 이동 */
-			if (result.delete) {
+			if (result.delete !== undefined && Object.keys(result.delete).length !== 0) {
+				console.log('result.delete : ', result.delete);
 				alert('게시글 삭제');
 				navigate(`/board`);
 			}

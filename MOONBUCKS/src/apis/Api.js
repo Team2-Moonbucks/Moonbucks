@@ -15,7 +15,7 @@ export const request = async (method, url, data) => {
     .catch(error => {
         if(error.response.status === 404){
             console.log('잘못된 요청!')
-            alert('잘못된 요청입니다!');
+            // alert('잘못된 요청입니다!');
             window.location.href = '/error';
 
         }

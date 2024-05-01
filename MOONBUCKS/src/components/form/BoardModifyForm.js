@@ -52,7 +52,7 @@ function BoardModifyForm() {
 
 	useEffect(
 		()=>{
-			if(result.modify){
+			if(result.modify !== undefined && Object.keys(result.modify).length !== 0){
 				alert('게시물 수정');
 				navigate('/board');
 			}
