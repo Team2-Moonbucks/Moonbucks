@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { callGetDessertAPI, callRegistDessertAPI } from '../../apis/DessertAPICalls';
+import { callGetDessertListAPI, callRegistDessertAPI } from '../../apis/DessertAPICalls';
 
 function DessertRegistForm() {
     const result = useSelector(state => state.dessertReducer);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const dessertList = result.dessertList;
+    const nameCaution = document.getElementById('nameCaution');
     const isAuthorized = !!localStorage.getItem('isLogin');
     const isAdmin = !!localStorage.getItem('isAdmin');
     const [registDessert, setRegistDessert] = useState({
@@ -28,6 +30,7 @@ function DessertRegistForm() {
             setRegistDessert(prevState => ({ ...prevState, id : lastId.toString() })); // ID를 문자열로 변환하여 저장
         };
         fetchLastId();
+        dispatch(callGetDessertListAPI('전체보기'));
     }, []);
 
     // 권한 검증과 리다이렉트
@@ -47,6 +50,26 @@ function DessertRegistForm() {
     const onChangeHandler = (e) => {
         let name = e.target.name;
         let value = e.target.value;
+
+        console.log('dessertList', dessertList);
+        if(dessertList){
+            const userIdValue = document.getElementById('userId').value;
+			const nameCaution = document.getElementById('nameCaution');
+			let isDuplicateName = dessertList.some(user => user.menuName === userIdValue);
+
+            console.log('userIdValue : ', userIdValue);
+			if(userIdValue.trim() === ''){
+				nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
+				nameCaution.style = 'color : rgb(247, 51, 51)';
+			} else if(isDuplicateName){
+				nameCaution.innerHTML = '  * 중복된 메뉴이름입니다.';
+				nameCaution.style = 'color : rgb(247, 51, 51)';
+			} else{
+				nameCaution.innerHTML = '  * 사용가능한 메뉴이름입니다.';
+				nameCaution.style = 'color : rgb(29, 252, 96)';
+			}
+		}
+
         switch (name) {
             case 'menuPrice':
                 value = parseInt(value);
@@ -101,8 +124,8 @@ function DessertRegistForm() {
 
     return (
         <div className = 'formTotal'>
-            <label>메뉴 이름</label><br/>
-            <input type="text" name="menuName" value={registDessert.menuName} onChange={onChangeHandler} />
+            <label>메뉴 이름</label><span id="nameCaution" className='nameCaution'></span><br/>
+            <input type="text" name="menuName" id='userId' value={registDessert.menuName} onChange={onChangeHandler} />
             <br/>
             <label>메뉴 가격</label><br/>
             <input type="number" name="menuPrice" value={registDessert.menuPrice} onChange={onChangeHandler} />
