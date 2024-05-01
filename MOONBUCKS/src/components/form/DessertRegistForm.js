@@ -24,7 +24,7 @@ function DessertRegistForm() {
         const fetchLastId = async () => {
             const response = await fetch('http://localhost:4000/dessert');
             const desserts = await response.json();
-            const lastId = parseInt(desserts[desserts.length - 1]?.id || '0') +1;
+            const lastId = Math.max(...desserts.map(item => parseInt(item.id, 10)))+1;
             setRegistDessert(prevState => ({ ...prevState, id : lastId.toString() })); // ID를 문자열로 변환하여 저장
         };
         fetchLastId();
