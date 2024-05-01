@@ -37,9 +37,9 @@ function CoffeeModifyForm() {
 
 	useEffect(
 		() => {
+
 			if(coffee){
-				setModifyCoffee(
-										{
+				setModifyCoffee({
 						id: id,
 						coffeeName: coffee.coffeeName,
 						coffeePrice: coffee.coffeePrice,
@@ -52,7 +52,7 @@ function CoffeeModifyForm() {
 				)
 			}
 		},
-		[]
+		[coffee]
 	)
 
 
@@ -121,6 +121,8 @@ function CoffeeModifyForm() {
 	useEffect(
 		() => {
 			/* 메뉴 수정 완료 확인 후 /coffee로 이동 */
+			console.log('result 바뀔때마다 호출...', result);
+
 			if (result.modify) {
 				alert('메뉴 수정');
 				navigate(`/coffee`);
@@ -156,7 +158,10 @@ function CoffeeModifyForm() {
 			<label>사진</label><br/>
 			{modifyCoffee.detail.image && (
 				<div className='imgBox'>
-					<img className='imgUpload' src={modifyCoffee.detail.image} alt="이전 이미지" />
+					<span>
+						<img className='imgUpload' src={modifyCoffee.detail.image} alt="이전 이미지" />
+
+					</span>
 					<br />
 				</div>
 			)}

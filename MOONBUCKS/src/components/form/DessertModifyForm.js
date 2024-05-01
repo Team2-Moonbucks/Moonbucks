@@ -37,6 +37,7 @@ function DessertModifyForm() {
 
     // dessert 데이터가 로드되면 modifyDessert 상태 업데이트
     useEffect(() => {
+
         if (dessert) {
             setModifyDessert({
                 id: id,
@@ -153,7 +154,9 @@ function DessertModifyForm() {
 			<label>사진</label><br/>
 			{modifyDessert.detail.image && (
 				<div className='imgBox'>
-					<img className='imgUpload' src={modifyDessert.detail.image} alt="이전 이미지" />
+					<span>
+						<img className='imgUpload' src={modifyDessert.detail.image} alt="이전 이미지" />
+					</span>
 					<br />
 				</div>
 			)}

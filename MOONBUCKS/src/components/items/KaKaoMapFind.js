@@ -71,7 +71,7 @@ function KaKaoMapFind( { onCoordinateChange, shop } ){
                                         '</div>';
                 
                             setInfoContent(content);
-                            setNewAddr(result[0].address.address_name);
+                            setNewAddr(result[0].road_address.address_name);
                                         
                             // 마커를 클릭한 위치에 표시합니다 
                             marker.setPosition(mouseEvent.latLng);
