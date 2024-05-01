@@ -11,6 +11,9 @@ function CoffeeRegistForm() {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const coffeeList = result.coffeeList;
+	const nameCaution = document.getElementById('nameCaution');
+
+	
 	
 
 	/* 입력 값 state 저장 */
@@ -32,6 +35,27 @@ function CoffeeRegistForm() {
 
 		let name = e.target.name;
 		let value = e.target.value;
+
+		if(coffeeList){
+			const userIdValue = document.getElementById('userId').value;
+			const nameCaution = document.getElementById('nameCaution');
+			let isDuplicateName = coffeeList.some(user => user.coffeeName === userIdValue);
+
+			console.log('isDuplicateName 동작중', isDuplicateName);
+
+			if(userIdValue.trim() === ''){
+				nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
+				nameCaution.style = 'color : rgb(247, 51, 51)';
+			} else if(isDuplicateName){
+				nameCaution.innerHTML = '  * 이미 존재하는 메뉴명입니다.';
+				nameCaution.style = 'color : rgb(247, 51, 51)';
+			} else{
+				nameCaution.innerHTML = '  * 사용가능한 메뉴명입니다.';
+				nameCaution.style = 'color : rgb(29, 252, 96)';
+			}
+		}
+
+		
 
 		/* json-server에 저장될 데이터 타입 맞추기 위한 코드 */
 		switch (name) {
@@ -143,8 +167,8 @@ function CoffeeRegistForm() {
 
 	return (
 		<div className='formTotal'>
-			<label>메뉴 이름</label><br/>
-			<input type="text" name="coffeeName" value={registCoffee.coffeeName} onChange={onChangeHandler} />
+			<label>메뉴 이름</label><span id="nameCaution" className='nameCaution'></span><br/>
+			<input type="text"  name="coffeeName" id = "userId" onChange={onChangeHandler} className='nameCaution'/>
 			<br />
 			<label>메뉴 가격</label><br/>
 			<input type="number" name="coffeePrice" value={registCoffee.coffeePrice} onChange={onChangeHandler} />
