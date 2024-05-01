@@ -221,12 +221,12 @@
     },
     {
       "id": "22",
-      "shopName": "강남오거리",
-      "shopAddr": "서울특별시 강남구 봉은사로2길 39 (역삼동)",
+      "shopName": "강남역",
+      "shopAddr": "서울 강남구 역삼동 804",
       "shopPhone": "1522-3232",
       "shopCategory": "일반 매장",
-      "shopYcoordinate": "37.502117",
-      "shopXcoordinate": "127.026672"
+      "shopYcoordinate": 37.4978601438827,
+      "shopXcoordinate": 127.02816982053832
     },
     {
       "id": "23",
