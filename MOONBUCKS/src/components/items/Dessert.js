@@ -31,7 +31,7 @@ function Dessert({ id }) {
 						</tr>
 						<tr>
 							<td><span>가격</span>|</td>
-							<td>{dessert.menuPrice}</td>
+							<td>{dessert.menuPrice.toLocaleString()}원</td>
 						</tr>
 						<tr>
 							<td><span>종류</span>|</td>
