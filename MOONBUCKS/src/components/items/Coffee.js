@@ -31,7 +31,7 @@ function Coffee({id}) {
 						</tr>
 						<tr>
 							<td><span>가격</span>|</td>
-							<td>{coffee.coffeePrice}</td>
+							<td>{coffee.coffeePrice.toLocaleString()}원</td>
 						</tr>
 						<tr>
 							<td><span>종류</span>|</td>

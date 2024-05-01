@@ -49,7 +49,7 @@ function DessertRegistForm() {
 
     useEffect (
         () => {
-            if(dessertList){
+          
                 const userIdValue = document.getElementById('userId').value;
                 const nameCaution = document.getElementById('nameCaution');
     
@@ -58,7 +58,7 @@ function DessertRegistForm() {
                     nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
                     nameCaution.style = 'color : rgb(247, 51, 51)';
                 }}
-        },
+        ,
         []
     )
 
