@@ -154,6 +154,12 @@ function CoffeeModifyForm() {
 			<textarea name="description" value={modifyCoffee.detail.description} onChange={onChangeHandler}></textarea>
 			<br />
 			<label>사진</label><br/>
+			{modifyCoffee.detail.image && (
+				<div>
+					<img src={modifyCoffee.detail.image} alt="이전 이미지" />
+					<br />
+				</div>
+			)}
 			<input
 				type="file"
 				name="image"
