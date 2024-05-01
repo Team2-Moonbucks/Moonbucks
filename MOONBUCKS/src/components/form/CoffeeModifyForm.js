@@ -155,16 +155,18 @@ function CoffeeModifyForm() {
 			<br />
 			<label>사진</label><br/>
 			{modifyCoffee.detail.image && (
-				<div>
-					<img src={modifyCoffee.detail.image} alt="이전 이미지" />
+				<div className='imgBox'>
+					<img className='imgUpload' src={modifyCoffee.detail.image} alt="이전 이미지" />
 					<br />
 				</div>
 			)}
 			<input
+				id="input-file"
 				type="file"
 				name="image"
 				accept='image/*'
 				onChange={fileChangeHandler}
+				// style={{display:"none"}}
 			/>
 			<br />
 			<button onClick={onClickHandler}>메뉴 수정</button>
