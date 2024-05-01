@@ -15,15 +15,29 @@ function ShopRegistForm() {
 
 	useEffect(
 		() => {
-			if(shopList){
 				const shopNameValue = document.getElementById('shopName').value;
 				const nameCaution = document.getElementById('nameCaution');
 		
+				
 				if(shopNameValue.trim() === ''){
 					nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
 					nameCaution.style = 'color : rgb(247, 51, 51)';
 				} 
-			}
+				
+		},[]
+	)
+
+	useEffect(
+		() => {
+			setRegistShop({
+				id: 0,
+				shopName: '',
+				shopAddr: '서울특별시 서대문구 연세로 10-1',
+				shopPhone: '',
+				shopCategory: '',
+				shopYcoordinate: 37.556514,
+				shopXcoordinate: 126.936992
+			});
 		},[]
 	)
 
@@ -164,7 +178,7 @@ function ShopRegistForm() {
 				},0);
 
 				let nextId = maxId + 1;
-				
+
 				console.log(`maxId:  ${maxId}, nextId: ${nextId}`);
 
 				setRegistShop(
