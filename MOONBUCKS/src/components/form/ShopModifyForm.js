@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callModifyShopAPI } from '../../apis/ShopAPICalls';
 import { callGetShopAPI } from '../../apis/ShopAPICalls';
+import KaKaoMapFind from '../items/KaKaoMapFind';
 
 function ShopModifyForm() {
 
@@ -36,6 +37,14 @@ function ShopModifyForm() {
 			shopXcoordinate: '',
 		}
 	);
+
+	const handleCoordinateChange = (xcoord, ycoord) => {
+        setModifyShop({
+            ...modifyShop,
+            shopXcoordinate: xcoord,
+            shopYcoordinate: ycoord
+        });
+    }
 
 	useEffect(
 		()=> {
@@ -152,11 +161,12 @@ function ShopModifyForm() {
 			</select>
 			<br />
 			<label>매장 x좌표 </label><br/>
-			<input type="text" name="shopXcoordinate" value={modifyShop.shopXcoordinate} onChange={onChangeHandler} />
+			<input type="text" name="shopXcoordinate" readOnly={true} value={modifyShop.shopXcoordinate} onChange={onChangeHandler} />
 			<br />
 			<label>매장 y좌표 </label><br/>
-			<input type="text" name="shopYcoordinate" value={modifyShop.shopYcoordinate} onChange={onChangeHandler} />
+			<input type="text" name="shopYcoordinate" readOnly={true} value={modifyShop.shopYcoordinate} onChange={onChangeHandler} />
 			<br />
+			<KaKaoMapFind onCoordinateChange={handleCoordinateChange} shop={modifyShop}/>
 			<button onClick={onClickHandler}>매장 수정</button>
 		</div>
 	)

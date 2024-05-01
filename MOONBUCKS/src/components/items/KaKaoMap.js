@@ -6,13 +6,14 @@ function KaKaoMap( { shop } ){
     /* 카카오 지도 api 사용하여 매장 위치 지도에 표시 */
     
     const [map, setMap] = useState(null);   
+    const [marker, setMarker] = useState(null);
     const xcoord = shop.shopXcoordinate;
     const ycoord = shop.shopYcoordinate;
 
     
     useEffect(
         () => {
-            const container = document.getElementById('map');
+            const container = document.getElementById('kakaomap');
             if(container){
                 const options = {
                     center: new kakao.maps.LatLng(ycoord, xcoord),
@@ -33,15 +34,39 @@ function KaKaoMap( { shop } ){
                 marker.setMap(map);
                 
                 setMap(map);
+                setMarker(marker);
+
+                
             }
+
+            return () => {
+                window.removeEventListener('resize', handleWindowResize);
+            };
         },
         []
     )
 
-    
+    useEffect(() => {
+        // Add event listener for window resize
+        window.addEventListener('resize', handleWindowResize);
+
+        // Clean up function to remove event listener
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, [map, marker]);
+
+    const handleWindowResize = () => {
+        if (map && marker) {
+            // Get center of the map
+            const center = map.getCenter();
+            // Set marker position to the center of the map
+            marker.setPosition(center);
+        }
+    };
 
     return(
-            <div id="map"></div> 
+            <div id="kakaomap"></div> 
     )
 
 
