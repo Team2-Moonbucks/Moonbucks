@@ -3,22 +3,24 @@ const { kakao } = window;
 
 function KaKaoMapFind( { onCoordinateChange, shop } ){
 
-    const { shopXcoordinate, shopYcoordinate } = shop;
+    const { shopXcoordinate, shopYcoordinate, shopAddr } = shop;
     const [newXcoord, setNewXCoord] = useState();
     const [newYcoord, setNewYCoord] = useState();
+    const [newAddr, setNewAddr] = useState();
+    
     const [infoContent, setInfoContent] = useState();
 
     /* 카카오 지도 api 사용하여 매장 위치 지도에 표시 */
-    const handleCoordinateChange = (shopXcoordinate, shopYcoordinate) => {
-        onCoordinateChange(shopXcoordinate, shopYcoordinate);
+    const handleCoordinateChange = (shopXcoordinate, shopYcoordinate, shopAddr) => {
+        onCoordinateChange(shopXcoordinate, shopYcoordinate, shopAddr);
     }
 
     useEffect(
         () => {
             // 좌표를 변경할 때마다 호출
-            handleCoordinateChange(newXcoord, newYcoord);
+            handleCoordinateChange(newXcoord, newYcoord, newAddr);
         }, 
-        [newXcoord, newYcoord]
+        [newXcoord, newYcoord, newAddr]
     );
 
     
@@ -68,6 +70,7 @@ function KaKaoMapFind( { onCoordinateChange, shop } ){
                                         '</div>';
                 
                             setInfoContent(content);
+                            setNewAddr(result[0].address.address_name);
                                         
                             // 마커를 클릭한 위치에 표시합니다 
                             marker.setPosition(mouseEvent.latLng);

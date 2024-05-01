@@ -38,11 +38,12 @@ function ShopModifyForm() {
 		}
 	);
 
-	const handleCoordinateChange = (xcoord, ycoord) => {
+	const handleCoordinateChange = (xcoord, ycoord, shopAddress) => {
         setModifyShop({
             ...modifyShop,
             shopXcoordinate: xcoord,
-            shopYcoordinate: ycoord
+            shopYcoordinate: ycoord,
+			shopAddr:shopAddress
         });
     }
 
