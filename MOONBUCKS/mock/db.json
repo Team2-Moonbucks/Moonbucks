@@ -221,12 +221,12 @@
     },
     {
       "id": "22",
-      "shopName": "강남오거리",
-      "shopAddr": "서울특별시 강남구 봉은사로2길 39 (역삼동)",
+      "shopName": "강남역",
+      "shopAddr": "서울 강남구 역삼동 804",
       "shopPhone": "1522-3232",
       "shopCategory": "일반 매장",
-      "shopYcoordinate": "37.502117",
-      "shopXcoordinate": "127.026672"
+      "shopYcoordinate": 37.4978601438827,
+      "shopXcoordinate": 127.02816982053832
     },
     {
       "id": "23",
@@ -1919,6 +1919,24 @@
       "shopCategory": "리저브 매장",
       "shopYcoordinate": "37.487447",
       "shopXcoordinate": "127.119164"
+    },
+    {
+      "id": "212",
+      "shopName": "test212",
+      "shopAddr": "서울 서대문구 대현동 104-75",
+      "shopPhone": "1522-3232",
+      "shopCategory": "",
+      "shopYcoordinate": 37.55711662308286,
+      "shopXcoordinate": 126.94091087395154
+    },
+    {
+      "id": "213",
+      "shopName": "test213",
+      "shopAddr": "서울 서대문구 창천동 20-20",
+      "shopPhone": "1522-3232",
+      "shopCategory": "",
+      "shopYcoordinate": 37.556971880212714,
+      "shopXcoordinate": 126.93975659662895
     }
   ],
   "menu": [

@@ -43,6 +43,9 @@ function DessertMenus() {
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 				/>
+                {searchTerm !== '' && (
+                    <p>"{searchTerm}" 검색 결과입니다.</p>
+                )}
 			</div>
             <div>
                 <button className={`${(category === '전체보기' ? 'active' : '')} TotalBtn` } onClick={() => handleCategoryChange('전체보기')}>전체보기</button>

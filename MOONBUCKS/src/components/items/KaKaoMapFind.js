@@ -7,7 +7,8 @@ function KaKaoMapFind( { onCoordinateChange, shop } ){
     const [newXcoord, setNewXCoord] = useState();
     const [newYcoord, setNewYCoord] = useState();
     const [newAddr, setNewAddr] = useState();
-    
+    const [map, setMap] = useState(null);   
+    const [marker, setMarker] = useState(null);
     const [infoContent, setInfoContent] = useState();
 
     /* 카카오 지도 api 사용하여 매장 위치 지도에 표시 */
@@ -114,14 +115,37 @@ function KaKaoMapFind( { onCoordinateChange, shop } ){
                     }    
                 }
 
-            
+                setMap(map);
+                setMarker(marker);
+
             }
 
+            return () => {
+                window.removeEventListener('resize', handleWindowResize);
+            };
         
         },
         [shop]
     )
 
+    useEffect(() => {
+        // Add event listener for window resize
+        window.addEventListener('resize', handleWindowResize);
+
+        // Clean up function to remove event listener
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, [map, marker]);
+
+    const handleWindowResize = () => {
+        if (map && marker) {
+            // Get center of the map
+            const center = map.getCenter();
+            // Set marker position to the center of the map
+            marker.setPosition(center);
+        }
+    };
 
 
     return(
