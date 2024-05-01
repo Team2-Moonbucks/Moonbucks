@@ -23,15 +23,16 @@ function DessertMenus() {
         dispatch(callGetDessertListAPI(category));
     };
 
-    const handleSearch = () => {
+    // 입력이 변경될 때마다 자동으로 검색을 수행
+    useEffect(() => {
         dispatch(callGetDessertListAPI(category, searchTerm));
-    };
+    }, [searchTerm, category, dispatch]);
 
     // 페이지가 처음 렌더링될 때 전체보기 카테고리의 API를 호출
     useEffect(() => {
         dispatch(callGetDessertListAPI(category));
     }, [dispatch, category]); // 카테고리 변경 시에도 API 재호출
-
+ 
     return (
         <div className="pageTitle dessertTitle">
             <h1> 디저트 {isAdmin && <button className='dessertRegistBtn' onClick={() => navigate(`/dessert/regist`)}>메뉴 추가</button>} </h1>
@@ -42,7 +43,6 @@ function DessertMenus() {
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 				/>
-				<button className='searchBtn' onClick={handleSearch} >검색</button>
 			</div>
             <div>
                 <button className={`${(category === '전체보기' ? 'active' : '')} TotalBtn` } onClick={() => handleCategoryChange('전체보기')}>전체보기</button>

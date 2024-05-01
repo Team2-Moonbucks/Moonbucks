@@ -26,6 +26,11 @@ function CoffeeMenu() {
         setSearchPerformed(true);
     };
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    };
     
 
     return (
@@ -36,7 +41,7 @@ function CoffeeMenu() {
             <button className={`${(category === '차' ? 'active' : '')} teaBtn` }  onClick={() => handleCategoryChange('차')}>티</button>
             <button className={`${(category === '블렌디드' ? 'active' : '')} blendedBtn` }  onClick={() => handleCategoryChange('블렌디드')}>블렌디드</button>
             <div className='searchBox'>
-                <input type="search" placeholder='검색어를 입력하세요.' value={searchTerm} onChange={handleSearchChange}></input>
+                <input type="search" placeholder='검색어를 입력하세요.' value={searchTerm} onChange={handleSearchChange} onKeyDown={handleKeyDown}></input>
                 <button className='searchBtn' onClick={handleSearch}>검색</button>
             </div>
                 {searchPerformed && <p>"{activeSearchTerm}" 검색 결과입니다.</p>}
