@@ -16,7 +16,7 @@ function BoardList({ title, searchTerm }) {
         if (boardList.length === 0) { // 데이터가 없을 경우 API 호출
             dispatch(callGetBoardListAPI());
         }
-    }, [dispatch]);
+    }, [dispatch, boardList.length]);
 
 	useEffect(
 		() => {
@@ -28,7 +28,8 @@ function BoardList({ title, searchTerm }) {
 
 	const filteredBoardList = boardList.filter(board => 
         (title === '전체' || board.title === title) &&
-        board.title.toLowerCase().includes(searchTerm.toLowerCase())
+        (board.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+         board.content.toLowerCase().includes(searchTerm.toLowerCase()))
     );
 
 
@@ -42,9 +43,9 @@ function BoardList({ title, searchTerm }) {
 					<li>작성일자</li>
 				</ul>
 				{filteredBoardList.length > 0 ? (
-					filteredBoardList.map(board => <BoardItem key={board.title} board={board} />)
+					filteredBoardList.map(board => <BoardItem key={board.id} board={board} />)
 				) : (
-					<p>해당 제목의 게시글이 없습니다.</p>
+					<p>해당 검색어와 일치하는 게시글이 없습니다.</p>
 				)}
 			</div>
 		)
