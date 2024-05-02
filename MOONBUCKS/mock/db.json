@@ -17,7 +17,7 @@
     {
       "id": "user02",
       "password": "pass02",
-      "nickname": "유저02",
+      "nickname": "유저이",
       "role": "user",
       "email": "user02@moonbucks.net"
     },
@@ -1923,11 +1923,11 @@
     {
       "id": "212",
       "shopName": "test212",
-      "shopAddr": "서울 서대문구 대현동 104-75",
+      "shopAddr": "서울특별시 마포구 대흥로24길 24",
       "shopPhone": "1522-3232",
       "shopCategory": "",
-      "shopYcoordinate": 37.55711662308286,
-      "shopXcoordinate": 126.94091087395154
+      "shopYcoordinate": 37.553362476183565,
+      "shopXcoordinate": 126.94727400287962
     },
     {
       "id": "213",
@@ -1937,6 +1937,15 @@
       "shopCategory": "",
       "shopYcoordinate": 37.556971880212714,
       "shopXcoordinate": 126.93975659662895
+    },
+    {
+      "id": "214",
+      "shopName": "테스트용",
+      "shopAddr": "서울특별시 마포구 신촌로26길 26",
+      "shopPhone": "1522-3232",
+      "shopCategory": "",
+      "shopYcoordinate": 37.55108661380685,
+      "shopXcoordinate": 126.95623841310224
     }
   ],
   "menu": [
@@ -2297,7 +2306,6 @@
       "coffeeName": "그린 티",
       "coffeePrice": 6400,
       "categoryName": "차",
-      "isOrderable": true,
       "detail": {
         "description": "신선한 그린 티의 고소함과 부드러운 우유의 조화가 만나 탄생한 그린 티 라떼는 건강과 맛을 동시에 채워줍니다. 천연 그린 티의 풍부한 영양소와 우유의 달콤한 맛이 어우러져 휴식을 취할 때 완벽한 선택입니다. 여유로운 한잔으로 일상의 소중함을 느껴보세요.",
         "image": "/images/12_greentea.png"
@@ -2915,6 +2923,20 @@
       "content": "tertgdasaew",
       "author": "관리자",
       "date": "2024. 5. 2. 오후 5:31:30"
+    },
+    {
+      "id": "15",
+      "title": "집 못감",
+      "content": "집에 못감\n",
+      "author": "유저01",
+      "date": "2024. 5. 2. 오후 5:41:24"
+    },
+    {
+      "id": "16",
+      "title": "6시에 갈 수 있다",
+      "content": "갈 수 있어!",
+      "author": "유저02",
+      "date": "2024. 5. 2. 오후 5:44:49"
     }
   ]
 }
