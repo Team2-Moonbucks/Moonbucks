@@ -9,19 +9,19 @@ function Main() {
 		<Container>
 			{/* <h1>Main</h1> */}
 			<div className="mainCSS d-block d-lg-none">
-				<span><img src="../dessert_mini.jpg"></img></span>
+				<span><img src="../dessert_mini.svg"></img></span>
 				<button onClick={() => navigate(`/dessert`)}>Detail More</button>
 			</div>
 			<div className="mainCSS d-none d-lg-block">
-				<span><img src="../dessert_main.jpg"></img></span>
+				<span><img src="../dessert_main.svg"></img></span>
 				<button onClick={() => navigate(`/dessert`)}>Detail More</button>
 			</div>
 			<div className="coffeeMain mainCSS d-block d-lg-none">
-				<span><img src="../coffee_mini.jpg"></img></span>
+				<span><img src="../coffee_mini.svg"></img></span>
 				<button onClick={() => navigate(`/menu`)}>Detail More</button>
 			</div>
 			<div className="coffeeMain mainCSS d-none d-lg-block">
-				<span><img src="../coffee_main.jpg"></img></span>
+				<span><img src="../coffee_main.svg"></img></span>
 				<button onClick={() => navigate(`/coffee`)}>Detail More</button>
 			</div>
 		</Container>
