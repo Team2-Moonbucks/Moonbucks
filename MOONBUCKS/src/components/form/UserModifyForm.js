@@ -18,13 +18,20 @@ function UserModifyForm() {
 
 
 
-
 	/* 수정할 메뉴 초기값 불러오기 */
 	useEffect(
 		() => {
 			/* user 호출 API */
 			dispatch(callGetUserAPI(nickname));
 			dispatch(callGetUserListAPI());
+
+			const userIdValue = document.getElementById('userId').value;
+			const nameCaution = document.getElementById('nameCaution');
+			
+			if(userIdValue.trim() === nickname){
+				nameCaution.innerHTML = '  * 기존의 닉네임입니다.';
+				nameCaution.style = 'color : rgb(29, 252, 96)';
+			}
 		},
 		[]
 	);
@@ -79,6 +86,9 @@ function UserModifyForm() {
 			if(userIdValue.trim() === ''){
 				nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
 				nameCaution.style = 'color : rgb(247, 51, 51)';
+			} else if(userIdValue.trim() === nickname){
+				nameCaution.innerHTML = '  * 기존의 닉네임입니다.';
+				nameCaution.style = 'color : rgb(29, 252, 96)';
 			} else if(isDuplicateName){
 				nameCaution.innerHTML = '  * 중복된 닉네임입니다.';
 				nameCaution.style = 'color : rgb(247, 51, 51)';
@@ -90,7 +100,7 @@ function UserModifyForm() {
 
 		setModifyUser(
 			{
-				...user,
+				...modifyUser,
 				[name]: value
 			}
 		);
