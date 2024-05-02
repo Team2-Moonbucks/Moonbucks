@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import ToTheTop from '../items/ToTheTop';
+import Swal from "sweetalert2";
+
 
 function Header() {
 
@@ -21,12 +23,21 @@ function Header() {
 
 	/* 로그아웃 호출 시: localStorage 저장 값 삭제, userReducer 값 리셋, 루트로 이동 */
 	const logoutHandler = () => {
+		
+
+		dispatch(resetLoginUser());
+		Swal.fire({
+			icon: "success",
+			title: `${nickname}님 로그아웃하셨습니다.`,
+			showConfirmButton: false,
+			timer: 1000
+		});
 		localStorage.removeItem('LoginNickname');
 		localStorage.removeItem('isAdmin');
 		localStorage.removeItem('isUser');
 		localStorage.removeItem('isLogin');
-		dispatch(resetLoginUser());
-		navigate('/');
+		localStorage.removeItem('LoginID');
+		navigate('/login');
 	}
 
 	return (

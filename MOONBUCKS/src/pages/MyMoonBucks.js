@@ -16,7 +16,6 @@ function UserDetail() {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const result = useSelector(state => state.userReducer);
-	const nickname = localStorage.getItem('LoginNickname');
 	const userId = localStorage.getItem('LoginID');
 
 	const updateHandler = () => navigate(`/mymoonbucks/modify`);
@@ -78,7 +77,7 @@ function UserDetail() {
 					</>
 				}
 			</h1>
-			<User nickname={nickname} />
+			<User id={userId} />
 		</div>
 	);
 }
