@@ -24,7 +24,7 @@
     {
       "id": "user03",
       "password": "pass03",
-      "nickname": "테스트용",
+      "nickname": "유저03",
       "role": "user",
       "email": "test test"
     }

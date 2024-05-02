@@ -2,16 +2,18 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { callGetUserAPI } from '../../apis/UserAPICalls';
 
-function User({ nickname }) {
+function User({ id }) {
 
 	const result = useSelector(state => state.userReducer);
 	const user = result.user;
 	const dispatch = useDispatch();
 
+	console.log('id : ', id);
+
 	useEffect(
 		() => {
 			/* user 호출 API */
-			dispatch(callGetUserAPI(nickname));
+			dispatch(callGetUserAPI(id));
 		},
 		[]
 	);

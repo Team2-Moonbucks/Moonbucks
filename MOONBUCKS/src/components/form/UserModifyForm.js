@@ -14,6 +14,7 @@ function UserModifyForm() {
 	const user = result.user;
 	const userlist = result.userlist;
 	const nickname = localStorage.getItem('LoginNickname');
+	const userId = localStorage.getItem('LoginID');
     const nameCaution = document.getElementById('nameCaution');
 
 
@@ -22,7 +23,7 @@ function UserModifyForm() {
 	useEffect(
 		() => {
 			/* user 호출 API */
-			dispatch(callGetUserAPI(nickname));
+			dispatch(callGetUserAPI(userId));
 			dispatch(callGetUserListAPI());
 
 			const userIdValue = document.getElementById('userId').value;
@@ -48,6 +49,7 @@ function UserModifyForm() {
 	useEffect(
 		()=> {
 			if(user){
+				console.log('user : ', user);
 				setModifyUser(
 					{
 						...user,
@@ -151,6 +153,7 @@ function UserModifyForm() {
 				});
 				document.getElementById('userId').focus();
 			}else{
+				localStorage.setItem("LoginNickname",modifyUser.nickname);
 				dispatch(callModifyUserAPI(modifyUser));
 			}
 		}
