@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callGetUserListAPI, callModifyUserAPI } from '../../apis/UserAPICalls';
 import { callGetUserAPI } from '../../apis/UserAPICalls';
+import Swal from "sweetalert2";
+
 
 function UserModifyForm() {
 
@@ -105,7 +107,12 @@ function UserModifyForm() {
 			console.log('result 바뀔때마다 호출...', result);
 			
 			if (result.modify) {
-				alert('회원 정보 수정');
+				Swal.fire({
+					icon: "success",
+					title: `회원정보가 수정되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate(`/mymoonbucks`);
 			}
 		},
@@ -116,10 +123,22 @@ function UserModifyForm() {
 
 		if(nameCaution){
 			if(nameCaution.innerHTML == '  * 중복된 닉네임입니다.'){
-				alert("중복된 닉네임입니다. 다시 입력해주세요");
+				Swal.fire({
+					icon: "warning",
+					html: `중복된 닉네임입니다. 다시 입력해주세요`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('userId').focus();
 			}else if(nameCaution.innerHTML == '  * 반드시 작성해야하는 부분입니다.'){
-				alert("닉네임은 반드시 작성해야합니다.");
+				Swal.fire({
+					icon: "warning",
+					html: `닉네임은 반드시 작성해야 합니다.`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('userId').focus();
 			}else{
 				dispatch(callModifyUserAPI(modifyUser));

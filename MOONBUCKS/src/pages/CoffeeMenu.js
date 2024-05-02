@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import CoffeeList from "../components/lists/CoffeeList";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+
 
 function CoffeeMenu() {
     const [category, setCategory] = useState('전체');
@@ -27,7 +29,13 @@ function CoffeeMenu() {
     const handleSearch = () => {
         console.log('내가 입력한 검색어 : ', searchTerm);
         if (searchTerm === "") {
-            alert("검색어를 입력해주세요!");
+            Swal.fire({
+				icon: "warning",
+				html: `검색어를 입력해주세요!`,
+				showCancelButton: false,
+				confirmButtonColor: "#1A264B",
+				confirmButtonText: "확인",
+			});
         } else {
             setActiveSearchTerm(searchTerm); // 사용자가 입력한 검색어로 검색 결과 값을 설정
             setSearchPerformed(true); // 검색 수행 상태를 true로 설정

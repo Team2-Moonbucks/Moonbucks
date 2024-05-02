@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callDeleteDessertAPI } from '../apis/DessertAPICalls';
+import Swal from "sweetalert2";
+
 
 function DessertDetail() {
 
@@ -16,13 +18,34 @@ function DessertDetail() {
 	const result = useSelector(state => state.dessertReducer);
 
 	const updateHandler = () => navigate(`/dessert/modify/${id}`);
-	const deleteHandler = () => dispatch(callDeleteDessertAPI(id));
+	const deleteHandler = () => {
+		Swal.fire({
+			title: "메뉴를 삭제하겠습니까?",
+			text: "삭제 후 되돌릴 수 없습니다.",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#1A264B",
+			cancelButtonColor: "#d33",
+			confirmButtonText: "삭제",
+			cancelButtonText: "취소"
+			}).then((result) => {
+			if (result.isConfirmed) {
+				Swal.fire({
+				title: "삭제 완료!",
+				text: "메뉴가 삭제되었습니다",
+				icon: "success",
+				showConfirmButton: false,
+				timer: 1000
+				});
+				dispatch(callDeleteDessertAPI(id));
+			}
+		});
+	}
 
 	useEffect(
 		() => {
 			/* 메뉴 삭제 완료 확인 후 /dessert 이동 */
 			if (result.delete) {
-				alert('메뉴 삭제');
 				navigate(`/dessert`);
 			}
 		}, // eslint-disable-next-line

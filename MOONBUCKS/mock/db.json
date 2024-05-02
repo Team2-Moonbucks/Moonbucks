@@ -2199,7 +2199,6 @@
       "coffeeName": "카푸치노",
       "coffeePrice": 5000,
       "categoryName": "커피",
-      "isOrderable": true,
       "detail": {
         "description": "에스프레소, 스팀 우유, 우유 거품이 깔끔하게 섞인 커피 음료로, 부드러운 크리마와 진한 커피의 조화가 느껴집니다! 부드럽고 부드러운 텍스처와 진한 커피 향이 어우러진 이 커피는 커피 본연의 맛을 즐기신다면 카푸치노와 오늘을 함께해보세요!",
         "image": "/images/3_capucino.png"

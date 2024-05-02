@@ -2,7 +2,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { callGetCoffeeAPI, callRegistCoffeeAPI } from '../../apis/CoffeeAPICalls';
+import { callGetCoffeeAPI, callGetCoffeeListAPI, callRegistCoffeeAPI } from '../../apis/CoffeeAPICalls';
+import Swal from "sweetalert2";
+
 
 
 function CoffeeRegistForm() {
@@ -126,7 +128,12 @@ function CoffeeRegistForm() {
 		() => {
 			/* 메뉴 등록 완료 확인 후 /coffee로 이동 */
 			if (result.regist) {
-				alert('메뉴 등록');
+				Swal.fire({
+					icon: "success",
+					title: `메뉴가 등록되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate(`/coffee`);
 			}
 		},
@@ -142,49 +149,56 @@ function CoffeeRegistForm() {
                 if(userIdValue.trim() === ''){
                     nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
                     nameCaution.style = 'color : rgb(247, 51, 51)';
-				}},
+				}
+				dispatch(callGetCoffeeListAPI());
+
+				if(coffeeList && coffeeList.length > 0) {
+
+					let maxId = coffeeList.reduce((max, shop) => {
+						const parsedId = parseInt(shop.id, 10);
+						return Math.max(max, isNaN(parsedId) ? 0 : parsedId);
+					},0);
+	
+					let nextId = maxId + 1;
+	
+					console.log(`maxId:  ${maxId}, nextId: ${nextId}`);
+	
+					setRegistCoffee(
+						{
+							...registCoffee,
+							id: `${nextId}`
+						}
+					);
+				}
+			},
         []
     )
 
 
-	// useEffect(
-	// 	() => {
-	// 		dispatch(callGetCoffeeAPI());
-	// 	}
-	// )
-
-	// useEffect(
-	// 	() => {
-
-	// 		if(coffeeList && coffeeList.length > 0) {
-
-	// 			let maxId = coffeeList.reduce((max, coffee) => Math.max(max, coffee.id, 0));
-	// 			let nextId = maxId + 1;
-
-	// 			console.log(`maxId:  ${maxId}, nextId: ${nextId}`);
-
-	// 			setRegistCoffee(
-	// 				{
-	// 					...registCoffee,
-	// 					id: `${nextId}`
-	// 				}
-	// 			);
-	// 		}
-	// 	}
-	// )
 
 	const onClickHandler = () => {
 		/* registCoffee에 대한 유효성 검사 후 호출 */
 
-		console.log('nameCaution.innerHTML : ', nameCaution.innerHTML);
 		if(nameCaution){
 			if(nameCaution.innerHTML == '  * 사용가능한 메뉴명입니다.'){
 				dispatch(callRegistCoffeeAPI(registCoffee));
 			}else if(nameCaution.innerHTML == '  * 이미 존재하는 메뉴명입니다.'){
-				alert("중복된 메뉴이름입니다. 다시 입력해주세요");
+				Swal.fire({
+					icon: "warning",
+					html: `중복된 메뉴이름입니다. 다시 입력해주세요`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('userId').focus();
 			}else{
-				alert("메뉴명은 반드시 작성해야 합니다.");
+				Swal.fire({
+					icon: "warning",
+					html: `메뉴명은 반드시 작성해야 합니다.`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('userId').focus();
 			}
 			

@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callDeleteShopAPI } from '../apis/ShopAPICalls';
+import Swal from "sweetalert2";
+
 
 function ShopDetail() {
 
@@ -16,13 +18,34 @@ function ShopDetail() {
 	const result = useSelector(state => state.shopReducer);
 
 	const updateHandler = () => navigate(`/shop/modify/${id}`);
-	const deleteHandler = () => dispatch(callDeleteShopAPI(id));
+	const deleteHandler = () => {
+		Swal.fire({
+			title: "매장을 삭제하겠습니까?",
+			text: "삭제 후 되돌릴 수 없습니다.",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#1A264B",
+			cancelButtonColor: "#d33",
+			confirmButtonText: "삭제",
+			cancelButtonText: "취소"
+			}).then((result) => {
+			if (result.isConfirmed) {
+				Swal.fire({
+				title: "삭제 완료!",
+				text: "매장이 삭제되었습니다",
+				icon: "success",
+				showConfirmButton: false,
+				timer: 1000
+				});
+				dispatch(callDeleteShopAPI(id));
+			}
+		});
+	}
 
 	useEffect(
 		() => {
 			/* 매장 삭제 완료 확인 후 /shop로 이동 */
 			if (result.delete) {
-				alert('매장 삭제');
 				navigate(`/shop`);
 			}
 		}, // eslint-disable-next-line

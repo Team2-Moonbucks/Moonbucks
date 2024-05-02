@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { callGetBoardAPI, callRegistBoardAPI } from '../../apis/BoardAPICalls';
+import Swal from "sweetalert2";
+
 
 
 function BoardRegistForm() {
@@ -126,39 +128,18 @@ function BoardRegistForm() {
 		() => {
 			/* 메뉴 등록 완료 확인 후 /board로 이동 */
 			if (result.regist) {
-				alert('게시글 등록');
+				Swal.fire({
+					icon: "success",
+					title: `게시글이 등록되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate(`/board`);
 			}
 		},
 		[result]
 	);
 
-
-	// useEffect(
-	// 	() => {
-	// 		dispatch(callGetBoardAPI());
-	// 	}
-	// )
-
-	// useEffect(
-	// 	() => {
-
-	// 		if(boardList && boardList.length > 0) {
-
-	// 			let maxId = boardList.reduce((max, board) => Math.max(max, board.id, 0));
-	// 			let nextId = maxId + 1;
-
-	// 			console.log(`maxId:  ${maxId}, nextId: ${nextId}`);
-
-	// 			setRegistBoard(
-	// 				{
-	// 					...registBoard,
-	// 					id: `${nextId}`
-	// 				}
-	// 			);
-	// 		}
-	// 	}
-	// )
 
 	const onClickHandler = () => {
 		/* registBoard에 대한 유효성 검사 후 호출 */

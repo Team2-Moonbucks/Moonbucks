@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { callGetShoplistAPI, callRegistShopAPI } from '../../apis/ShopAPICalls';
 import KaKaoMapFind from '../items/KaKaoMapFind';
+import Swal from "sweetalert2";
+
 
 function ShopRegistForm() {
 
@@ -153,7 +155,12 @@ function ShopRegistForm() {
 		() => {
 			/* 매장 등록 완료 확인 후 /shop로 이동 */
 			if (result.regist) {
-				alert('매장 등록');
+				Swal.fire({
+					icon: "success",
+					title: `매장이 등록되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate(`/shop`);
 			}
 		},
@@ -224,10 +231,22 @@ function ShopRegistForm() {
 			if(nameCaution.innerHTML == '  * 사용가능한 매장명입니다.'){
 				dispatch(callRegistShopAPI(registShop));
 			}else if(nameCaution.innerHTML == '  * 중복된 매장명입니다.'){
-				alert("중복된 매장명입니다. 다시 입력해주세요");
+				Swal.fire({
+					icon: "warning",
+					html: `중복된 매장명입니다. 다시 입력해주세요`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('shopName').focus();
 			}else{
-				alert("매장명은 반드시 작성해야합니다.");
+				Swal.fire({
+					icon: "warning",
+					html: `매장명은 반드시 작성해야 합니다.`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('shopName').focus();
 			}
 		}
