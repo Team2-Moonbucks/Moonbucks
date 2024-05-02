@@ -29,6 +29,7 @@
 	position: relative;
 	padding: 10px;
 	box-sizing: border-box;
+	min-height: 80vh;
 }
 
 .pageTitle textarea{
@@ -422,7 +423,6 @@ a {
 	background-color: #3C3D3E;
 	padding: 10px;
 	line-height: 10px;
-	margin-top: 100px;
 }
 
 .footer h2{
@@ -1023,4 +1023,28 @@ input[type="file"]:hover::file-selector-button{
 	background-repeat: no-repeat;
 	background-position: 50%;
 	margin: 0 auto;
+}
+
+.to-the-top {
+	width: 70px;
+	height: 70px;
+	background-image: url(../public/toTheTop.svg);
+	background-size: cover;
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
+	z-index: 99999;
+	border: none;
+	border-radius: 10px;
+	transition: opacity 0.3s ease;
+}
+
+/* 스크롤이 발생할 때 보이게 설정 */
+.to-the-top.active {
+	opacity: 1;
+}
+
+/* 스크롤이 발생하지 않을 때 숨기게 설정 */
+.to-the-top:not(.active) {
+	opacity: 0;
 }
