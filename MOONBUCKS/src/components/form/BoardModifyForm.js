@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callModifyBoardAPI } from '../../apis/BoardAPICalls';
 import { callGetBoardAPI } from '../../apis/BoardAPICalls';
+import Swal from "sweetalert2";
+
 
 function BoardModifyForm() {
 
@@ -52,8 +54,13 @@ function BoardModifyForm() {
 
 	useEffect(
 		()=>{
-			if(result.modify){
-				alert('게시물 수정');
+			if(result.modify !== undefined && Object.keys(result.modify).length !== 0){
+				Swal.fire({
+					icon: "success",
+					title: `게시글이 수정되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate('/board');
 			}
 		},

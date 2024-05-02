@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { callGetDessertListAPI, callRegistDessertAPI } from '../../apis/DessertAPICalls';
+import Swal from "sweetalert2";
+
 
 function DessertRegistForm() {
     const result = useSelector(state => state.dessertReducer);
@@ -42,14 +44,19 @@ function DessertRegistForm() {
 
     useEffect(() => {
         if (result.regist) {
-            alert('메뉴 등록');
+            Swal.fire({
+                icon: "success",
+                title: `메뉴가 등록되었습니다`,
+                showConfirmButton: false,
+                timer: 1000
+            });
             navigate(`/dessert`);
         }
     }, [result, navigate]);
 
     useEffect (
         () => {
-          
+        
                 const userIdValue = document.getElementById('userId').value;
                 const nameCaution = document.getElementById('nameCaution');
     
@@ -138,10 +145,22 @@ function DessertRegistForm() {
 			if(nameCaution.innerHTML == '  * 사용가능한 메뉴이름입니다.'){
 				dispatch(callRegistDessertAPI(registDessert));
 			}else if(nameCaution.innerHTML == '  * 중복된 메뉴이름입니다.'){
-				alert("중복된 메뉴이름입니다. 다시 입력해주세요");
+				Swal.fire({
+					icon: "warning",
+					html: `중복된 메뉴이름입니다. 다시 입력해주세요`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('userId').focus();
 			}else{
-				alert("메뉴명은 반드시 작성해야합니다.");
+				Swal.fire({
+					icon: "warning",
+					html: `메뉴명은 반드시 작성해야 합니다.`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('userId').focus();
 			}
 		}

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { callLoginAPI } from '../../apis/UserAPICalls';
 import { resetLoginUser } from "../../modules/UserModule";
+import Swal from "sweetalert2";
 
 
 function LoginForm() {
@@ -19,6 +20,12 @@ function LoginForm() {
 			password: ''
 		}
 	);
+
+	/* 경고창 CSS */
+
+
+
+
 
 	/* 입력 값 변경 시 이벤트 핸들러 */
 	const onChangeHandler = (e) => {
@@ -42,7 +49,13 @@ function LoginForm() {
 	useEffect(
 		() => {
 			if (result?.message) {
-				alert('아이디와 비밀번호를 확인해주세요');
+				Swal.fire({
+					icon: "warning",
+					html: `아이디와 비밀번호를 확인해주세요`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				setLoginInfo(
 					{
 						id: '',
@@ -51,7 +64,12 @@ function LoginForm() {
 				);
 				dispatch(resetLoginUser());
 			} else if (isAuthorized) {
-				alert(`${loginInfo.id}님 환영합니다!`);
+				Swal.fire({
+					icon: "success",
+					title: `${loginInfo.id}님 환영합니다!`,
+					showConfirmButton: false,
+					timer: 1500
+				});
 				navigate('/');
 			}
 		}, // eslint-disable-next-line

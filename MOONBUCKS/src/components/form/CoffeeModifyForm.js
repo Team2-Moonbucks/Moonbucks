@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callModifyCoffeeAPI } from '../../apis/CoffeeAPICalls';
 import { callGetCoffeeAPI } from '../../apis/CoffeeAPICalls';
+import Swal from "sweetalert2";
+
 
 function CoffeeModifyForm() {
 
@@ -39,7 +41,8 @@ function CoffeeModifyForm() {
 		() => {
 
 			if(coffee){
-				setModifyCoffee({
+				setModifyCoffee(
+										{
 						id: id,
 						coffeeName: coffee.coffeeName,
 						coffeePrice: coffee.coffeePrice,
@@ -124,7 +127,12 @@ function CoffeeModifyForm() {
 			console.log('result 바뀔때마다 호출...', result);
 
 			if (result.modify) {
-				alert('메뉴 수정');
+				Swal.fire({
+					icon: "success",
+					title: `메뉴가 수정되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate(`/coffee`);
 			}
 		},

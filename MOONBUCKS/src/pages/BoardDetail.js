@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callDeleteBoardAPI, callGetBoardAPI } from '../apis/BoardAPICalls';
 import Board from '../components/items/Board';
+import Swal from "sweetalert2";
+
 
 function BoardDetail() {
 
@@ -18,7 +20,30 @@ function BoardDetail() {
 	const nickname = localStorage.getItem('LoginNickname');
 
 	const updateHandler = () => navigate(`/board/modify/${id}`);
-	const deleteHandler = () => dispatch(callDeleteBoardAPI(id));
+	const deleteHandler = () => {
+		Swal.fire({
+			title: "게시물을 삭제하겠습니까?",
+			text: "삭제 후 되돌릴 수 없습니다.",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#1A264B",
+			cancelButtonColor: "#d33",
+			confirmButtonText: "삭제",
+			cancelButtonText: "취소"
+			}).then((result) => {
+			if (result.isConfirmed) {
+				Swal.fire({
+				title: "삭제 완료!",
+				text: "게시물이 삭제되었습니다",
+				icon: "success",
+				showConfirmButton: false,
+				timer: 1000
+				});
+				dispatch(callDeleteBoardAPI(id));
+			}
+		});
+
+	};
 
 	// const author = board
 	console.log('board : ', board);
@@ -28,8 +53,8 @@ function BoardDetail() {
 	useEffect(
 		() => {
 			/* 메뉴 삭제 완료 확인 후 /board로 이동 */
-			if (result.delete) {
-				alert('게시글 삭제');
+			if (result.delete !== undefined && Object.keys(result.delete).length !== 0) {
+				console.log('result.delete : ', result.delete);
 				navigate(`/board`);
 			}
 		}, // eslint-disable-next-line

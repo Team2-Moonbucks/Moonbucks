@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { callGetUserListAPI, callRegistUserAPI } from '../../apis/UserAPICalls';
+import Swal from "sweetalert2";
+
 
 
 function UserRegistForm() {
@@ -147,7 +149,12 @@ function UserRegistForm() {
 		() => {
 			/* 회원 등록 완료 확인 후 메인으로 이동 */
 			if (result.regist) {
-				alert('회원 등록');
+				Swal.fire({
+					icon: "success",
+					title: `회원으로 등록되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate(`/`);
 			}
 		},
@@ -170,22 +177,52 @@ function UserRegistForm() {
 					if(nicknameCaution.innerHTML == ' '){
 						dispatch(callRegistUserAPI(registUser));
 					}else{
-						alert('닉네임은 반드시 작성해야합니다!');
+						Swal.fire({
+							icon: "warning",
+							html: `닉네임은 반드시 작성해야합니다!`,
+							showCancelButton: false,
+							confirmButtonColor: "#1A264B",
+							confirmButtonText: "확인",
+						});
 						document.getElementById('nickname').focus();
 					}
 				}else{
-					alert('비밀번호가 일치하지 않습니다!');
+					Swal.fire({
+						icon: "warning",
+						html: `비밀번호가 일치하지 않습니다!`,
+						showCancelButton: false,
+						confirmButtonColor: "#1A264B",
+						confirmButtonText: "확인",
+					});
 					document.getElementById('passwordConfirm').focus();
 				}
 			}else{
-				alert('비밀번호는 반드시 작성해야합니다!');
+				Swal.fire({
+					icon: "warning",
+					html: `비밀번호는 반드시 작성해야 합니다.`,
+					showCancelButton: false,
+					confirmButtonColor: "#1A264B",
+					confirmButtonText: "확인",
+				});
 				document.getElementById('password').focus();
 			}
 		}else if(nameCaution.innerHTML == '  * 중복된 아이디입니다.'){
-			alert('중복된 아이디입니다! 다른 아이디를 사용해주세요');
+			Swal.fire({
+				icon: "warning",
+				html: `중복된 아이디입니다. 다른 아이디를 사용해주세요`,
+				showCancelButton: false,
+				confirmButtonColor: "#1A264B",
+				confirmButtonText: "확인",
+			});
 			document.getElementById('userId').focus();
 		}else if(nameCaution.innerHTML == '  * 반드시 작성해야하는 부분입니다.'){
-			alert('아이디는 반드시 작성해야합니다!');
+			Swal.fire({
+				icon: "warning",
+				html: `아이디는 반드시 작성해야 합니다.`,
+				showCancelButton: false,
+				confirmButtonColor: "#1A264B",
+				confirmButtonText: "확인",
+			});
 			document.getElementById('userId').focus();
 		}
 	}

@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { callModifyShopAPI } from '../../apis/ShopAPICalls';
 import { callGetShopAPI } from '../../apis/ShopAPICalls';
 import KaKaoMapFind from '../items/KaKaoMapFind';
+import Swal from "sweetalert2";
+
 
 function ShopModifyForm() {
 
@@ -13,9 +15,11 @@ function ShopModifyForm() {
 	const result = useSelector(state => state.shopReducer);
 	const shop = result.shop;
 
+	
+	
 	console.log('[ShopModifyForm] result', result);
-
-
+	
+	
 	/* 수정할 메뉴 초기값 불러오기 */
 	useEffect(
 		() => {
@@ -25,6 +29,7 @@ function ShopModifyForm() {
 		[]
 	);
 
+	
 	/* 입력 값 state 저장 */
 	const [modifyShop, setModifyShop] = useState(
 		{
@@ -130,7 +135,12 @@ function ShopModifyForm() {
 			console.log('result 바뀔때마다 호출...', result);
 			
 			if (result.modify) {
-				alert('매장 수정');
+				Swal.fire({
+					icon: "success",
+					title: `매장이 수정되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate(`/shop`);
 			}
 		},

@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { callGetShopAPI } from '../../apis/ShopAPICalls';
+
 import KaKaoMap from './KaKaoMap';
+
 
 function Shop({ id }) {
 
@@ -9,16 +11,19 @@ function Shop({ id }) {
 	const shop = result.shop;
 	const dispatch = useDispatch();
 
+	
+
+	console.log('[shop]result : ', result);
+
+
 	useEffect(
 		() => {
 			/* shop 호출 API */
 			dispatch(callGetShopAPI(id));
-
-
+			
 		},
 		[]
 	);
-
 
 
 	return (

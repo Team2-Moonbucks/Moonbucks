@@ -4,6 +4,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callDeleteUserAPI } from '../apis/UserAPICalls';
 import { resetLoginUser } from "../modules/UserModule";
+import Swal from "sweetalert2";
+
 
 function UserDetail() {
 
@@ -18,7 +20,29 @@ function UserDetail() {
 	const userId = localStorage.getItem('LoginID');
 
 	const updateHandler = () => navigate(`/mymoonbucks/modify`);
-	const deleteHandler = () => dispatch(callDeleteUserAPI(userId));
+	const deleteHandler = () => {
+		Swal.fire({
+			title: "회원을 탈퇴하겠습니까?",
+			text: "탈퇴 후 되돌릴 수 없습니다.",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#1A264B",
+			cancelButtonColor: "#d33",
+			confirmButtonText: "삭제",
+			cancelButtonText: "취소"
+			}).then((result) => {
+			if (result.isConfirmed) {
+				Swal.fire({
+				title: "삭제 완료!",
+				text: "회원 탈되되었습니다",
+				icon: "success",
+				showConfirmButton: false,
+				timer: 1000
+				});
+				dispatch(callDeleteUserAPI(userId));
+			}
+		});
+	}
 
 
 	/* 로그아웃 호출 시: localStorage 저장 값 삭제, userReducer 값 리셋, 루트로 이동 */
@@ -35,7 +59,6 @@ function UserDetail() {
 		() => {
 			/* 매장 삭제 완료 확인 후 /user로 이동 */
 			if (result.delete) {
-				alert('회원 정보 삭제');
 				logoutHandler();
 			}
 		}, // eslint-disable-next-line

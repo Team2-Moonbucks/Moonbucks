@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callModifyDessertAPI } from '../../apis/DessertAPICalls';
 import { callGetDessertAPI } from '../../apis/DessertAPICalls';
+import Swal from "sweetalert2";
+
 
 function DessertModifyForm() {
 
@@ -120,7 +122,12 @@ function DessertModifyForm() {
 			console.log('result 바뀔때마다 호출...', result);
 			
 			if (result.modify) {
-				alert('매장 수정');
+				Swal.fire({
+					icon: "success",
+					title: `메뉴가 수정되었습니다`,
+					showConfirmButton: false,
+					timer: 1000
+				});
 				navigate(`/dessert`);
 			}
 		},
