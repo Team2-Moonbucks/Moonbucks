@@ -864,7 +864,8 @@ input[type=file]::file-selector-button {
 
 .loginForm{
 	width: 100%;
-	margin-top: 20px;
+	min-height: 40vh;
+	margin-top: 60px;
 	text-align: center;
 }
 
