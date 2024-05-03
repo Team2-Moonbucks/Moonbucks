@@ -51,7 +51,7 @@ function UserDetail() {
 		localStorage.removeItem('isUser');
 		localStorage.removeItem('isLogin');
 		dispatch(resetLoginUser());
-		navigate('/');
+		navigate('/login');
 	}
 
 	useEffect(

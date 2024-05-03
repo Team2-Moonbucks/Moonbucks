@@ -19,34 +19,43 @@ function UserRegistForm() {
 	const pwdConfirmCaution = document.getElementById('pwdConfirmCaution');
 
 
-
-	if(userList){
-		const userNameValue = document.getElementById('userId').value;
-		const nameCaution = document.getElementById('nameCaution');
-		const pwd = document.getElementById('password').value;
-		const pwdCaution = document.getElementById('pwdCaution');
-		const nickname = document.getElementById('nickname').value;
-
-		if(userNameValue.trim() === ''){
-			nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
-			nameCaution.style = 'color : rgb(247, 51, 51)';
-		} 
-
-		if(nickname.trim() === ''){
-			nicknameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
-			nicknameCaution.style = 'color : rgb(247, 51, 51)';
-		} else{
-			pwdCaution.innerHTML = ' ';
-		}
+	useEffect(
+		()=>{
+			if(userList){
+				console.log('[regist] result : ', result);
+				console.log('[regist]userList : ', userList);
+				const userNameValue = document.getElementById('userId').value;
+				const nameCaution = document.getElementById('nameCaution');
+				const pwd = document.getElementById('password').value;
+				const pwdCaution = document.getElementById('pwdCaution');
+				const nickname = document.getElementById('nickname').value;
+				const nicknameCaution = document.getElementById('nicknameCaution');
 		
+				if(userNameValue.trim() === ''){
+					nameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
+					nameCaution.style = 'color : rgb(247, 51, 51)';
+				} 
+		
+				if(nickname.trim() === ''){
+					nicknameCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
+					nicknameCaution.style = 'color : rgb(247, 51, 51)';
+				} else{
+					pwdCaution.innerHTML = ' ';
+				}
+				
+		
+				if(pwd.trim() === ''){
+					pwdCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
+					pwdCaution.style = 'color : rgb(247, 51, 51)';
+				} else{
+					pwdCaution.innerHTML = ' ';
+				}
+			}
+		},
+		[userList]
+	)
 
-		if(pwd.trim() === ''){
-			pwdCaution.innerHTML = '  * 반드시 작성해야하는 부분입니다.';
-			pwdCaution.style = 'color : rgb(247, 51, 51)';
-		} else{
-			pwdCaution.innerHTML = ' ';
-		}
-	}
+
 
 	
 
@@ -148,14 +157,24 @@ function UserRegistForm() {
 	useEffect(
 		() => {
 			/* 회원 등록 완료 확인 후 메인으로 이동 */
-			if (result.regist) {
+			console.log('result.regist : ', result.regist)
+			if(result.regist){
+				console.log('Object.keys(result.regist).length : ', Object.keys(result.regist).length)
+			}
+
+			if (result.regist && Object.keys(result.regist).length > 0) {
+				console.log('result.regist : ', result.regist)
+				console.log('Object.keys(result.regist).length : ', Object.keys(result.regist).length)
 				Swal.fire({
 					icon: "success",
 					title: `회원으로 등록되었습니다`,
 					showConfirmButton: false,
-					timer: 1000
+					timer: 2000
 				});
 				navigate(`/`);
+				setTimeout(() => {
+					window.location.reload();
+				  }, 1000);
 			}
 		},
 		[result]
@@ -241,7 +260,7 @@ function UserRegistForm() {
 			<label>닉네임 </label> <span id="nicknameCaution" className='nameCaution'></span>
 			<input type="text" name="nickname" id="nickname" onChange={onChangeHandler} />
 			<br />
-			<label>E-mail </label>
+			<label>E-mail dd</label>
 			<input type="text" name="email" onChange={onChangeHandler} />
 			<br />
 			<button onClick={onClickHandler}>회원 등록</button>

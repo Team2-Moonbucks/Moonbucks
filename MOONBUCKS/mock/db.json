@@ -27,6 +27,20 @@
       "nickname": "유저03",
       "role": "user",
       "email": "user03@moonbucks.com"
+    },
+    {
+      "id": "user10",
+      "password": "pass10",
+      "nickname": "테스트 계정",
+      "role": "user",
+      "email": ""
+    },
+    {
+      "id": "1",
+      "password": "1",
+      "nickname": "1",
+      "role": "user",
+      "email": ""
     }
   ],
   "shop": [
