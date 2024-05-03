@@ -1960,6 +1960,15 @@
       "shopCategory": "",
       "shopYcoordinate": 37.55108661380685,
       "shopXcoordinate": 126.95623841310224
+    },
+    {
+      "id": "215",
+      "shopName": "신림리저브",
+      "shopAddr": "서울특별시 관악구 남부순환로 1618",
+      "shopPhone": "1588-1588",
+      "shopCategory": "리저브 매장",
+      "shopYcoordinate": 37.484048608974,
+      "shopXcoordinate": 126.93045336994194
     }
   ],
   "menu": [

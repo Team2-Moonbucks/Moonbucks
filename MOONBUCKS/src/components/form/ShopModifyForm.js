@@ -166,9 +166,9 @@ function ShopModifyForm() {
 			<br />
 			<label>카테고리 </label><br/>
 			<select name="shopCategory" value={modifyShop.shopCategory} onChange={onChangeHandler}>
-				<option>일반</option>
-				<option>DT</option>
-				<option>리저브</option>
+				<option>일반 매장</option>
+				<option>DT 매장</option>
+				<option>리저브 매장</option>
 			</select>
 			<br />
 			<label>매장 x좌표 </label><br/>
